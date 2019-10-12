@@ -131,16 +131,17 @@ def filterPairs(pairs):
  
 def prepareData(fp, reverse=False):
     input_lang, output_lang, pairs = readLangs(fp, reverse)
-    print("Read %s sentence pairs"%len(pairs))
+    print("\n Read %s sentence pairs"%len(pairs))
     pairs = filterPairs(pairs)
-    print("Trimmed to %s sentence pairs"%len(pairs))
-    print("Counting words...")
+    print(" Trimmed to %s sentence pairs"%len(pairs))
+    print("\n Counting words...")
     for pair in pairs:
         input_lang.addSentence(pair[0])
         output_lang.addSentence(pair[1])
-    print("Counted words:")
-    print(input_lang.name, input_lang.n_words)
-    print(output_lang.name, output_lang.n_words)
+    print(" Counted words:")
+    print("\t", input_lang.name, input_lang.n_words)
+    print("\t", output_lang.name, output_lang.n_words)
+    print("")
     return input_lang, output_lang, pairs
 
 # e.g.
@@ -187,9 +188,9 @@ def tensorFromSentence(lang, sentence, device):
     return torch.tensor(indexes, dtype=torch.long, device=device).view(-1, 1)
 
 
-def tensorsFromPair(pair, input_lang, output_lang, ):
-    input_tensor = tensorFromSentence(input_lang, pair[0])
-    target_tensor = tensorFromSentence(output_lang, pair[1])
+def tensorsFromPair(pair, input_lang, output_lang,  device):
+    input_tensor = tensorFromSentence(input_lang, pair[0], device)
+    target_tensor = tensorFromSentence(output_lang, pair[1], device)
     return (input_tensor, target_tensor)
 
 

@@ -13,6 +13,7 @@ from io import open
 #import re
 import random
 import time
+import numpy as np 
 
 import torch
 import torch.nn as nn
@@ -27,7 +28,7 @@ import utils
 from utils import *
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-print(device)
+print("\n device: ", device)
 
 print("\n torch version ", torch.__version__ )
 
@@ -40,10 +41,11 @@ def swish(x):
 
 class BERTEncoder(BertForSequenceClassification):
     def __init__(self, config, num_labels=2):
-        super(BERTEncoder, self).__init__(config)
+        super(BERTEncoder, self).__init__(config, num_labels)
         self.num_labels = num_labels
         self.bert = BertModel(config)
         self.dropout = nn.Dropout(config.hidden_dropout_prob)
+        self.hidden_size = config.hidden_size #!
         self.classifier = nn.Linear(config.hidden_size, num_labels)
         self.apply(self.init_bert_weights)
         
@@ -59,6 +61,9 @@ class BERTEncoder(BertForSequenceClassification):
         else:
             return logits ;
     
+    def initHidden(self):
+        return torch.zeros(1, 1, self.hidden_size, device=device)
+
 
 # Define the Decoder 
 class DecoderRNN(nn.Module):
@@ -87,10 +92,7 @@ class DecoderRNN(nn.Module):
 # Evaluation for the Model after Training 
 def evaluate(encoder, decoder, sentence, input_lang, output_lang, max_length=utils.MAX_LENGTH):
     with torch.no_grad():
-        if sentence is str:
-            input_tensor = utils.tensorFromSentence(input_lang, sentence, device )
-        else:
-            input_tensor = sentence ;
+        input_tensor = utils.tensorFromSentence(input_lang, sentence, device )
         input_length = input_tensor.size()[0]
         encoder_hidden = encoder.initHidden()
 
@@ -124,14 +126,14 @@ def evaluate(encoder, decoder, sentence, input_lang, output_lang, max_length=uti
         return decoded_words, decoder_attentions[:di + 1] 
     
     
-def evaluateRandomly(encoder, decoder, pairs, n=10):
+def evaluateRandomly(encoder, decoder, pairs, input_lang, output_lang, n=10):
     output_sentences = []
     rew = 0.0
     for i in range(n):
         pair = random.choice(pairs)
         #print('>', pair[0])
         #print('=', pair[1])
-        output_words, attentions = evaluate(encoder, decoder, pair[0])
+        output_words, attentions = evaluate(encoder, decoder, pair[0], input_lang, output_lang)
         output_sentence = ' '.join(output_words)
         #print('<', output_sentence)
         #output_sentences.append(output_sentence)
@@ -145,7 +147,7 @@ def evaluateRandomly(encoder, decoder, pairs, n=10):
 # Training the Model 
 teacher_forcing_ratio = 0.5
 
-def trainBert(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, decoder_optimizer, criterion, max_length=utils.MAX_LENGTH):
+def trainBert(input_tensor, target_tensor, encoder, decoder, training_ans, input_lang, output_lang, encoder_optimizer, decoder_optimizer, criterion, max_length=utils.MAX_LENGTH):
 
     encoder_optimizer.zero_grad()
     decoder_optimizer.zero_grad()
@@ -172,6 +174,8 @@ def trainBert(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, 
 
     use_teacher_forcing = True if random.random() < teacher_forcing_ratio else False
 
+    rewards = [] #!
+
     if use_teacher_forcing:
         # Teacher forcing: Feed the target as the next input
         for di in range(target_length):
@@ -179,22 +183,36 @@ def trainBert(input_tensor, target_tensor, encoder, decoder, encoder_optimizer, 
                 decoder_input, decoder_hidden)
             loss += criterion(decoder_output, target_tensor[di])
             decoder_input = target_tensor[di]  # Teacher forcing
-
+            print(" * %s step: "%str(di), loss.detach() ) #!
     else:
         # Without teacher forcing: use its own predictions as the next input
+        decoded_words = [] #!
+
         for di in range(target_length):
             decoder_output, decoder_hidden = decoder(
                 decoder_input, decoder_hidden)
             topv, topi = decoder_output.topk(1)
+            #!!!
+            if topi.item() == EOS_token:
+                decoded_words.append('<EOS>')
+                break
+            else:
+                decoded_words.append(output_lang.index2word[topi.item()])
+            #!!!
             decoder_input = topi.squeeze().detach()  # detach from history as input
 
+            decoded_sentence = str(" ").join(decoded_words) 
+            print("\n --query--> ", decoded_sentence)
+            rew = reward.get_reward(decoded_sentence, training_ans )
+            rewards.append(rew)
+            print("\n --reward--> ", rew)
             loss += criterion(decoder_output, target_tensor[di])
+            print(" * %s step: "%str(di), loss.detach() )#!
             if decoder_input.item() == utils.EOS_token:
                 break;
-    
-    #i =  #!           
-    _, rewrd = evaluateRandomly(encoder, decoder, n=target_length)
-    loss = loss*rewrd
+               
+    #_, rewrd = evaluateRandomly(encoder, decoder, pairs, input_lang, output_lang, n=target_length)
+    #loss = loss*np.mean(rewards)
     
     loss.backward()
 
@@ -219,21 +237,28 @@ def trainItersBert(encoder, decoder, n_iters, pairs, input_lang, output_lang, pr
     #decoder_optimizer = optim.Adam(decoder.parameters(), lr=learning_rate, amsgrad=True)
     #decoder_scheduler = optim.lr_scheduler.CosineAnnealingLR(decoder_optimizer, n_iters)                                                       
                                                        
-    training_pairs = [utils.tensorsFromPair(random.choice(pairs), input_lang, output_lang)  for i in range(n_iters)]
+    training_pairs = []
+    training_answers = []#!
+    for _ in range(n_iters):
+        pair = random.choice(pairs)
+        training_pairs.append( utils.tensorsFromPair(pair[:-1], input_lang, output_lang, device) )
+        training_answers.append(pair[-1])#!
+
     criterion = nn.NLLLoss()
 
     for iter in range(1, n_iters + 1):
         #encoder_scheduler.step()
         #decoder_scheduler.step()
-        
+        print("\n ----- %s Epoch ----- "%str(iter) )
         training_pair = training_pairs[iter - 1]
+        training_ans = training_answers[iter - 1]
         input_tensor = training_pair[0]
         target_tensor = training_pair[1]
         input_tensor.transpose_(0,1)
         #print(input_tensor.size())
 
         loss = trainBert(input_tensor, target_tensor, encoder,
-                     decoder, encoder_optimizer, decoder_optimizer, criterion)
+                     decoder, training_ans, input_lang, output_lang, encoder_optimizer, decoder_optimizer, criterion)
         print_loss_total += loss
         plot_loss_total += loss
 

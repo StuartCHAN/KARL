@@ -16,7 +16,8 @@ import argparse
 class Seq2SeqModel:
     def __init__(self, output_lang):
         hidden_size = 256
-        self.encoder = nl.BERTEncoder.from_pretrained('bert-base-multilingual-cased', num_labels=hidden_size ).to(nl.device)  
+        #self.encoder = nl.BERTEncoder.from_pretrained('bert-base-multilingual-cased', num_labels=hidden_size ).to(nl.device) 
+        self.encoder = nl.BERTEncoder.from_pretrained('bert-base-uncased', num_labels=hidden_size ).to(nl.device) 
         self.decoder = nl.DecoderRNN(hidden_size = 256, output_size = output_lang.n_words).to(nl.device) 
 
     def trainItersBert(self, pairs, input_lang, output_lang):

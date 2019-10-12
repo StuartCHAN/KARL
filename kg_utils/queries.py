@@ -26,7 +26,7 @@ def process(query):
         response = getSPARQL(query)
     except:            
         response = getVirtuoso(query)
-    print("\n ", response)
+    #print("\n ", response)
     entity = preprocess(response)
     #!
     print()
@@ -34,7 +34,7 @@ def process(query):
 
 
 def preprocess(response):
-    #try:
+    try:
         if "boolean" in response.keys():
             value = response["boolean"]
         else:
@@ -43,8 +43,8 @@ def preprocess(response):
             if 0==len(value):
                 return "empty"
         return value
-    #except :
-    #   return "error";
+    except :
+       return "error";
 
        
 def getVirtuoso(query):

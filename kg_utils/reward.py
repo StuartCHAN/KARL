@@ -26,7 +26,7 @@ def get_reward(cand_sent, ref_ent):
 	else:
 		#cand_embedding, ref_embedding = queries.lookup_embedding(entity), queries.lookup_embedding(ref_answer)  
 		reward = calculate_reward(entity, ref_ent ) 
-		return reward ;
+		return reward ; 
 
 
 def calculate_reward(cand_ent, ref_ent ):   
