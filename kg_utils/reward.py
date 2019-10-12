@@ -5,17 +5,19 @@ Created on Mon Oct  7 18:08:37 2019
 @author: Stuart
 """
 import numpy as np
-import queries.process as process
-from utils import interprete 
+import kg_utils
+import kg_utils.kgutils as kgutils
+import kg_utils.queries as queries
+ 
 
 from sematch.semantic.similarity import EntitySimilarity
 sim = EntitySimilarity()
 
 
 def get_reward(cand_sent, ref_ent):
-	cand_query = interprete(cand_sent)
-	entity = process(cand_query)
-	if entity == ref_answer:
+	cand_query = kgutils.interprete(cand_sent)
+	entity = queries.process(cand_query)
+	if entity == ref_ent:
 		return 1.0
 	elif entity is "empty":
 		return 1.0
@@ -30,7 +32,7 @@ def get_reward(cand_sent, ref_ent):
 def calculate_reward(cand_ent, ref_ent ):   
 	#distance = sim.similarity('http://dbpedia.org/resource/Madrid','http://dbpedia.org/resource/Barcelona') #0.409923677282
 	rewrd = 2.0-sim.similarity(cand_ent, ref_ent )
-    return rewrd ;
+	return rewrd ;
 
 """
     pos_h, pos_t, pos_r = self.get_positive_instance(in_batch = True)

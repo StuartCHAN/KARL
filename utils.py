@@ -6,7 +6,8 @@ Created on Sat Oct 12 17:14:59 2019
 """
 import torch
 import json 
-import queries
+import kg_utils.queries as queries 
+import kg_utils.kgutils as kgutils
 
 # Pre-processing Data
 
@@ -75,7 +76,7 @@ def normalizeString(s):
 def loadData(fp):
     #e.g. fp = "../data/qald9/qald-9-train-multilingual.json"
     data = json.load(open( fp, "r", encoding="UTF-8"))
-    pairs = [ (str(qa["question"][3]["string"]).lower().strip()[:-1], queries.encode(queries.select(qa["query"]["sparql"])), queries.preprocess(qa["answers"][0]) )  for qa in data["questions"] ] 
+    pairs = [ (str(qa["question"][3]["string"]).lower().strip()[:-1], kgutils.encode(kgutils.select(qa["query"]["sparql"])), queries.preprocess(qa["answers"][0]) )  for qa in data["questions"] ] 
     return pairs
 
  

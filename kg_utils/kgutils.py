@@ -5,7 +5,7 @@ import logging
 import re
 import sys
 import random 
-from queries import preprocess
+from kg_utils.queries import preprocess
 
 
 

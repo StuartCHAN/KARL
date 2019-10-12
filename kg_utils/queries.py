@@ -14,11 +14,6 @@ import xmltodict
 from collections import OrderedDict
 from SPARQLWrapper import SPARQLWrapper, JSON, XML
 
-import gensim
-from gensim.models import KeyedVectors
-
-fp = "../data/dbpedia_embeddings.d200.bin"
-model = KeyedVectors.load_word2vec_format(fp, binary=True, unicode_errors='ignore')
 """
  e.g.
  query1 = "ASK WHERE { <http://dbpedia.org/resource/Taiko> a <http://dbpedia.org/class/yago/WikicatJapaneseMusicalInstruments> }" 
