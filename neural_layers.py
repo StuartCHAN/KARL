@@ -202,17 +202,18 @@ def trainBert(input_tensor, target_tensor, encoder, decoder, training_ans, input
             decoder_input = topi.squeeze().detach()  # detach from history as input
 
             decoded_sentence = str(" ").join(decoded_words) 
-            print("\n --query--> ", decoded_sentence)
+            print("\n --query--> ", decoded_sentence, "\n ")
             rew = reward.get_reward(decoded_sentence, training_ans )
             rewards.append(rew)
             print("\n --reward--> ", rew)
             loss += criterion(decoder_output, target_tensor[di])
             print(" * %s step: "%str(di), loss.detach() )#!
+            print("\n ")#!
             if decoder_input.item() == utils.EOS_token:
                 break;
                
     #_, rewrd = evaluateRandomly(encoder, decoder, pairs, input_lang, output_lang, n=target_length)
-    #loss = loss*np.mean(rewards)
+    loss = loss*torch.FloatTenso([np.mean(rewards)])
     
     loss.backward()
 
