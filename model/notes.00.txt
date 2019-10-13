@@ -1,0 +1,8922 @@
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  4.624207632882254
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  4.543210506439209
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri sep_dot
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  4.491194831000434
+
+
+
+ Loss: [4.4911947]
+
+ ----- 1749 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.1723896861076355
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.27062511444091797
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.424742857615153
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.4016888439655304
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.39532971382141113
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  1.3533714612325032
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  1.9125665937151228
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a WHERE
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  2.019479990005493
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a WHERE sep_dot
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.855512195163303
+
+
+
+ Loss: [2.3856585]
+
+ ----- 1750 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.12075798958539963
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.17347851395606995
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  1.7868758837382
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  1.3891724348068237
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  1.1495954513549804
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  2.005497455596924
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  2.5280753544398715
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  2.9205548763275146
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri sep_dot
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  2.8862431844075522
+
+
+
+ Loss: [5.1952376]
+
+ ----- 1751 Epoch -----
+ * 0 step xentrop:  0.09385576844215393
+
+ * 1 step xentrop:  0.12192480266094208
+
+ * 2 step xentrop:  0.3864883581797282
+
+ * 3 step xentrop:  0.32663047313690186
+
+ * 4 step xentrop:  0.28958821296691895
+
+ * 5 step xentrop:  0.5189325014750162
+
+ * 6 step xentrop:  0.702310289655413
+
+ * 7 step xentrop:  1.3237102031707764
+
+ * 8 step xentrop:  1.2113844553629558
+
+ * 9 step xentrop:  1.570169448852539
+
+ * 10 step xentrop:  1.9948775551535867
+
+ * 11 step xentrop:  2.084668000539144
+
+ * 12 step xentrop:  2.1769742232102613
+
+ * 13 step xentrop:  2.465282712663923
+
+ * 14 step xentrop:  2.6313430786132814
+
+ * 15 step xentrop:  2.5504391193389893
+
+ * 16 step xentrop:  2.5365822735954735
+
+ * 17 step xentrop:  2.6705775790744357
+
+ * 18 step xentrop:  2.534421820389597
+
+ * 19 step xentrop:  2.4277761459350584
+
+
+ Loss: 2.4277761459350584
+
+ ----- 1752 Epoch -----
+ * 0 step xentrop:  0.09364530444145203
+
+ * 1 step xentrop:  2.496729850769043
+
+ * 2 step xentrop:  1.797759215037028
+
+ * 3 step xentrop:  1.4234956502914429
+
+ * 4 step xentrop:  1.1976265907287598
+
+ * 5 step xentrop:  1.153576135635376
+
+ * 6 step xentrop:  1.0583957944597517
+
+ * 7 step xentrop:  1.0216069221496582
+
+ * 8 step xentrop:  0.991882430182563
+
+ * 9 step xentrop:  0.9201652526855468
+
+ * 10 step xentrop:  0.8555159135298296
+
+ * 11 step xentrop:  0.7915313243865967
+
+ * 12 step xentrop:  0.8423180946936975
+
+ * 13 step xentrop:  0.8847361973353794
+
+ * 14 step xentrop:  1.1104100545247395
+
+ * 15 step xentrop:  1.0473769903182983
+
+ * 16 step xentrop:  1.105670367970186
+
+ * 17 step xentrop:  1.2707333034939237
+
+ * 18 step xentrop:  1.2370730952212685
+
+ * 19 step xentrop:  1.1795544624328613
+
+
+ Loss: 1.1795544624328613
+
+ ----- 1753 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.08319414407014847
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.16307173669338226
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.23159436384836832
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.20960058271884918
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.1926620125770569
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  0.2656250794728597
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  0.36440607479640413
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.1410162448883057
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri sep_dot
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.0720088746812608
+
+
+
+ Loss: [1.4843199]
+
+ ----- 1754 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.06959358602762222
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.12561210989952087
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.16147828102111816
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.15124014019966125
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.14169349670410156
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  0.17247978846232095
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  1.0934901237487793
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.7061405181884766
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri sep_dot
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.7810081905788846
+
+
+
+ Loss: [3.2058148]
+
+ ----- 1755 Epoch -----
+ * 0 step xentrop:  0.05945843830704689
+
+ * 1 step xentrop:  0.10321525484323502
+
+ * 2 step xentrop:  0.1268633008003235
+
+ * 3 step xentrop:  0.11902573704719543
+
+ * 4 step xentrop:  0.11402430534362792
+
+ * 5 step xentrop:  0.13245306412378946
+
+ * 6 step xentrop:  0.24402148383004324
+
+ * 7 step xentrop:  0.7405324578285217
+
+ * 8 step xentrop:  0.7175618277655708
+
+ * 9 step xentrop:  0.8680034637451172
+
+ * 10 step xentrop:  1.4469039223410867
+
+ * 11 step xentrop:  1.3410202662150066
+
+ * 12 step xentrop:  1.242998563326322
+
+
+ Loss: 1.242998563326322
+
+ ----- 1756 Epoch -----
+ * 0 step xentrop:  0.05082935467362404
+
+ * 1 step xentrop:  0.09030397236347198
+
+ * 2 step xentrop:  0.11401242017745972
+
+ * 3 step xentrop:  0.10755619406700134
+
+ * 4 step xentrop:  0.10318747758865357
+
+ * 5 step xentrop:  1.4777355194091797
+
+ * 6 step xentrop:  2.221597126552037
+
+ * 7 step xentrop:  2.0028419494628906
+
+ * 8 step xentrop:  1.7898296780056424
+
+ * 9 step xentrop:  1.6120149612426757
+
+
+ Loss: 1.6120149612426757
+
+ ----- 1757 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.0562204048037529
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.08681179583072662
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.10572361946105957
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.0996103584766388
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.0961242973804474
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  1.410219669342041
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  2.3041349138532365
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  2.263819694519043
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri brack_close
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  2.08288934495714
+
+
+
+ Loss: [3.7492008]
+
+ ----- 1758 Epoch -----
+ * 0 step xentrop:  0.04642152041196823
+
+ * 1 step xentrop:  4.291967391967773
+
+ * 2 step xentrop:  2.883486747741699
+
+ * 3 step xentrop:  2.1807196140289307
+
+ * 4 step xentrop:  3.1963565826416014
+
+ * 5 step xentrop:  3.718174934387207
+
+ * 6 step xentrop:  4.469414847237723
+
+ * 7 step xentrop:  4.016569137573242
+
+ * 8 step xentrop:  3.573583814832899
+
+
+ Loss: 3.573583814832899
+
+ ----- 1759 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.04504869878292084
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.11156120151281357
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.11963894963264465
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.10716088116168976
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.10149543285369873
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  1.0587489604949951
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  1.6940416608537947
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.6339974403381348
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri brack_close
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.4723836051093206
+
+
+
+ Loss: [2.6502905]
+
+ ----- 1760 Epoch -----
+ * 0 step xentrop:  0.03658382222056389
+
+ * 1 step xentrop:  0.0904216393828392
+
+ * 2 step xentrop:  0.09471927086512248
+
+ * 3 step xentrop:  0.08624188601970673
+
+ * 4 step xentrop:  0.08348326683044434
+
+ * 5 step xentrop:  0.3042477567990621
+
+ * 6 step xentrop:  0.9618932179042271
+
+ * 7 step xentrop:  1.4151349067687988
+
+ * 8 step xentrop:  1.3363414340549045
+
+ * 9 step xentrop:  1.6704788208007812
+
+ * 10 step xentrop:  1.9543703252618962
+
+ * 11 step xentrop:  1.7961130142211914
+
+ * 12 step xentrop:  1.6652788015512319
+
+
+ Loss: 1.6652788015512319
+
+ ----- 1761 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.033987242728471756
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.08025474101305008
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.085630198319753
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.07834442704916
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.0767789363861084
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  1.216448465983073
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  1.7708747046334403
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.6258883476257324
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri brack_close
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.4655578401353624
+
+
+
+ Loss: [2.638004]
+
+ ----- 1762 Epoch -----
+ * 0 step xentrop:  0.03320743888616562
+
+ * 1 step xentrop:  0.07011055946350098
+
+ * 2 step xentrop:  0.07356331745783488
+
+ * 3 step xentrop:  0.06802025437355042
+
+ * 4 step xentrop:  0.06723270416259766
+
+ * 5 step xentrop:  0.29476022720336914
+
+ * 6 step xentrop:  0.5188327516828265
+
+ * 7 step xentrop:  1.1429924964904785
+
+ * 8 step xentrop:  1.075823465983073
+
+ * 9 step xentrop:  1.6315952301025392
+
+ * 10 step xentrop:  2.0442033247514204
+
+ * 11 step xentrop:  1.8899753888448079
+
+ * 12 step xentrop:  1.7516011458176832
+
+
+ Loss: 1.7516011458176832
+
+ ----- 1763 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.03291310742497444
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  2.910104751586914
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  3.4294052124023438
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  3.6251368522644043
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  4.280606460571289
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  4.446319580078125
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  4.616691589355469
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  4.493439197540283
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri brack_close
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  4.4829050699869795
+
+
+
+ Loss: [8.96581]
+
+ ----- 1764 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.03072148747742176
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.16540558636188507
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.24872360626856485
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.22563914954662323
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.21166470050811767
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  1.2930734952290852
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  1.842388698032924
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.8012139797210693
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri brack_close
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.6866373485989041
+
+
+
+ Loss: [3.0359473]
+
+ ----- 1765 Epoch -----
+ * 0 step xentrop:  0.027729611843824387
+
+ * 1 step xentrop:  0.12537086009979248
+
+ * 2 step xentrop:  0.15777456760406494
+
+ * 3 step xentrop:  0.1502992808818817
+
+ * 4 step xentrop:  0.14564334154129027
+
+ * 5 step xentrop:  1.0838421980539958
+
+ * 6 step xentrop:  1.4695663452148438
+
+ * 7 step xentrop:  1.33564293384552
+
+ * 8 step xentrop:  1.1929164462619357
+
+ * 9 step xentrop:  1.074168586730957
+
+
+ Loss: 1.074168586730957
+
+ ----- 1766 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.02704852819442749
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.10950301587581635
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.136517604192098
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.13147617876529694
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.12809817790985106
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  0.4330088297526042
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  0.9500482422964913
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.4649286270141602
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri brack_close
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.5961856842041016
+
+
+
+ Loss: [2.2101033]
+
+ ----- 1767 Epoch -----
+ * 0 step xentrop:  0.02636604942381382
+
+ * 1 step xentrop:  2.065723419189453
+
+ * 2 step xentrop:  1.5021198590596516
+
+ * 3 step xentrop:  1.1761943101882935
+
+ * 4 step xentrop:  1.882166862487793
+
+ * 5 step xentrop:  1.6338472366333008
+
+ * 6 step xentrop:  1.5390184947422572
+
+ * 7 step xentrop:  2.226963520050049
+
+ * 8 step xentrop:  2.0762835608588324
+
+ * 9 step xentrop:  1.9417930603027345
+
+ * 10 step xentrop:  1.7791422063654119
+
+ * 11 step xentrop:  1.775368372599284
+
+ * 12 step xentrop:  2.026553374070388
+
+ * 13 step xentrop:  2.393478666033064
+
+ * 14 step xentrop:  2.2772252400716146
+
+ * 15 step xentrop:  2.1370420455932617
+
+
+ Loss: 2.1370420455932617
+
+ ----- 1768 Epoch -----
+ * 0 step xentrop:  0.02880515716969967
+
+ * 1 step xentrop:  0.2112097591161728
+
+ * 2 step xentrop:  0.18488876024881998
+
+ * 3 step xentrop:  0.1608647108078003
+
+ * 4 step xentrop:  0.14849435091018676
+
+ * 5 step xentrop:  0.20708417892456055
+
+ * 6 step xentrop:  0.6113853454589844
+
+ * 7 step xentrop:  1.1226286888122559
+
+ * 8 step xentrop:  1.0149192810058594
+
+ * 9 step xentrop:  1.3563589096069335
+
+ * 10 step xentrop:  1.8497969887473367
+
+ * 11 step xentrop:  1.8570486704508464
+
+ * 12 step xentrop:  2.301137484036959
+
+ * 13 step xentrop:  2.3799522944859097
+
+ * 14 step xentrop:  2.4656247456868488
+
+ * 15 step xentrop:  2.339042901992798
+
+ * 16 step xentrop:  2.301758934469784
+
+ * 17 step xentrop:  2.3053400251600475
+
+ * 18 step xentrop:  2.578677127235814
+
+ * 19 step xentrop:  2.5569746017456056
+
+ * 20 step xentrop:  2.4374892825172063
+
+ * 21 step xentrop:  2.3288314125754614
+
+
+ Loss: 2.3288314125754614
+
+ ----- 1769 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.02305278740823269
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.16458778083324432
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.15650113423665366
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.1381577104330063
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.12926716804504396
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  1.358614444732666
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  2.2205326897757396
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  2.0686423778533936
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri sep_dot
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.9871976640489366
+
+
+
+ Loss: [3.5769558]
+
+ ----- 1770 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.02408810332417488
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.11433178186416626
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.11463794112205505
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.10437466949224472
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.10090855360031128
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  1.3257322311401367
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  2.09945855821882
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.9046211242675781
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri brack_close
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.8885968526204426
+
+
+
+ Loss: [2.428196]
+
+ ----- 1771 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.020870130509138107
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.0895647183060646
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.09219429890314738
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.08505812287330627
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.08394643068313598
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  0.8443592389424642
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  1.4220072882516044
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.2812355756759644
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri sep_dot
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.3241000705295138
+
+
+
+ Loss: [2.3833802]
+
+ ----- 1772 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.019320279359817505
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.07160936295986176
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.07586470246315002
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.07138438522815704
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.07164575457572937
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  0.9041618506113688
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  1.1843011038643974
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.987438678741455
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri brack_close
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.9405076768663194
+
+
+
+ Loss: [1.3971655]
+
+ ----- 1773 Epoch -----
+ * 0 step xentrop:  0.01879957877099514
+
+ * 1 step xentrop:  0.05994682013988495
+
+ * 2 step xentrop:  0.07099748651186626
+
+ * 3 step xentrop:  0.06833309680223465
+
+ * 4 step xentrop:  0.0673907995223999
+
+ * 5 step xentrop:  1.1895492871602376
+
+ * 6 step xentrop:  1.873857089451381
+
+ * 7 step xentrop:  1.6759958267211914
+
+ * 8 step xentrop:  1.5381267335679796
+
+ * 9 step xentrop:  1.3854622840881348
+
+
+ Loss: 1.3854622840881348
+
+ ----- 1774 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.019317707046866417
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.05700559541583061
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.06560571988423665
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.063359834253788
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.06293137073516845
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  1.0691498915354412
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  1.7577694484165736
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.6556541919708252
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri sep_dot
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.6234252717759874
+
+
+
+ Loss: [2.9221654]
+
+ ----- 1775 Epoch -----
+ * 0 step xentrop:  0.019537625834345818
+
+ * 1 step xentrop:  0.0513235405087471
+
+ * 2 step xentrop:  0.05578140914440155
+
+ * 3 step xentrop:  0.054068781435489655
+
+ * 4 step xentrop:  0.05461649894714356
+
+ * 5 step xentrop:  0.41501696904500324
+
+ * 6 step xentrop:  1.0110564913068498
+
+ * 7 step xentrop:  1.574360966682434
+
+ * 8 step xentrop:  1.459499888949924
+
+ * 9 step xentrop:  1.3185558319091797
+
+
+ Loss: 1.3185558319091797
+
+ ----- 1776 Epoch -----
+ * 0 step xentrop:  0.018674392253160477
+
+ * 1 step xentrop:  0.04937281459569931
+
+ * 2 step xentrop:  0.054043506582578026
+
+ * 3 step xentrop:  0.05220067873597145
+
+ * 4 step xentrop:  0.052696263790130614
+
+ * 5 step xentrop:  0.308754563331604
+
+ * 6 step xentrop:  0.6813020024980817
+
+ * 7 step xentrop:  1.5202230215072632
+
+ * 8 step xentrop:  1.3741193347507052
+
+ * 9 step xentrop:  1.856048583984375
+
+ * 10 step xentrop:  2.231524033979936
+
+ * 11 step xentrop:  2.522878964742025
+
+ * 12 step xentrop:  2.360788345336914
+
+ * 13 step xentrop:  2.543104444231306
+
+ * 14 step xentrop:  2.7471539815266928
+
+ * 15 step xentrop:  2.9619853496551514
+
+ * 16 step xentrop:  2.8280024808995865
+
+ * 17 step xentrop:  2.9759688907199435
+
+ * 18 step xentrop:  3.1274638928865133
+
+ * 19 step xentrop:  3.4144935607910156
+
+ * 20 step xentrop:  3.273545401436942
+
+ * 21 step xentrop:  3.1288774663751777
+
+
+ Loss: 3.1288774663751777
+
+ ----- 1777 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  7.051183700561523
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  7.012642860412598
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  7.01899782816569
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  7.7639689445495605
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  7.8225830078125
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  7.589436213175456
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  7.4669020516531805
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  7.26052713394165
+
+
+
+ Loss: [14.521054]
+
+ ----- 1778 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.09287787228822708
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.16099049150943756
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.19415072600046793
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.19492119550704956
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.2038546085357666
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  1.1012976964314778
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  1.6957261221749442
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.7126801013946533
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri brack_close
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.5723368326822917
+
+
+
+ Loss: [2.8302064]
+
+ ----- 1779 Epoch -----
+ * 0 step xentrop:  0.07249723374843597
+
+ * 1 step xentrop:  0.12375544756650925
+
+ * 2 step xentrop:  0.13921811183293661
+
+ * 3 step xentrop:  0.1391087919473648
+
+ * 4 step xentrop:  0.14266607761383057
+
+ * 5 step xentrop:  0.8733781178792318
+
+ * 6 step xentrop:  1.4692564010620117
+
+ * 7 step xentrop:  1.3283792734146118
+
+ * 8 step xentrop:  1.1831625832451715
+
+ * 9 step xentrop:  1.0656256675720215
+
+
+ Loss: 1.0656256675720215
+
+ ----- 1780 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.07471953332424164
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.11878205835819244
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.1264679729938507
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.1271679699420929
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.12940616607666017
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  1.1732582251230876
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  1.6340021405901228
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.4989662170410156
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri brack_close
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.3505659103393555
+
+
+
+ Loss: [2.4310186]
+
+ ----- 1781 Epoch -----
+ * 0 step xentrop:  3.3014628887176514
+
+ * 1 step xentrop:  1.7157776355743408
+
+ * 2 step xentrop:  1.224204699198405
+
+ * 3 step xentrop:  0.9486163854598999
+
+ * 4 step xentrop:  0.7828369617462159
+
+ * 5 step xentrop:  0.6865038871765137
+
+ * 6 step xentrop:  1.5665029798235213
+
+ * 7 step xentrop:  1.532283902168274
+
+ * 8 step xentrop:  1.4978406694200304
+
+ * 9 step xentrop:  1.395194911956787
+
+ * 10 step xentrop:  1.27485145222057
+
+ * 11 step xentrop:  1.181959867477417
+
+ * 12 step xentrop:  1.632584498478816
+
+ * 13 step xentrop:  1.8266701017107283
+
+ * 14 step xentrop:  2.200872802734375
+
+ * 15 step xentrop:  2.1119744777679443
+
+ * 16 step xentrop:  1.988709618063534
+
+
+ Loss: 1.988709618063534
+
+ ----- 1782 Epoch -----
+ * 0 step xentrop:  0.1809437870979309
+
+ * 1 step xentrop:  4.283328533172607
+
+ * 2 step xentrop:  2.8968369166056314
+
+ * 3 step xentrop:  2.20188307762146
+
+ * 4 step xentrop:  3.224044418334961
+
+ * 5 step xentrop:  3.5295092264811196
+
+ * 6 step xentrop:  4.044810431344168
+
+ * 7 step xentrop:  3.595560312271118
+
+ * 8 step xentrop:  3.2027178870307074
+
+
+ Loss: 3.2027178870307074
+
+ ----- 1783 Epoch -----
+ * 0 step xentrop:  0.1464204043149948
+
+ * 1 step xentrop:  0.1888582408428192
+
+ * 2 step xentrop:  0.17069526513417563
+
+ * 3 step xentrop:  0.1547790765762329
+
+ * 4 step xentrop:  0.14487223625183104
+
+ * 5 step xentrop:  1.2169184684753418
+
+ * 6 step xentrop:  1.5433506284441267
+
+ * 7 step xentrop:  1.3984637260437012
+
+ * 8 step xentrop:  1.244153658548991
+
+ * 9 step xentrop:  1.1209543228149415
+
+
+ Loss: 1.1209543228149415
+
+ ----- 1784 Epoch -----
+ * 0 step xentrop:  0.13400405645370483
+
+ * 1 step xentrop:  0.1724471151828766
+
+ * 2 step xentrop:  0.15368857979774475
+
+ * 3 step xentrop:  0.13998815417289734
+
+ * 4 step xentrop:  0.130914044380188
+
+ * 5 step xentrop:  0.46328989664713544
+
+ * 6 step xentrop:  0.6956068447657994
+
+ * 7 step xentrop:  1.3739373683929443
+
+ * 8 step xentrop:  1.3381656010945637
+
+ * 9 step xentrop:  1.7357284545898437
+
+ * 10 step xentrop:  2.0687484741210938
+
+ * 11 step xentrop:  2.112393061319987
+
+ * 12 step xentrop:  2.2722820868858924
+
+ * 13 step xentrop:  2.367452621459961
+
+ * 14 step xentrop:  2.2404215494791666
+
+ * 15 step xentrop:  2.2054102420806885
+
+ * 16 step xentrop:  2.2530059814453125
+
+ * 17 step xentrop:  2.3282402886284723
+
+ * 18 step xentrop:  2.2123077794125208
+
+ * 19 step xentrop:  2.1029212951660154
+
+
+ Loss: 2.1029212951660154
+
+ ----- 1785 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.11263351887464523
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.14445123076438904
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.1350217858950297
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.12560495734214783
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.11787455081939698
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  0.9969209829966227
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  1.6844329833984375
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.5474882125854492
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri brack_close
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.3892297744750977
+
+
+
+ Loss: [2.5006137]
+
+ ----- 1786 Epoch -----
+ * 0 step xentrop:  0.09835363924503326
+
+ * 1 step xentrop:  0.12111245095729828
+
+ * 2 step xentrop:  0.11206165949503581
+
+ * 3 step xentrop:  0.10394006967544556
+
+ * 4 step xentrop:  0.09818493127822876
+
+ * 5 step xentrop:  0.3838242292404175
+
+ * 6 step xentrop:  1.174452236720494
+
+ * 7 step xentrop:  1.7710251808166504
+
+ * 8 step xentrop:  1.6341896057128906
+
+ * 9 step xentrop:  1.47987699508667
+
+
+ Loss: 1.47987699508667
+
+ ----- 1787 Epoch -----
+ * 0 step xentrop:  2.8284339904785156
+
+ * 1 step xentrop:  1.47805917263031
+
+ * 2 step xentrop:  1.057802677154541
+
+ * 3 step xentrop:  0.8184831738471985
+
+ * 4 step xentrop:  0.6763209342956543
+
+ * 5 step xentrop:  0.5891296068827311
+
+ * 6 step xentrop:  0.5396751676286969
+
+ * 7 step xentrop:  0.4804524779319763
+
+ * 8 step xentrop:  0.45671749114990234
+
+ * 9 step xentrop:  1.1254799842834473
+
+ * 10 step xentrop:  1.3447022871537642
+
+ * 11 step xentrop:  1.2917208671569824
+
+ * 12 step xentrop:  1.1929706426767201
+
+ * 13 step xentrop:  1.1092287472316198
+
+
+ Loss: 1.1092287472316198
+
+ ----- 1788 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.24243777990341187
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.18685299158096313
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.15281210343043009
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.13485679030418396
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.12024085521697998
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  0.3156513571739197
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  0.5411987985883441
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.1706337928771973
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri brack_close
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.3910613589816623
+
+
+
+ Loss: [1.2519553]
+
+ ----- 1789 Epoch -----
+ * 0 step xentrop:  0.1569933146238327
+
+ * 1 step xentrop:  0.13224449753761292
+
+ * 2 step xentrop:  0.11658130089441936
+
+ * 3 step xentrop:  0.10653141140937805
+
+ * 4 step xentrop:  0.0957243263721466
+
+ * 5 step xentrop:  1.3104408582051594
+
+ * 6 step xentrop:  1.9344275338309151
+
+ * 7 step xentrop:  1.7326303720474243
+
+ * 8 step xentrop:  1.5614498986138239
+
+ * 9 step xentrop:  1.4064558029174805
+
+
+ Loss: 1.4064558029174805
+
+ ----- 1790 Epoch -----
+ * 0 step xentrop:  0.13804684579372406
+
+ * 1 step xentrop:  0.11979058384895325
+
+ * 2 step xentrop:  2.935022989908854
+
+ * 3 step xentrop:  2.2257399559020996
+
+ * 4 step xentrop:  1.7896661758422852
+
+ * 5 step xentrop:  2.607982317606608
+
+ * 6 step xentrop:  3.2203927721296037
+
+ * 7 step xentrop:  3.721282958984375
+
+ * 8 step xentrop:  3.5160694122314453
+
+ * 9 step xentrop:  3.1730518341064453
+
+
+ Loss: 3.1730518341064453
+
+ ----- 1791 Epoch -----
+ * 0 step xentrop:  0.1117982342839241
+
+ * 1 step xentrop:  0.10039180517196655
+
+ * 2 step xentrop:  0.13640673955281576
+
+ * 3 step xentrop:  0.11814688891172409
+
+ * 4 step xentrop:  0.10653728246688843
+
+ * 5 step xentrop:  0.3097232977549235
+
+ * 6 step xentrop:  0.6997370038713727
+
+ * 7 step xentrop:  1.3923938274383545
+
+ * 8 step xentrop:  1.2559659745958116
+
+ * 9 step xentrop:  1.9042497634887696
+
+ * 10 step xentrop:  2.320688421075994
+
+ * 11 step xentrop:  2.196475346883138
+
+ * 12 step xentrop:  2.0440889505239634
+
+
+ Loss: 2.0440889505239634
+
+ ----- 1792 Epoch -----
+ * 0 step xentrop:  0.09830977022647858
+
+ * 1 step xentrop:  0.0912967249751091
+
+ * 2 step xentrop:  0.12084164222081502
+
+ * 3 step xentrop:  0.10578873753547668
+
+ * 4 step xentrop:  0.09569716453552246
+
+ * 5 step xentrop:  1.039353847503662
+
+ * 6 step xentrop:  1.2828848702566964
+
+ * 7 step xentrop:  1.7793890237808228
+
+ * 8 step xentrop:  1.6346667607625325
+
+ * 9 step xentrop:  2.0094970703125
+
+ * 10 step xentrop:  2.3000753576105293
+
+ * 11 step xentrop:  2.2227322260538735
+
+ * 12 step xentrop:  2.0538334479698768
+
+ * 13 step xentrop:  1.910149165562221
+
+
+ Loss: 1.910149165562221
+
+ ----- 1793 Epoch -----
+ * 0 step xentrop:  0.08846621960401535
+
+ * 1 step xentrop:  0.08394792675971985
+
+ * 2 step xentrop:  2.3150293032328286
+
+ * 3 step xentrop:  1.7501355409622192
+
+ * 4 step xentrop:  1.407017421722412
+
+ * 5 step xentrop:  2.3460849126180015
+
+ * 6 step xentrop:  2.670731680733817
+
+ * 7 step xentrop:  2.909149646759033
+
+ * 8 step xentrop:  2.626713646782769
+
+ * 9 step xentrop:  2.3869421005249025
+
+
+ Loss: 2.3869421005249025
+
+ ----- 1794 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.0778837576508522
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.07627193629741669
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.1513173778851827
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.12737330794334412
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.11364141702651978
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  0.32410577932993573
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  1.121497971670968
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  2.0476088523864746
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri brack_close
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  2.912205590142144
+
+
+
+ Loss: [4.0322847]
+
+ ----- 1795 Epoch -----
+ * 0 step xentrop:  0.06812494993209839
+
+ * 1 step xentrop:  0.06849247217178345
+
+ * 2 step xentrop:  0.1115001638730367
+
+ * 3 step xentrop:  0.09642636775970459
+
+ * 4 step xentrop:  0.0895762026309967
+
+ * 5 step xentrop:  0.1802359422047933
+
+ * 6 step xentrop:  1.1520581926618303
+
+ * 7 step xentrop:  1.8615515232086182
+
+ * 8 step xentrop:  1.7458546956380208
+
+ * 9 step xentrop:  1.574356460571289
+
+
+ Loss: 1.574356460571289
+
+ ----- 1796 Epoch -----
+ * 0 step xentrop:  0.061818692833185196
+
+ * 1 step xentrop:  0.06325981765985489
+
+ * 2 step xentrop:  0.09884703159332275
+
+ * 3 step xentrop:  0.08674846589565277
+
+ * 4 step xentrop:  0.08124158978462219
+
+ * 5 step xentrop:  1.2376807530721028
+
+ * 6 step xentrop:  1.9634404863630022
+
+ * 7 step xentrop:  1.8212751150131226
+
+ * 8 step xentrop:  1.626220915052626
+
+ * 9 step xentrop:  1.4650693893432618
+
+
+ Loss: 1.4650693893432618
+
+ ----- 1797 Epoch -----
+ * 0 step xentrop:  0.059591762721538544
+
+ * 1 step xentrop:  0.06158985570073128
+
+ * 2 step xentrop:  0.08836197853088379
+
+ * 3 step xentrop:  0.07878591120243073
+
+ * 4 step xentrop:  0.07457723021507263
+
+ * 5 step xentrop:  0.17406157652537027
+
+ * 6 step xentrop:  1.1812780925205775
+
+ * 7 step xentrop:  1.807823657989502
+
+ * 8 step xentrop:  1.6689674589369032
+
+ * 9 step xentrop:  1.507063102722168
+
+
+ Loss: 1.507063102722168
+
+ ----- 1798 Epoch -----
+ * 0 step xentrop:  3.23909854888916
+
+ * 1 step xentrop:  1.6779497861862183
+
+ * 2 step xentrop:  1.1630720297495525
+
+ * 3 step xentrop:  0.8991459012031555
+
+ * 4 step xentrop:  0.7461595058441162
+
+ * 5 step xentrop:  0.6509801944096884
+
+ * 6 step xentrop:  0.588343892778669
+
+ * 7 step xentrop:  0.5202178359031677
+
+ * 8 step xentrop:  0.4753396775987413
+
+ * 9 step xentrop:  1.169346237182617
+
+ * 10 step xentrop:  1.5531893643465908
+
+ * 11 step xentrop:  1.9899223645528157
+
+ * 12 step xentrop:  1.978843982403095
+
+ * 13 step xentrop:  2.3621956961495534
+
+ * 14 step xentrop:  2.5949078877766927
+
+ * 15 step xentrop:  2.878068208694458
+
+ * 16 step xentrop:  2.891085007611443
+
+ * 17 step xentrop:  2.7546734280056424
+
+ * 18 step xentrop:  2.9912727757504114
+
+ * 19 step xentrop:  2.937666130065918
+
+ * 20 step xentrop:  3.110196068173363
+
+ * 21 step xentrop:  3.0232488458806817
+
+ * 22 step xentrop:  2.8987333878226904
+
+ * 23 step xentrop:  2.7812039057413735
+
+
+ Loss: 2.7812039057413735
+
+ ----- 1799 Epoch -----
+ * 0 step xentrop:  0.16326892375946045
+
+ * 1 step xentrop:  0.1123853251338005
+
+ * 2 step xentrop:  0.12113598982493083
+
+ * 3 step xentrop:  0.10437417030334473
+
+ * 4 step xentrop:  0.09579651951789855
+
+ * 5 step xentrop:  0.1883971095085144
+
+ * 6 step xentrop:  0.45663567951747347
+
+ * 7 step xentrop:  1.1710851192474365
+
+ * 8 step xentrop:  1.057747311062283
+
+ * 9 step xentrop:  1.5774549484252929
+
+ * 10 step xentrop:  1.803375244140625
+
+ * 11 step xentrop:  1.8388573328653972
+
+ * 12 step xentrop:  1.9739042428823619
+
+ * 13 step xentrop:  2.1691161564418246
+
+ * 14 step xentrop:  2.0927139282226563
+
+ * 15 step xentrop:  1.9653266668319702
+
+ * 16 step xentrop:  1.8514635422650505
+
+ * 17 step xentrop:  1.750467300415039
+
+ * 18 step xentrop:  1.6591791855661493
+
+
+ Loss: 1.6591791855661493
+
+ ----- 1800 Epoch -----
+ * 0 step xentrop:  0.14028920233249664
+
+ * 1 step xentrop:  0.10009405016899109
+
+ * 2 step xentrop:  0.1051387886206309
+
+ * 3 step xentrop:  0.09196389466524124
+
+ * 4 step xentrop:  0.08469124436378479
+
+ * 5 step xentrop:  1.1772849559783936
+
+ * 6 step xentrop:  1.7365060533796037
+
+ * 7 step xentrop:  1.5579934120178223
+
+ * 8 step xentrop:  1.7229241265190973
+
+ * 9 step xentrop:  1.684173011779785
+
+ * 10 step xentrop:  1.7033920288085938
+
+ * 11 step xentrop:  2.081491788228353
+
+ * 12 step xentrop:  2.0268082251915565
+
+ * 13 step xentrop:  1.8924264907836914
+
+
+ Loss: 1.8924264907836914
+
+ ----- 1801 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.12248797714710236
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.089540496468544
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.09404478470484416
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.08333325386047363
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.07732556462287903
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  1.1786243915557861
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  1.4041509628295898
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.6626935005187988
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri brack_close
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.6049546135796442
+
+
+
+ Loss: [1.8055739]
+
+ ----- 1802 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.09094782918691635
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.07071640342473984
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.08299896617730458
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.07491973787546158
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.06964097023010254
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  0.250069538752238
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  0.4416294438498361
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type dbo_Film
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  0.8861198425292969
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type dbo_Film sep_dot
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  0.8009189499749078
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type dbo_Film sep_dot dbo_starring
+
+
+
+ --reward-->  2.0
+
+ * 9 step xentrop:  1.3092653274536132
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type dbo_Film sep_dot dbo_starring var_uri
+
+
+
+ --reward-->  2.0
+
+ * 10 step xentrop:  1.821946230801669
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type dbo_Film sep_dot dbo_starring var_uri brack_close
+
+
+
+ --reward-->  2.0
+
+ * 11 step xentrop:  1.8158949216206868
+
+
+
+ Loss: [2.7238424]
+
+ ----- 1803 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.08001523464918137
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.06373312324285507
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.0691614846388499
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.06560111045837402
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.06013532280921936
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  0.1191520889600118
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  0.4038211277553013
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  0.9282227754592896
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri sep_dot
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.3129776848687067
+
+
+
+ Loss: [1.1254095]
+
+ ----- 1804 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.06836000084877014
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.055468544363975525
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.05975957711537679
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.06633111089468002
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.05746506452560425
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  0.0855479637781779
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  0.7034236363002232
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.0371593236923218
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri sep_dot
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  0.9927245246039497
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri sep_dot var_uri
+
+
+
+ --reward-->  2.0
+
+ * 9 step xentrop:  1.3948381423950196
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri sep_dot var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 10 step xentrop:  1.9119529724121094
+
+
+
+ Loss: [3.2356126]
+
+ ----- 1805 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.058521635830402374
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.05037402734160423
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.05515208840370178
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.05483262240886688
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.04997628927230835
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  0.07749058802922566
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  0.3226870128086635
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a dbr_Bandleader
+
+F:\Anaconda3_5_2_0\Anaconda3\envs\envx\lib\site-packages\SPARQLWrapper\Wrapper.py:676: RuntimeWarning: not detected query type for query '<<<S<<<E<<<L<<<E<<<C<<<T<<< <<<D<<<I<<<S<<<T<<<I<<<N<<<C<<<T<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<W<<<H<<<E<<<R<<<E<<< <<<b<<<r<<<a<<<c<<<k<<<:<<<o<<<p<<<e<<<n<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<a<<< <<<d<<<b<<<r<<<:<<<B<<<a<<<n<<<d<<<l<<<e<<<a<<<d<<<e<<<r<<<'
+  warnings.warn("not detected query type for query '%s'" % query.replace("\n", " "), RuntimeWarning)
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  0.8836738467216492
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a dbr_Bandleader sep_dot
+
+F:\Anaconda3_5_2_0\Anaconda3\envs\envx\lib\site-packages\SPARQLWrapper\Wrapper.py:676: RuntimeWarning: not detected query type for query '<<<S<<<E<<<L<<<E<<<C<<<T<<< <<<D<<<I<<<S<<<T<<<I<<<N<<<C<<<T<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<W<<<H<<<E<<<R<<<E<<< <<<b<<<r<<<a<<<c<<<k<<<:<<<o<<<p<<<e<<<n<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<a<<< <<<d<<<b<<<r<<<:<<<B<<<a<<<n<<<d<<<l<<<e<<<a<<<d<<<e<<<r<<< <<<s<<<e<<<p<<<:<<<d<<<o<<<t<<<'
+  warnings.warn("not detected query type for query '%s'" % query.replace("\n", " "), RuntimeWarning)
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  0.7930171754625108
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a dbr_Bandleader sep_dot dbo_instrument
+
+F:\Anaconda3_5_2_0\Anaconda3\envs\envx\lib\site-packages\SPARQLWrapper\Wrapper.py:676: RuntimeWarning: not detected query type for query '<<<S<<<E<<<L<<<E<<<C<<<T<<< <<<D<<<I<<<S<<<T<<<I<<<N<<<C<<<T<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<W<<<H<<<E<<<R<<<E<<< <<<b<<<r<<<a<<<c<<<k<<<:<<<o<<<p<<<e<<<n<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<a<<< <<<d<<<b<<<r<<<:<<<B<<<a<<<n<<<d<<<l<<<e<<<a<<<d<<<e<<<r<<< <<<s<<<e<<<p<<<:<<<d<<<o<<<t<<< <<<d<<<b<<<o<<<:<<<i<<<n<<<s<<<t<<<r<<<u<<<m<<<e<<<n<<<t<<<'
+  warnings.warn("not detected query type for query '%s'" % query.replace("\n", " "), RuntimeWarning)
+
+
+ --reward-->  2.0
+
+ * 9 step xentrop:  1.2291830062866211
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a dbr_Bandleader sep_dot dbo_instrument dbr_Trumpet
+
+F:\Anaconda3_5_2_0\Anaconda3\envs\envx\lib\site-packages\SPARQLWrapper\Wrapper.py:676: RuntimeWarning: not detected query type for query '<<<S<<<E<<<L<<<E<<<C<<<T<<< <<<D<<<I<<<S<<<T<<<I<<<N<<<C<<<T<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<W<<<H<<<E<<<R<<<E<<< <<<b<<<r<<<a<<<c<<<k<<<:<<<o<<<p<<<e<<<n<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<a<<< <<<d<<<b<<<r<<<:<<<B<<<a<<<n<<<d<<<l<<<e<<<a<<<d<<<e<<<r<<< <<<s<<<e<<<p<<<:<<<d<<<o<<<t<<< <<<d<<<b<<<o<<<:<<<i<<<n<<<s<<<t<<<r<<<u<<<m<<<e<<<n<<<t<<< <<<d<<<b<<<r<<<:<<<T<<<r<<<u<<<m<<<p<<<e<<<t<<<'
+  warnings.warn("not detected query type for query '%s'" % query.replace("\n", " "), RuntimeWarning)
+
+
+ --reward-->  2.0
+
+ * 10 step xentrop:  1.734169526533647
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a dbr_Bandleader sep_dot dbo_instrument dbr_Trumpet sep_dot
+
+F:\Anaconda3_5_2_0\Anaconda3\envs\envx\lib\site-packages\SPARQLWrapper\Wrapper.py:676: RuntimeWarning: not detected query type for query '<<<S<<<E<<<L<<<E<<<C<<<T<<< <<<D<<<I<<<S<<<T<<<I<<<N<<<C<<<T<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<W<<<H<<<E<<<R<<<E<<< <<<b<<<r<<<a<<<c<<<k<<<:<<<o<<<p<<<e<<<n<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<a<<< <<<d<<<b<<<r<<<:<<<B<<<a<<<n<<<d<<<l<<<e<<<a<<<d<<<e<<<r<<< <<<s<<<e<<<p<<<:<<<d<<<o<<<t<<< <<<d<<<b<<<o<<<:<<<i<<<n<<<s<<<t<<<r<<<u<<<m<<<e<<<n<<<t<<< <<<d<<<b<<<r<<<:<<<T<<<r<<<u<<<m<<<p<<<e<<<t<<< <<<s<<<e<<<p<<<:<<<d<<<o<<<t<<<'
+  warnings.warn("not detected query type for query '%s'" % query.replace("\n", " "), RuntimeWarning)
+
+
+ --reward-->  2.0
+
+ * 11 step xentrop:  1.9483118057250977
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a dbr_Bandleader sep_dot dbo_instrument dbr_Trumpet sep_dot dbo_instrument
+
+F:\Anaconda3_5_2_0\Anaconda3\envs\envx\lib\site-packages\SPARQLWrapper\Wrapper.py:676: RuntimeWarning: not detected query type for query '<<<S<<<E<<<L<<<E<<<C<<<T<<< <<<D<<<I<<<S<<<T<<<I<<<N<<<C<<<T<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<W<<<H<<<E<<<R<<<E<<< <<<b<<<r<<<a<<<c<<<k<<<:<<<o<<<p<<<e<<<n<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<a<<< <<<d<<<b<<<r<<<:<<<B<<<a<<<n<<<d<<<l<<<e<<<a<<<d<<<e<<<r<<< <<<s<<<e<<<p<<<:<<<d<<<o<<<t<<< <<<d<<<b<<<o<<<:<<<i<<<n<<<s<<<t<<<r<<<u<<<m<<<e<<<n<<<t<<< <<<d<<<b<<<r<<<:<<<T<<<r<<<u<<<m<<<p<<<e<<<t<<< <<<s<<<e<<<p<<<:<<<d<<<o<<<t<<< <<<d<<<b<<<o<<<:<<<i<<<n<<<s<<<t<<<r<<<u<<<m<<<e<<<n<<<t<<<'
+  warnings.warn("not detected query type for query '%s'" % query.replace("\n", " "), RuntimeWarning)
+
+
+ --reward-->  2.0
+
+ * 12 step xentrop:  2.4063177842360277
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a dbr_Bandleader sep_dot dbo_instrument dbr_Trumpet sep_dot dbo_instrument dbr_Trumpet
+
+F:\Anaconda3_5_2_0\Anaconda3\envs\envx\lib\site-packages\SPARQLWrapper\Wrapper.py:676: RuntimeWarning: not detected query type for query '<<<S<<<E<<<L<<<E<<<C<<<T<<< <<<D<<<I<<<S<<<T<<<I<<<N<<<C<<<T<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<W<<<H<<<E<<<R<<<E<<< <<<b<<<r<<<a<<<c<<<k<<<:<<<o<<<p<<<e<<<n<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<a<<< <<<d<<<b<<<r<<<:<<<B<<<a<<<n<<<d<<<l<<<e<<<a<<<d<<<e<<<r<<< <<<s<<<e<<<p<<<:<<<d<<<o<<<t<<< <<<d<<<b<<<o<<<:<<<i<<<n<<<s<<<t<<<r<<<u<<<m<<<e<<<n<<<t<<< <<<d<<<b<<<r<<<:<<<T<<<r<<<u<<<m<<<p<<<e<<<t<<< <<<s<<<e<<<p<<<:<<<d<<<o<<<t<<< <<<d<<<b<<<o<<<:<<<i<<<n<<<s<<<t<<<r<<<u<<<m<<<e<<<n<<<t<<< <<<d<<<b<<<r<<<:<<<T<<<r<<<u<<<m<<<p<<<e<<<t<<<'
+  warnings.warn("not detected query type for query '%s'" % query.replace("\n", " "), RuntimeWarning)
+
+
+ --reward-->  2.0
+
+ * 13 step xentrop:  2.803502764020647
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a dbr_Bandleader sep_dot dbo_instrument dbr_Trumpet sep_dot dbo_instrument dbr_Trumpet brack_close
+
+F:\Anaconda3_5_2_0\Anaconda3\envs\envx\lib\site-packages\SPARQLWrapper\Wrapper.py:676: RuntimeWarning: not detected query type for query '<<<S<<<E<<<L<<<E<<<C<<<T<<< <<<D<<<I<<<S<<<T<<<I<<<N<<<C<<<T<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<W<<<H<<<E<<<R<<<E<<< <<<b<<<r<<<a<<<c<<<k<<<:<<<o<<<p<<<e<<<n<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<a<<< <<<d<<<b<<<r<<<:<<<B<<<a<<<n<<<d<<<l<<<e<<<a<<<d<<<e<<<r<<< <<<s<<<e<<<p<<<:<<<d<<<o<<<t<<< <<<d<<<b<<<o<<<:<<<i<<<n<<<s<<<t<<<r<<<u<<<m<<<e<<<n<<<t<<< <<<d<<<b<<<r<<<:<<<T<<<r<<<u<<<m<<<p<<<e<<<t<<< <<<s<<<e<<<p<<<:<<<d<<<o<<<t<<< <<<d<<<b<<<o<<<:<<<i<<<n<<<s<<<t<<<r<<<u<<<m<<<e<<<n<<<t<<< <<<d<<<b<<<r<<<:<<<T<<<r<<<u<<<m<<<p<<<e<<<t<<< <<<b<<<r<<<a<<<c<<<k<<<:<<<c<<<l<<<o<<<s<<<e<<<'
+  warnings.warn("not detected query type for query '%s'" % query.replace("\n", " "), RuntimeWarning)
+
+
+ --reward-->  2.0
+
+ * 14 step xentrop:  2.686074066162109
+
+
+
+ Loss: [3.2232888]
+
+ ----- 1806 Epoch -----
+ * 0 step xentrop:  3.2345731258392334
+
+ * 1 step xentrop:  1.6733778715133667
+
+ * 2 step xentrop:  1.1608717441558838
+
+ * 3 step xentrop:  0.8992700576782227
+
+ * 4 step xentrop:  0.7411952018737793
+
+ * 5 step xentrop:  0.64178466796875
+
+ * 6 step xentrop:  0.5817879268101284
+
+ * 7 step xentrop:  0.514977753162384
+
+ * 8 step xentrop:  0.46610286500718856
+
+ * 9 step xentrop:  1.0368528366088867
+
+ * 10 step xentrop:  1.2811836762861772
+
+ * 11 step xentrop:  1.6174707412719727
+
+ * 12 step xentrop:  1.6653988177959735
+
+ * 13 step xentrop:  1.5610148566109794
+
+
+ Loss: 1.5610148566109794
+
+ ----- 1807 Epoch -----
+ * 0 step xentrop:  0.1795981377363205
+
+ * 1 step xentrop:  3.726083278656006
+
+ * 2 step xentrop:  2.5123035113016763
+
+ * 3 step xentrop:  1.8934201002120972
+
+ * 4 step xentrop:  2.877760314941406
+
+ * 5 step xentrop:  3.343373934427897
+
+ * 6 step xentrop:  3.5616673060825894
+
+ * 7 step xentrop:  3.2445216178894043
+
+ * 8 step xentrop:  2.903818130493164
+
+
+ Loss: 2.903818130493164
+
+ ----- 1808 Epoch -----
+ * 0 step xentrop:  0.147470161318779
+
+ * 1 step xentrop:  0.11233663558959961
+
+ * 2 step xentrop:  1.9111231168111165
+
+ * 3 step xentrop:  1.4414986371994019
+
+ * 4 step xentrop:  1.1581459045410156
+
+ * 5 step xentrop:  2.256100654602051
+
+ * 6 step xentrop:  2.550815854753767
+
+ * 7 step xentrop:  2.7430663108825684
+
+ * 8 step xentrop:  2.5262063344319663
+
+ * 9 step xentrop:  2.306956672668457
+
+
+ Loss: 2.306956672668457
+
+ ----- 1809 Epoch -----
+ * 0 step xentrop:  0.11815161257982254
+
+ * 1 step xentrop:  0.09502413868904114
+
+ * 2 step xentrop:  1.7378775278727214
+
+ * 3 step xentrop:  1.3089098930358887
+
+ * 4 step xentrop:  1.053342056274414
+
+ * 5 step xentrop:  1.8744656244913738
+
+ * 6 step xentrop:  2.1432820728846957
+
+ * 7 step xentrop:  2.6198477745056152
+
+ * 8 step xentrop:  2.371888902452257
+
+ * 9 step xentrop:  2.7920660018920898
+
+ * 10 step xentrop:  2.9977222789417612
+
+ * 11 step xentrop:  2.8365538914998374
+
+ * 12 step xentrop:  2.6862393892728367
+
+ * 13 step xentrop:  2.5236432211739674
+
+
+ Loss: 2.5236432211739674
+
+ ----- 1810 Epoch -----
+ * 0 step xentrop:  0.10650092363357544
+
+ * 1 step xentrop:  0.08602447807788849
+
+ * 2 step xentrop:  0.16632638374964395
+
+ * 3 step xentrop:  0.13706061244010925
+
+ * 4 step xentrop:  0.1142724871635437
+
+ * 5 step xentrop:  1.1657137076059978
+
+ * 6 step xentrop:  1.5661484854561942
+
+ * 7 step xentrop:  1.4986534118652344
+
+ * 8 step xentrop:  1.383464707268609
+
+ * 9 step xentrop:  1.2473700523376465
+
+
+ Loss: 1.2473700523376465
+
+ ----- 1811 Epoch -----
+ * 0 step xentrop:  0.08941879123449326
+
+ * 1 step xentrop:  4.430701732635498
+
+ * 2 step xentrop:  2.979429244995117
+
+ * 3 step xentrop:  2.2445521354675293
+
+ * 4 step xentrop:  3.1712368011474608
+
+ * 5 step xentrop:  3.162212689717611
+
+ * 6 step xentrop:  3.5018577575683594
+
+ * 7 step xentrop:  3.107595682144165
+
+ * 8 step xentrop:  2.7719650268554688
+
+
+ Loss: 2.7719650268554688
+
+ ----- 1812 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.07901841402053833
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.1038317009806633
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  1.9457360903422039
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  1.4709572792053223
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  1.1816251754760743
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  2.105893135070801
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  2.934524263654436
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type dbo_Film
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  3.2191028594970703
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type dbo_Film sep_dot
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  3.2409420013427734
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type dbo_Film sep_dot dbo_starring
+
+
+
+ --reward-->  2.0
+
+ * 9 step xentrop:  3.2808464050292967
+
+
+
+ Loss: [6.5616927]
+
+ ----- 1813 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.062492527067661285
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.0858372375369072
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.3254890441894531
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.25339260697364807
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.20792622566223146
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  1.0213850339253743
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  1.6156270163399833
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type dbo_Film
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.8528028726577759
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type dbo_Film sep_dot
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.7437366909450955
+
+
+
+ Loss: [2.8533874]
+
+ ----- 1814 Epoch -----
+ * 0 step xentrop:  0.06149870157241821
+
+ * 1 step xentrop:  0.0772395059466362
+
+ * 2 step xentrop:  0.14930866161982217
+
+ * 3 step xentrop:  0.1216740757226944
+
+ * 4 step xentrop:  0.10195766687393189
+
+ * 5 step xentrop:  0.3425214687983195
+
+ * 6 step xentrop:  0.9615797315325055
+
+ * 7 step xentrop:  1.5581873655319214
+
+ * 8 step xentrop:  1.4633673561943903
+
+ * 9 step xentrop:  1.7614585876464843
+
+ * 10 step xentrop:  1.7697212912819602
+
+ * 11 step xentrop:  2.2448013623555503
+
+ * 12 step xentrop:  2.6268072861891527
+
+ * 13 step xentrop:  2.490447453090123
+
+ * 14 step xentrop:  2.67811279296875
+
+ * 15 step xentrop:  2.7470500469207764
+
+ * 16 step xentrop:  2.5974372414981617
+
+ * 17 step xentrop:  2.4977859920925565
+
+ * 18 step xentrop:  2.7581514057360197
+
+ * 19 step xentrop:  2.9835954666137696
+
+ * 20 step xentrop:  2.895375206356957
+
+ * 21 step xentrop:  2.9769391146573154
+
+ * 22 step xentrop:  3.157091223675272
+
+ * 23 step xentrop:  3.0300318400065103
+
+
+ Loss: 3.0300318400065103
+
+ ----- 1815 Epoch -----
+ * 0 step xentrop:  0.05852467194199562
+
+ * 1 step xentrop:  4.627281188964844
+
+ * 2 step xentrop:  3.1111536026000977
+
+ * 3 step xentrop:  2.3419737815856934
+
+ * 4 step xentrop:  3.3489303588867188
+
+ * 5 step xentrop:  4.021430333455403
+
+ * 6 step xentrop:  4.5474668230329245
+
+ * 7 step xentrop:  4.028341293334961
+
+ * 8 step xentrop:  3.5941488477918835
+
+
+ Loss: 3.5941488477918835
+
+ ----- 1816 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.05339132621884346
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.11311905831098557
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.16436358292897543
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.13393038511276245
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.11057591438293457
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  1.4239110946655273
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  1.8967394147600447
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  2.3872756958007812
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri sep_dot
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  2.169819090101454
+
+
+
+ Loss: [2.7897675]
+
+ ----- 1817 Epoch -----
+ * 0 step xentrop:  0.047444988042116165
+
+ * 1 step xentrop:  0.09421855956315994
+
+ * 2 step xentrop:  0.13310362895329794
+
+ * 3 step xentrop:  0.10978280007839203
+
+ * 4 step xentrop:  0.09178428649902344
+
+ * 5 step xentrop:  0.9103204409281412
+
+ * 6 step xentrop:  1.1751916067940849
+
+ * 7 step xentrop:  1.5727466344833374
+
+ * 8 step xentrop:  1.4222643110487196
+
+ * 9 step xentrop:  1.7187488555908204
+
+ * 10 step xentrop:  2.00367563421076
+
+ * 11 step xentrop:  1.9096795717875164
+
+ * 12 step xentrop:  1.7922166677621694
+
+ * 13 step xentrop:  1.6685940878731864
+
+
+ Loss: 1.6685940878731864
+
+ ----- 1818 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.04301852360367775
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.08596941828727722
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.11546378334363301
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.09623387455940247
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.08106408715248108
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  0.7064311504364014
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  1.3378982543945312
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.385125994682312
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri sep_dot
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.4787782033284504
+
+
+
+ Loss: [2.6618009]
+
+ ----- 1819 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.04224104806780815
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.07747147232294083
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.08718214432398479
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.07442516833543777
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.0634965181350708
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  0.32098543643951416
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  0.5753346851893834
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.2397221326828003
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri brack_close
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.244636959499783
+
+
+
+ Loss: [0.9740637]
+
+ ----- 1820 Epoch -----
+ * 0 step xentrop:  0.0404457189142704
+
+ * 1 step xentrop:  0.06732327491044998
+
+ * 2 step xentrop:  0.0759635219971339
+
+ * 3 step xentrop:  0.06607609987258911
+
+ * 4 step xentrop:  0.05655620694160461
+
+ * 5 step xentrop:  1.1977227528889973
+
+ * 6 step xentrop:  1.715604509626116
+
+ * 7 step xentrop:  1.5402910709381104
+
+ * 8 step xentrop:  1.450469758775499
+
+ * 9 step xentrop:  2.0666704177856445
+
+ * 10 step xentrop:  2.5087533430619673
+
+ * 11 step xentrop:  2.428638140360514
+
+ * 12 step xentrop:  2.2553395491379957
+
+
+ Loss: 2.2553395491379957
+
+ ----- 1821 Epoch -----
+ * 0 step xentrop:  0.03942113369703293
+
+ * 1 step xentrop:  0.06368768215179443
+
+ * 2 step xentrop:  0.07341061035792033
+
+ * 3 step xentrop:  0.06380698829889297
+
+ * 4 step xentrop:  0.05476841926574707
+
+ * 5 step xentrop:  1.1573650042215984
+
+ * 6 step xentrop:  1.6539124080113001
+
+ * 7 step xentrop:  1.493342399597168
+
+ * 8 step xentrop:  1.3808008829752605
+
+ * 9 step xentrop:  1.2448408126831054
+
+
+ Loss: 1.2448408126831054
+
+ ----- 1822 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.034525319933891296
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  2.4459571838378906
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  3.5546789169311523
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  4.047405242919922
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  4.557881927490234
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  3.996013959248861
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  4.1797913142613
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  4.25386905670166
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri sep_dot
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  4.4057595994737415
+
+
+
+ Loss: [4.6649218]
+
+ ----- 1823 Epoch -----
+ * 0 step xentrop:  0.03320697695016861
+
+ * 1 step xentrop:  0.1758033037185669
+
+ * 2 step xentrop:  0.22219828764597574
+
+ * 3 step xentrop:  0.22275805473327637
+
+ * 4 step xentrop:  0.20984489917755128
+
+ * 5 step xentrop:  0.7223321596781412
+
+ * 6 step xentrop:  1.0654734202793665
+
+ * 7 step xentrop:  0.9867945313453674
+
+ * 8 step xentrop:  0.9122143851386176
+
+ * 9 step xentrop:  0.8224743843078614
+
+
+ Loss: 0.8224743843078614
+
+ ----- 1824 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.034900568425655365
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.14537963271141052
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.18366432189941406
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.1828291267156601
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.17414529323577882
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  1.4134626388549805
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  2.3076629638671875
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  2.2171216011047363
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri sep_dot
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  2.080462349785699
+
+
+
+ Loss: [2.6748803]
+
+ ----- 1825 Epoch -----
+ * 0 step xentrop:  3.7833707332611084
+
+ * 1 step xentrop:  1.9413578510284424
+
+ * 2 step xentrop:  1.332133134206136
+
+ * 3 step xentrop:  1.0232486724853516
+
+ * 4 step xentrop:  0.8383564949035645
+
+ * 5 step xentrop:  0.7201312383015951
+
+ * 6 step xentrop:  1.291658673967634
+
+ * 7 step xentrop:  1.6358354091644287
+
+ * 8 step xentrop:  2.0036913553873696
+
+ * 9 step xentrop:  2.042232704162598
+
+ * 10 step xentrop:  1.8702349229292436
+
+ * 11 step xentrop:  1.7245073318481445
+
+ * 12 step xentrop:  1.790099364060622
+
+ * 13 step xentrop:  1.7883169991629464
+
+ * 14 step xentrop:  2.099253845214844
+
+ * 15 step xentrop:  2.0398592948913574
+
+ * 16 step xentrop:  2.282796523150276
+
+ * 17 step xentrop:  2.461157480875651
+
+ * 18 step xentrop:  2.6376156054045024
+
+ * 19 step xentrop:  2.696250152587891
+
+ * 20 step xentrop:  2.6831407092866444
+
+ * 21 step xentrop:  2.5702544125643643
+
+ * 22 step xentrop:  2.72228307309358
+
+ * 23 step xentrop:  2.8982569376627603
+
+ * 24 step xentrop:  2.800323486328125
+
+ * 25 step xentrop:  2.7355915949894833
+
+ * 26 step xentrop:  2.636103877314815
+
+
+ Loss: 2.636103877314815
+
+ ----- 1826 Epoch -----
+ * 0 step xentrop:  0.09756861627101898
+
+ * 1 step xentrop:  3.5655181407928467
+
+ * 2 step xentrop:  2.480421225229899
+
+ * 3 step xentrop:  1.921778678894043
+
+ * 4 step xentrop:  2.894387435913086
+
+ * 5 step xentrop:  3.2022104263305664
+
+ * 6 step xentrop:  3.574683053152902
+
+ * 7 step xentrop:  3.2164018154144287
+
+ * 8 step xentrop:  2.875621371799045
+
+
+ Loss: 2.875621371799045
+
+ ----- 1827 Epoch -----
+ * 0 step xentrop:  0.08774830400943756
+
+ * 1 step xentrop:  0.20809650421142578
+
+ * 2 step xentrop:  0.21210616827011108
+
+ * 3 step xentrop:  0.1870092749595642
+
+ * 4 step xentrop:  0.17530914545059204
+
+ * 5 step xentrop:  0.4162942171096802
+
+ * 6 step xentrop:  0.6290721893310547
+
+ * 7 step xentrop:  0.9896494746208191
+
+ * 8 step xentrop:  0.8940695656670464
+
+ * 9 step xentrop:  1.1238768577575684
+
+ * 10 step xentrop:  1.5995063781738281
+
+ * 11 step xentrop:  1.5396796862284343
+
+ * 12 step xentrop:  1.8289122948279748
+
+ * 13 step xentrop:  2.095867565699986
+
+ * 14 step xentrop:  1.9832950592041017
+
+ * 15 step xentrop:  1.8802412748336792
+
+
+ Loss: 1.8802412748336792
+
+ ----- 1828 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  2.6647350788116455
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  3.4194412231445312
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  3.854873021443685
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  3.900031566619873
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  4.036603164672852
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  4.174235026041667
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  4.256719316755023
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  4.319771766662598
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri sep_dot
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  4.20903820461697
+
+
+
+ Loss: [3.1567786]
+
+ ----- 1829 Epoch -----
+ * 0 step xentrop:  0.5977734923362732
+
+ * 1 step xentrop:  0.6964993476867676
+
+ * 2 step xentrop:  0.735198974609375
+
+ * 3 step xentrop:  0.6915295124053955
+
+ * 4 step xentrop:  0.6477432727813721
+
+ * 5 step xentrop:  1.6661709149678547
+
+ * 6 step xentrop:  2.020153318132673
+
+ * 7 step xentrop:  1.882137656211853
+
+ * 8 step xentrop:  1.7601049211290147
+
+ * 9 step xentrop:  1.5854036331176757
+
+
+ Loss: 1.5854036331176757
+
+ ----- 1830 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.37280645966529846
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  3.298492908477783
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  3.4709819157918296
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  3.447467565536499
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  4.207147216796875
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  4.679955800374349
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  5.091475895472935
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  5.0824174880981445
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri brack_open
+
+F:\Anaconda3_5_2_0\Anaconda3\envs\envx\lib\site-packages\SPARQLWrapper\Wrapper.py:676: RuntimeWarning: not detected query type for query '<<<S<<<E<<<L<<<E<<<C<<<T<<< <<<D<<<I<<<S<<<T<<<I<<<N<<<C<<<T<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<W<<<H<<<E<<<R<<<E<<< <<<b<<<r<<<a<<<c<<<k<<<:<<<o<<<p<<<e<<<n<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<r<<<d<<<f<<<:<<<t<<<y<<<p<<<e<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<b<<<r<<<a<<<c<<<k<<<:<<<o<<<p<<<e<<<n<<<'
+  warnings.warn("not detected query type for query '%s'" % query.replace("\n", " "), RuntimeWarning)
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  4.778950585259332
+
+
+
+ Loss: [9.557901]
+
+ ----- 1831 Epoch -----
+ * 0 step xentrop:  0.18502260744571686
+
+ * 1 step xentrop:  0.5121995806694031
+
+ * 2 step xentrop:  0.7091836929321289
+
+ * 3 step xentrop:  0.6458818912506104
+
+ * 4 step xentrop:  0.6206178188323974
+
+ * 5 step xentrop:  0.8561255137125651
+
+ * 6 step xentrop:  1.1223504202706474
+
+ * 7 step xentrop:  1.6792385578155518
+
+ * 8 step xentrop:  1.5364487965901692
+
+ * 9 step xentrop:  1.7987268447875977
+
+ * 10 step xentrop:  2.2291088104248047
+
+ * 11 step xentrop:  2.135970115661621
+
+ * 12 step xentrop:  1.9747340862567608
+
+
+ Loss: 1.9747340862567608
+
+ ----- 1832 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.14839468896389008
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.3868798613548279
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.49018752574920654
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.4578787684440613
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.4362190723419189
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  0.5730334122975668
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  0.7945893151419503
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.4185656309127808
+
+
+
+ Loss: [0.8406315]
+
+ ----- 1833 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.1163872629404068
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.23163166642189026
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  2.9444910685221353
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  2.2725887298583984
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  1.8560659408569335
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  2.8498382568359375
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  3.3025820595877513
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  3.7746334075927734
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri brack_close
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  3.4957199096679688
+
+
+
+ Loss: [4.8402276]
+
+ ----- 1834 Epoch -----
+ * 0 step xentrop:  0.08598729968070984
+
+ * 1 step xentrop:  0.1630481779575348
+
+ * 2 step xentrop:  0.424027959505717
+
+ * 3 step xentrop:  0.35947713255882263
+
+ * 4 step xentrop:  0.3226256608963013
+
+ * 5 step xentrop:  0.4794270992279053
+
+ * 6 step xentrop:  0.734053203037807
+
+ * 7 step xentrop:  0.9887833595275879
+
+ * 8 step xentrop:  0.9076517952813042
+
+ * 9 step xentrop:  1.049978542327881
+
+ * 10 step xentrop:  1.4726923162286931
+
+ * 11 step xentrop:  1.4155081113179524
+
+ * 12 step xentrop:  1.6233511704664965
+
+ * 13 step xentrop:  1.8417889731270927
+
+ * 14 step xentrop:  1.7302625020345053
+
+ * 15 step xentrop:  1.628838062286377
+
+
+ Loss: 1.628838062286377
+
+ ----- 1835 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.07585856318473816
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.1409599781036377
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.3021037181218465
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.26867204904556274
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.24443700313568115
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  1.2372230688730876
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  1.9689064025878906
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  2.0339930057525635
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri sep_dot
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  2.050450219048394
+
+
+
+ Loss: [3.6908104]
+
+ ----- 1836 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  2.872804641723633
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  3.202277183532715
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  3.226073900858561
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  3.2617876529693604
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  3.2645423889160154
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  3.2428305943806968
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  3.5910742623465404
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  3.886451244354248
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri brack_close
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  4.1715066697862415
+
+
+
+ Loss: [4.416889]
+
+ ----- 1837 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.5263049602508545
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.6849878430366516
+
+
+
+ --query-->  SELECT DISTINCT dbo_
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.890423854192098
+
+
+
+ --query-->  SELECT DISTINCT dbo_ PREFIX
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  1.3195384740829468
+
+
+
+ --query-->  SELECT DISTINCT dbo_ PREFIX dbr_
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  2.016038513183594
+
+
+
+ --query-->  SELECT DISTINCT dbo_ PREFIX dbr_ dbr_
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  2.870326360066732
+
+
+
+ --query-->  SELECT DISTINCT dbo_ PREFIX dbr_ dbr_ ASK
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  3.3766577584402904
+
+
+
+ --query-->  SELECT DISTINCT dbo_ PREFIX dbr_ dbr_ ASK WHERE
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  4.0962443351745605
+
+
+
+ --query-->  SELECT DISTINCT dbo_ PREFIX dbr_ dbr_ ASK WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  3.971751742892795
+
+
+
+ --query-->  SELECT DISTINCT dbo_ PREFIX dbr_ dbr_ ASK WHERE brack_open dbr_
+
+F:\Anaconda3_5_2_0\Anaconda3\envs\envx\lib\site-packages\SPARQLWrapper\Wrapper.py:676: RuntimeWarning: not detected query type for query '<<<S<<<E<<<L<<<E<<<C<<<T<<< <<<D<<<I<<<S<<<T<<<I<<<N<<<C<<<T<<< <<<d<<<b<<<o<<<:<<< <<<P<<<R<<<E<<<F<<<I<<<X<<< <<<d<<<b<<<r<<<:<<< <<<d<<<b<<<r<<<:<<< <<<A<<<S<<<K<<< <<<W<<<H<<<E<<<R<<<E<<< <<<b<<<r<<<a<<<c<<<k<<<:<<<o<<<p<<<e<<<n<<< <<<d<<<b<<<r<<<:<<<'
+  warnings.warn("not detected query type for query '%s'" % query.replace("\n", " "), RuntimeWarning)
+
+
+ --reward-->  2.0
+
+ * 9 step xentrop:  4.3099418640136715
+
+
+
+ --query-->  SELECT DISTINCT dbo_ PREFIX dbr_ dbr_ ASK WHERE brack_open dbr_ ASK
+
+F:\Anaconda3_5_2_0\Anaconda3\envs\envx\lib\site-packages\SPARQLWrapper\Wrapper.py:676: RuntimeWarning: not detected query type for query '<<<S<<<E<<<L<<<E<<<C<<<T<<< <<<D<<<I<<<S<<<T<<<I<<<N<<<C<<<T<<< <<<d<<<b<<<o<<<:<<< <<<P<<<R<<<E<<<F<<<I<<<X<<< <<<d<<<b<<<r<<<:<<< <<<d<<<b<<<r<<<:<<< <<<A<<<S<<<K<<< <<<W<<<H<<<E<<<R<<<E<<< <<<b<<<r<<<a<<<c<<<k<<<:<<<o<<<p<<<e<<<n<<< <<<d<<<b<<<r<<<:<<< <<<A<<<S<<<K<<<'
+  warnings.warn("not detected query type for query '%s'" % query.replace("\n", " "), RuntimeWarning)
+
+
+ --reward-->  2.0
+
+ * 10 step xentrop:  4.622588417746804
+
+
+
+ --query-->  SELECT DISTINCT dbo_ PREFIX dbr_ dbr_ ASK WHERE brack_open dbr_ ASK WHERE
+
+F:\Anaconda3_5_2_0\Anaconda3\envs\envx\lib\site-packages\SPARQLWrapper\Wrapper.py:676: RuntimeWarning: not detected query type for query '<<<S<<<E<<<L<<<E<<<C<<<T<<< <<<D<<<I<<<S<<<T<<<I<<<N<<<C<<<T<<< <<<d<<<b<<<o<<<:<<< <<<P<<<R<<<E<<<F<<<I<<<X<<< <<<d<<<b<<<r<<<:<<< <<<d<<<b<<<r<<<:<<< <<<A<<<S<<<K<<< <<<W<<<H<<<E<<<R<<<E<<< <<<b<<<r<<<a<<<c<<<k<<<:<<<o<<<p<<<e<<<n<<< <<<d<<<b<<<r<<<:<<< <<<A<<<S<<<K<<< <<<W<<<H<<<E<<<R<<<E<<<'
+  warnings.warn("not detected query type for query '%s'" % query.replace("\n", " "), RuntimeWarning)
+
+
+ --reward-->  2.0
+
+ * 11 step xentrop:  4.557719866434733
+
+
+
+ --query-->  SELECT DISTINCT dbo_ PREFIX dbr_ dbr_ ASK WHERE brack_open dbr_ ASK WHERE brack_open
+
+F:\Anaconda3_5_2_0\Anaconda3\envs\envx\lib\site-packages\SPARQLWrapper\Wrapper.py:676: RuntimeWarning: not detected query type for query '<<<S<<<E<<<L<<<E<<<C<<<T<<< <<<D<<<I<<<S<<<T<<<I<<<N<<<C<<<T<<< <<<d<<<b<<<o<<<:<<< <<<P<<<R<<<E<<<F<<<I<<<X<<< <<<d<<<b<<<r<<<:<<< <<<d<<<b<<<r<<<:<<< <<<A<<<S<<<K<<< <<<W<<<H<<<E<<<R<<<E<<< <<<b<<<r<<<a<<<c<<<k<<<:<<<o<<<p<<<e<<<n<<< <<<d<<<b<<<r<<<:<<< <<<A<<<S<<<K<<< <<<W<<<H<<<E<<<R<<<E<<< <<<b<<<r<<<a<<<c<<<k<<<:<<<o<<<p<<<e<<<n<<<'
+  warnings.warn("not detected query type for query '%s'" % query.replace("\n", " "), RuntimeWarning)
+
+
+ --reward-->  2.0
+
+ * 12 step xentrop:  4.54016348031851
+
+
+
+ Loss: [9.080327]
+
+ ----- 1838 Epoch -----
+ * 0 step xentrop:  0.18409207463264465
+
+ * 1 step xentrop:  0.2659893333911896
+
+ * 2 step xentrop:  0.3004149595896403
+
+ * 3 step xentrop:  0.33304911851882935
+
+ * 4 step xentrop:  0.4041727066040039
+
+ * 5 step xentrop:  1.5413343111673992
+
+ * 6 step xentrop:  1.8818556921822684
+
+ * 7 step xentrop:  1.7092846632003784
+
+ * 8 step xentrop:  1.5311243269178603
+
+ * 9 step xentrop:  1.3790131568908692
+
+
+ Loss: 1.3790131568908692
+
+ ----- 1839 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.15725737810134888
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.22209306061267853
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.24036709467569986
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.2555493116378784
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.2964215040206909
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  1.0829346179962158
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  1.519165311540876
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.5090324878692627
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri sep_dot
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.443383428785536
+
+
+
+ Loss: [2.5980902]
+
+ ----- 1840 Epoch -----
+ * 0 step xentrop:  2.29960298538208
+
+ * 1 step xentrop:  1.1707911491394043
+
+ * 2 step xentrop:  0.8021307786305746
+
+ * 3 step xentrop:  0.7103142738342285
+
+ * 4 step xentrop:  0.7512184143066406
+
+ * 5 step xentrop:  0.7217898368835449
+
+ * 6 step xentrop:  0.897141865321568
+
+ * 7 step xentrop:  1.162469744682312
+
+ * 8 step xentrop:  1.4470888773600261
+
+ * 9 step xentrop:  1.5138940811157227
+
+ * 10 step xentrop:  1.46104587208141
+
+ * 11 step xentrop:  1.4251621564229329
+
+ * 12 step xentrop:  1.890181908240685
+
+ * 13 step xentrop:  1.9420157841273717
+
+ * 14 step xentrop:  2.191514587402344
+
+ * 15 step xentrop:  2.152301549911499
+
+ * 16 step xentrop:  2.3324488471536076
+
+ * 17 step xentrop:  2.464262432522244
+
+ * 18 step xentrop:  2.5862011156584086
+
+ * 19 step xentrop:  2.547882652282715
+
+ * 20 step xentrop:  2.4783058166503906
+
+ * 21 step xentrop:  2.3820795579390093
+
+ * 22 step xentrop:  2.491820459780486
+
+ * 23 step xentrop:  2.7224610646565757
+
+ * 24 step xentrop:  2.6963360595703123
+
+ * 25 step xentrop:  2.619334881122296
+
+ * 26 step xentrop:  2.522923787434896
+
+
+ Loss: 2.522923787434896
+
+ ----- 1841 Epoch -----
+ * 0 step xentrop:  0.36481374502182007
+
+ * 1 step xentrop:  0.27849629521369934
+
+ * 2 step xentrop:  0.24520554145177206
+
+ * 3 step xentrop:  0.2336406111717224
+
+ * 4 step xentrop:  0.24403715133666992
+
+ * 5 step xentrop:  0.48179833094278973
+
+ * 6 step xentrop:  1.1511776787894112
+
+ * 7 step xentrop:  1.6987743377685547
+
+ * 8 step xentrop:  1.9165933397081163
+
+ * 9 step xentrop:  1.7964921951293946
+
+ * 10 step xentrop:  2.3295128562233667
+
+ * 11 step xentrop:  2.5504349072774253
+
+ * 12 step xentrop:  2.3913098848783054
+
+ * 13 step xentrop:  2.4677734375
+
+ * 14 step xentrop:  2.3171119689941406
+
+ * 15 step xentrop:  2.2228810787200928
+
+ * 16 step xentrop:  2.3092072430778954
+
+ * 17 step xentrop:  2.315976036919488
+
+ * 18 step xentrop:  2.2290115356445312
+
+ * 19 step xentrop:  2.2852012634277346
+
+ * 20 step xentrop:  2.3076028369721913
+
+ * 21 step xentrop:  2.3657535206187856
+
+ * 22 step xentrop:  2.270627394966457
+
+ * 23 step xentrop:  2.337467670440674
+
+ * 24 step xentrop:  2.2472816467285157
+
+
+ Loss: 2.2472816467285157
+
+ ----- 1842 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.2564964294433594
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.21790820360183716
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.19125823179880777
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.18562424182891846
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.18507792949676513
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  1.0916236241658528
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  1.5498202187674386
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.4309343099594116
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri brack_close
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.4742217593722873
+
+
+
+ Loss: [1.895428]
+
+ ----- 1843 Epoch -----
+ * 0 step xentrop:  0.15649496018886566
+
+ * 1 step xentrop:  0.14838239550590515
+
+ * 2 step xentrop:  0.13776060938835144
+
+ * 3 step xentrop:  0.1349378377199173
+
+ * 4 step xentrop:  0.13471295833587646
+
+ * 5 step xentrop:  0.9390840530395508
+
+ * 6 step xentrop:  1.4593549455915178
+
+ * 7 step xentrop:  1.804541826248169
+
+ * 8 step xentrop:  1.6452658971150715
+
+ * 9 step xentrop:  1.6647123336791991
+
+ * 10 step xentrop:  1.9301997098055752
+
+ * 11 step xentrop:  2.0173726081848145
+
+ * 12 step xentrop:  2.0407240940974307
+
+ * 13 step xentrop:  2.0687605994088307
+
+ * 14 step xentrop:  1.9832979838053386
+
+ * 15 step xentrop:  1.880508303642273
+
+ * 16 step xentrop:  1.9018880058737362
+
+ * 17 step xentrop:  1.8010565439860027
+
+ * 18 step xentrop:  1.8210384971217106
+
+ * 19 step xentrop:  2.061932182312012
+
+ * 20 step xentrop:  1.9986317952473958
+
+ * 21 step xentrop:  1.9196787747469815
+
+ * 22 step xentrop:  1.9789927938710088
+
+ * 23 step xentrop:  1.9087333679199219
+
+
+ Loss: 1.9087333679199219
+
+ ----- 1844 Epoch -----
+ * 0 step xentrop:  0.1269770860671997
+
+ * 1 step xentrop:  0.12755268812179565
+
+ * 2 step xentrop:  0.12245701750119527
+
+ * 3 step xentrop:  0.122970350086689
+
+ * 4 step xentrop:  0.11955411434173584
+
+ * 5 step xentrop:  0.40028544267018634
+
+ * 6 step xentrop:  0.6664137159075055
+
+ * 7 step xentrop:  1.3284854888916016
+
+ * 8 step xentrop:  1.2011114756266277
+
+ * 9 step xentrop:  1.6128927230834962
+
+ * 10 step xentrop:  1.933947823264382
+
+ * 11 step xentrop:  1.807339032491048
+
+ * 12 step xentrop:  1.7823053506704478
+
+
+ Loss: 1.7823053506704478
+
+ ----- 1845 Epoch -----
+ * 0 step xentrop:  0.11503724753856659
+
+ * 1 step xentrop:  0.11392010748386383
+
+ * 2 step xentrop:  0.11026039719581604
+
+ * 3 step xentrop:  0.11073699593544006
+
+ * 4 step xentrop:  0.10782978534698487
+
+ * 5 step xentrop:  0.29940704504648846
+
+ * 6 step xentrop:  0.9776720319475446
+
+ * 7 step xentrop:  1.6806671619415283
+
+ * 8 step xentrop:  1.5536969502766926
+
+ * 9 step xentrop:  1.4451614379882813
+
+
+ Loss: 1.4451614379882813
+
+ ----- 1846 Epoch -----
+ * 0 step xentrop:  0.0995391383767128
+
+ * 1 step xentrop:  4.512040138244629
+
+ * 2 step xentrop:  3.0339282353719077
+
+ * 3 step xentrop:  2.2934439182281494
+
+ * 4 step xentrop:  3.2188838958740233
+
+ * 5 step xentrop:  3.2290945053100586
+
+ * 6 step xentrop:  3.7046576908656528
+
+ * 7 step xentrop:  3.263847827911377
+
+ * 8 step xentrop:  2.9461752573649087
+
+
+ Loss: 2.9461752573649087
+
+ ----- 1847 Epoch -----
+ * 0 step xentrop:  0.0876847505569458
+
+ * 1 step xentrop:  0.14483889937400818
+
+ * 2 step xentrop:  0.12929601470629373
+
+ * 3 step xentrop:  0.12115858495235443
+
+ * 4 step xentrop:  0.11475449800491333
+
+ * 5 step xentrop:  0.25456416606903076
+
+ * 6 step xentrop:  0.6090108326503209
+
+ * 7 step xentrop:  1.2909801006317139
+
+ * 8 step xentrop:  1.1727911631266277
+
+ * 9 step xentrop:  1.339346981048584
+
+ * 10 step xentrop:  1.7444052262739702
+
+ * 11 step xentrop:  1.7496585845947266
+
+ * 12 step xentrop:  2.090704551109901
+
+ * 13 step xentrop:  2.1873017719813754
+
+ * 14 step xentrop:  2.049549611409505
+
+ * 15 step xentrop:  2.042393445968628
+
+ * 16 step xentrop:  2.075688081629136
+
+ * 17 step xentrop:  1.989137437608507
+
+ * 18 step xentrop:  1.8868203414113898
+
+ * 19 step xentrop:  1.7947275161743164
+
+ * 20 step xentrop:  1.711398715064639
+
+ * 21 step xentrop:  1.6356405778364702
+
+
+ Loss: 1.6356405778364702
+
+ ----- 1848 Epoch -----
+ * 0 step xentrop:  0.07242560386657715
+
+ * 1 step xentrop:  0.1261550784111023
+
+ * 2 step xentrop:  0.11649998029073079
+
+ * 3 step xentrop:  0.10993342101573944
+
+ * 4 step xentrop:  0.10424258708953857
+
+ * 5 step xentrop:  0.1988800366719564
+
+ * 6 step xentrop:  0.48080216135297504
+
+ * 7 step xentrop:  0.7583973407745361
+
+ * 8 step xentrop:  0.6884742312961154
+
+ * 9 step xentrop:  0.9822240829467773
+
+ * 10 step xentrop:  1.2502789930863814
+
+ * 11 step xentrop:  1.2260443369547527
+
+ * 12 step xentrop:  1.177890997666579
+
+
+ Loss: 1.177890997666579
+
+ ----- 1849 Epoch -----
+ * 0 step xentrop:  0.07014084607362747
+
+ * 1 step xentrop:  0.11466225981712341
+
+ * 2 step xentrop:  0.10609130064646403
+
+ * 3 step xentrop:  0.10041940957307816
+
+ * 4 step xentrop:  0.09494749903678894
+
+ * 5 step xentrop:  0.1586520771185557
+
+ * 6 step xentrop:  0.4159045900617327
+
+ * 7 step xentrop:  1.0576618909835815
+
+ * 8 step xentrop:  0.9512694676717123
+
+ * 9 step xentrop:  1.072078323364258
+
+ * 10 step xentrop:  1.5226594751531428
+
+ * 11 step xentrop:  1.4771661758422852
+
+ * 12 step xentrop:  1.3900228647085338
+
+
+ Loss: 1.3900228647085338
+
+ ----- 1850 Epoch -----
+ * 0 step xentrop:  0.06604372709989548
+
+ * 1 step xentrop:  0.10342422127723694
+
+ * 2 step xentrop:  0.09635938207308452
+
+ * 3 step xentrop:  0.09249556064605713
+
+ * 4 step xentrop:  0.08826339244842529
+
+ * 5 step xentrop:  0.6847313245137533
+
+ * 6 step xentrop:  0.9393482208251953
+
+ * 7 step xentrop:  1.4081369638442993
+
+ * 8 step xentrop:  1.2697888480292425
+
+ * 9 step xentrop:  1.5729248046875
+
+ * 10 step xentrop:  2.0532181479714136
+
+ * 11 step xentrop:  1.954379717508952
+
+ * 12 step xentrop:  2.267841339111328
+
+ * 13 step xentrop:  2.347489493233817
+
+ * 14 step xentrop:  2.391684977213542
+
+ * 15 step xentrop:  2.7058792114257812
+
+ * 16 step xentrop:  2.7574871287626377
+
+ * 17 step xentrop:  2.6089820861816406
+
+ * 18 step xentrop:  2.6586359927528784
+
+ * 19 step xentrop:  2.7112892150878904
+
+ * 20 step xentrop:  2.6392820449102494
+
+ * 21 step xentrop:  2.5215573744340376
+
+ * 22 step xentrop:  2.4138560087784477
+
+ * 23 step xentrop:  2.314848264058431
+
+ * 24 step xentrop:  2.2232261657714845
+
+
+ Loss: 2.2232261657714845
+
+ ----- 1851 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.06301593035459518
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.0953589677810669
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.09072222312291463
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.08633929491043091
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.08175671696662903
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  0.1671979029973348
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  0.36728852135794504
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  0.5552898645401001
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri sep_dot
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  0.5584898524814181
+
+
+
+ Loss: [0.7732936]
+
+ ----- 1852 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.052448820322752
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.08061462640762329
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.07665260632832845
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.0739799365401268
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.07089356184005738
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  1.150788942972819
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  1.6774749755859375
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.6166446208953857
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri sep_dot
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.4581277635362413
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri sep_dot dbo_location
+
+F:\Anaconda3_5_2_0\Anaconda3\envs\envx\lib\site-packages\SPARQLWrapper\Wrapper.py:676: RuntimeWarning: not detected query type for query '<<<S<<<E<<<L<<<E<<<C<<<T<<< <<<D<<<I<<<S<<<T<<<I<<<N<<<C<<<T<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<W<<<H<<<E<<<R<<<E<<< <<<b<<<r<<<a<<<c<<<k<<<:<<<o<<<p<<<e<<<n<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<a<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<s<<<e<<<p<<<:<<<d<<<o<<<t<<< <<<d<<<b<<<o<<<:<<<l<<<o<<<c<<<a<<<t<<<i<<<o<<<n<<<'
+  warnings.warn("not detected query type for query '%s'" % query.replace("\n", " "), RuntimeWarning)
+
+
+ --reward-->  2.0
+
+ * 9 step xentrop:  1.6288654327392578
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri sep_dot dbo_location var_uri
+
+F:\Anaconda3_5_2_0\Anaconda3\envs\envx\lib\site-packages\SPARQLWrapper\Wrapper.py:676: RuntimeWarning: not detected query type for query '<<<S<<<E<<<L<<<E<<<C<<<T<<< <<<D<<<I<<<S<<<T<<<I<<<N<<<C<<<T<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<W<<<H<<<E<<<R<<<E<<< <<<b<<<r<<<a<<<c<<<k<<<:<<<o<<<p<<<e<<<n<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<a<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<s<<<e<<<p<<<:<<<d<<<o<<<t<<< <<<d<<<b<<<o<<<:<<<l<<<o<<<c<<<a<<<t<<<i<<<o<<<n<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<<'
+  warnings.warn("not detected query type for query '%s'" % query.replace("\n", " "), RuntimeWarning)
+
+
+ --reward-->  2.0
+
+ * 10 step xentrop:  2.0055689378218218
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri sep_dot dbo_location var_uri sep_dot
+
+F:\Anaconda3_5_2_0\Anaconda3\envs\envx\lib\site-packages\SPARQLWrapper\Wrapper.py:676: RuntimeWarning: not detected query type for query '<<<S<<<E<<<L<<<E<<<C<<<T<<< <<<D<<<I<<<S<<<T<<<I<<<N<<<C<<<T<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<W<<<H<<<E<<<R<<<E<<< <<<b<<<r<<<a<<<c<<<k<<<:<<<o<<<p<<<e<<<n<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<a<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<s<<<e<<<p<<<:<<<d<<<o<<<t<<< <<<d<<<b<<<o<<<:<<<l<<<o<<<c<<<a<<<t<<<i<<<o<<<n<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<s<<<e<<<p<<<:<<<d<<<o<<<t<<<'
+  warnings.warn("not detected query type for query '%s'" % query.replace("\n", " "), RuntimeWarning)
+
+
+ --reward-->  2.0
+
+ * 11 step xentrop:  2.594454765319824
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri sep_dot dbo_location var_uri sep_dot var_uri
+
+F:\Anaconda3_5_2_0\Anaconda3\envs\envx\lib\site-packages\SPARQLWrapper\Wrapper.py:676: RuntimeWarning: not detected query type for query '<<<S<<<E<<<L<<<E<<<C<<<T<<< <<<D<<<I<<<S<<<T<<<I<<<N<<<C<<<T<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<W<<<H<<<E<<<R<<<E<<< <<<b<<<r<<<a<<<c<<<k<<<:<<<o<<<p<<<e<<<n<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<a<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<s<<<e<<<p<<<:<<<d<<<o<<<t<<< <<<d<<<b<<<o<<<:<<<l<<<o<<<c<<<a<<<t<<<i<<<o<<<n<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<s<<<e<<<p<<<:<<<d<<<o<<<t<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<<'
+  warnings.warn("not detected query type for query '%s'" % query.replace("\n", " "), RuntimeWarning)
+
+
+ --reward-->  2.0
+
+ * 12 step xentrop:  2.6551971435546875
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri sep_dot dbo_location var_uri sep_dot var_uri brack_close
+
+F:\Anaconda3_5_2_0\Anaconda3\envs\envx\lib\site-packages\SPARQLWrapper\Wrapper.py:676: RuntimeWarning: not detected query type for query '<<<S<<<E<<<L<<<E<<<C<<<T<<< <<<D<<<I<<<S<<<T<<<I<<<N<<<C<<<T<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<W<<<H<<<E<<<R<<<E<<< <<<b<<<r<<<a<<<c<<<k<<<:<<<o<<<p<<<e<<<n<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<a<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<s<<<e<<<p<<<:<<<d<<<o<<<t<<< <<<d<<<b<<<o<<<:<<<l<<<o<<<c<<<a<<<t<<<i<<<o<<<n<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<s<<<e<<<p<<<:<<<d<<<o<<<t<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<b<<<r<<<a<<<c<<<k<<<:<<<c<<<l<<<o<<<s<<<e<<<'
+  warnings.warn("not detected query type for query '%s'" % query.replace("\n", " "), RuntimeWarning)
+
+
+ --reward-->  2.0
+
+ * 13 step xentrop:  2.87517820085798
+
+
+
+ Loss: [5.750356]
+
+ ----- 1853 Epoch -----
+ * 0 step xentrop:  0.05453288182616234
+
+ * 1 step xentrop:  0.07065296918153763
+
+ * 2 step xentrop:  0.06635600825150807
+
+ * 3 step xentrop:  0.06639756262302399
+
+ * 4 step xentrop:  0.06366993188858032
+
+ * 5 step xentrop:  0.14941770831743875
+
+ * 6 step xentrop:  0.9262262071881976
+
+ * 7 step xentrop:  1.819824457168579
+
+ * 8 step xentrop:  2.2635169559054904
+
+ * 9 step xentrop:  2.7653112411499023
+
+ * 10 step xentrop:  2.605055722323331
+
+ * 11 step xentrop:  2.4832146962483725
+
+ * 12 step xentrop:  2.2953114142784705
+
+
+ Loss: 2.2953114142784705
+
+ ----- 1854 Epoch -----
+ * 0 step xentrop:  0.04841255024075508
+
+ * 1 step xentrop:  0.06490667909383774
+
+ * 2 step xentrop:  0.06524112820625305
+
+ * 3 step xentrop:  0.06452947854995728
+
+ * 4 step xentrop:  0.0637576162815094
+
+ * 5 step xentrop:  0.14749701817830405
+
+ * 6 step xentrop:  0.40655228069850374
+
+ * 7 step xentrop:  1.1894724369049072
+
+ * 8 step xentrop:  1.0739052030775282
+
+ * 9 step xentrop:  1.6003339767456055
+
+ * 10 step xentrop:  2.0160680250688032
+
+ * 11 step xentrop:  1.8799258867899578
+
+ * 12 step xentrop:  1.7474184769850512
+
+
+ Loss: 1.7474184769850512
+
+ ----- 1855 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.04370890557765961
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.06074637174606323
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.062014723817507424
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.06092666834592819
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.060882347822189334
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  1.251678228378296
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  1.790980339050293
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type dbo_Film
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.7901453971862793
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type dbo_Film sep_dot
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.980499267578125
+
+
+
+ Loss: [3.5648987]
+
+ ----- 1856 Epoch -----
+ * 0 step xentrop:  0.03888912871479988
+
+ * 1 step xentrop:  0.05468966066837311
+
+ * 2 step xentrop:  2.0257579485575357
+
+ * 3 step xentrop:  1.5254970788955688
+
+ * 4 step xentrop:  1.228994655609131
+
+ * 5 step xentrop:  2.155827363332113
+
+ * 6 step xentrop:  2.7791404724121094
+
+ * 7 step xentrop:  2.9058356285095215
+
+ * 8 step xentrop:  2.587246365017361
+
+ * 9 step xentrop:  2.371150016784668
+
+
+ Loss: 2.371150016784668
+
+ ----- 1857 Epoch -----
+ * 0 step xentrop:  0.03946422412991524
+
+ * 1 step xentrop:  3.5840983390808105
+
+ * 2 step xentrop:  2.421990076700846
+
+ * 3 step xentrop:  1.8363630771636963
+
+ * 4 step xentrop:  2.6439258575439455
+
+ * 5 step xentrop:  3.129582087198893
+
+ * 6 step xentrop:  3.377458299909319
+
+ * 7 step xentrop:  2.964791774749756
+
+ * 8 step xentrop:  2.6606521606445312
+
+
+ Loss: 2.6606521606445312
+
+ ----- 1858 Epoch -----
+ * 0 step xentrop:  0.033762067556381226
+
+ * 1 step xentrop:  0.08376992493867874
+
+ * 2 step xentrop:  0.10592301686604817
+
+ * 3 step xentrop:  0.09121496230363846
+
+ * 4 step xentrop:  0.084451824426651
+
+ * 5 step xentrop:  0.7447067896525065
+
+ * 6 step xentrop:  1.0951871871948242
+
+ * 7 step xentrop:  0.9913662075996399
+
+ * 8 step xentrop:  1.1751528845893011
+
+ * 9 step xentrop:  1.1445551872253419
+
+ * 10 step xentrop:  1.2328073328191584
+
+ * 11 step xentrop:  1.4133032162984211
+
+ * 12 step xentrop:  1.3289021712083082
+
+ * 13 step xentrop:  1.2387424196515764
+
+
+ Loss: 1.2387424196515764
+
+ ----- 1859 Epoch -----
+ * 0 step xentrop:  0.03341659903526306
+
+ * 1 step xentrop:  4.378842830657959
+
+ * 2 step xentrop:  2.9893951416015625
+
+ * 3 step xentrop:  2.2653889656066895
+
+ * 4 step xentrop:  3.1362789154052733
+
+ * 5 step xentrop:  3.1602837244669595
+
+ * 6 step xentrop:  3.6242577689034596
+
+ * 7 step xentrop:  3.3645331859588623
+
+ * 8 step xentrop:  3.7938274807400174
+
+ * 9 step xentrop:  4.111054611206055
+
+ * 10 step xentrop:  3.8479669744318183
+
+ * 11 step xentrop:  3.5408121744791665
+
+
+ Loss: 3.5408121744791665
+
+ ----- 1860 Epoch -----
+ * 0 step xentrop:  0.032584767788648605
+
+ * 1 step xentrop:  0.13045082986354828
+
+ * 2 step xentrop:  0.1339354713757833
+
+ * 3 step xentrop:  0.112307108938694
+
+ * 4 step xentrop:  0.10209194421768189
+
+ * 5 step xentrop:  1.0751676559448242
+
+ * 6 step xentrop:  1.778104509626116
+
+ * 7 step xentrop:  1.6350270509719849
+
+ * 8 step xentrop:  1.4926606284247503
+
+ * 9 step xentrop:  1.3466484069824218
+
+
+ Loss: 1.3466484069824218
+
+ ----- 1861 Epoch -----
+ * 0 step xentrop:  3.6732590198516846
+
+ * 1 step xentrop:  1.8777068853378296
+
+ * 2 step xentrop:  1.286784331003825
+
+ * 3 step xentrop:  1.0551609992980957
+
+ * 4 step xentrop:  0.9901577949523925
+
+ * 5 step xentrop:  0.9016279379526774
+
+ * 6 step xentrop:  0.9234083039419991
+
+ * 7 step xentrop:  0.8519802093505859
+
+ * 8 step xentrop:  0.7864581214057075
+
+ * 9 step xentrop:  1.4133716583251954
+
+ * 10 step xentrop:  2.0330678766424004
+
+ * 11 step xentrop:  2.504752000172933
+
+ * 12 step xentrop:  2.807878934420072
+
+ * 13 step xentrop:  2.788037436349051
+
+ * 14 step xentrop:  2.6064961751302085
+
+ * 15 step xentrop:  2.7338855266571045
+
+ * 16 step xentrop:  2.6644462136661304
+
+ * 17 step xentrop:  2.961448457505968
+
+ * 18 step xentrop:  3.1988529406095805
+
+ * 19 step xentrop:  3.171055221557617
+
+ * 20 step xentrop:  3.225808643159412
+
+ * 21 step xentrop:  3.098541953346946
+
+ * 22 step xentrop:  3.1150947239087974
+
+ * 23 step xentrop:  3.0079142252604165
+
+ * 24 step xentrop:  2.890119934082031
+
+
+ Loss: 2.890119934082031
+
+ ----- 1862 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.10842303186655045
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.1510705053806305
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.1452971895535787
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.12123143672943115
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.11069301366806031
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  0.3625328540802002
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  0.580644062587193
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.0451887845993042
+
+
+
+ Loss: [1.2863863]
+
+ ----- 1863 Epoch -----
+ * 0 step xentrop:  0.08841919153928757
+
+ * 1 step xentrop:  0.12028270959854126
+
+ * 2 step xentrop:  0.1127884288628896
+
+ * 3 step xentrop:  0.0964139997959137
+
+ * 4 step xentrop:  0.08873363733291625
+
+ * 5 step xentrop:  0.18226428826649985
+
+ * 6 step xentrop:  0.29836280005318777
+
+ * 7 step xentrop:  0.9181434512138367
+
+ * 8 step xentrop:  0.8547451231214735
+
+ * 9 step xentrop:  1.0405954360961913
+
+ * 10 step xentrop:  1.559819828380238
+
+ * 11 step xentrop:  1.4877681732177734
+
+ * 12 step xentrop:  1.3954359201284556
+
+
+ Loss: 1.3954359201284556
+
+ ----- 1864 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.08019722998142242
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.10777948051691055
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.10242835680643718
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.08853129297494888
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.08198421597480773
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  1.2097078164418538
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  2.1119753973824635
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.945817232131958
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri sep_dot
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.8669844733344183
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri sep_dot var_uri
+
+
+
+ --reward-->  2.0
+
+ * 9 step xentrop:  1.8512126922607421
+
+
+
+ Loss: [3.7024255]
+
+ ----- 1865 Epoch -----
+ * 0 step xentrop:  0.06691119074821472
+
+ * 1 step xentrop:  0.0887792706489563
+
+ * 2 step xentrop:  0.08824625611305237
+
+ * 3 step xentrop:  0.07572591304779053
+
+ * 4 step xentrop:  0.07098636031150818
+
+ * 5 step xentrop:  1.2139723300933838
+
+ * 6 step xentrop:  2.049983160836356
+
+ * 7 step xentrop:  1.8933392763137817
+
+ * 8 step xentrop:  1.7018732494778104
+
+ * 9 step xentrop:  1.5328375816345214
+
+
+ Loss: 1.5328375816345214
+
+ ----- 1866 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.06102082133293152
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.08257366716861725
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.08071763316790263
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.06964541971683502
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.06588590145111084
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  1.3572861353556316
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  1.8182852608816964
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.6459426879882812
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri brack_close
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.5071470472547743
+
+
+
+ Loss: [2.7128646]
+
+ ----- 1867 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.05590887740254402
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.07405540347099304
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.07202494144439697
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.06222907453775406
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.05920130610466003
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  0.314779798189799
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  1.0458801814488001
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.975412130355835
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri brack_close
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  2.038664076063368
+
+
+
+ Loss: [2.8227656]
+
+ ----- 1868 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.048907846212387085
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.06432788074016571
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.06409674882888794
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.05646812543272972
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.05407930016517639
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  0.1714860995610555
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  0.4936674322400774
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  0.9032658338546753
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri sep_dot
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  0.8778262668185763
+
+
+
+ Loss: [0.98755455]
+
+ ----- 1869 Epoch -----
+ * 0 step xentrop:  0.04378455877304077
+
+ * 1 step xentrop:  0.05743357911705971
+
+ * 2 step xentrop:  0.056937068700790405
+
+ * 3 step xentrop:  0.05106548219919205
+
+ * 4 step xentrop:  0.04884506464004516
+
+ * 5 step xentrop:  0.10518046220143636
+
+ * 6 step xentrop:  0.3892958164215088
+
+ * 7 step xentrop:  1.0436224937438965
+
+ * 8 step xentrop:  0.9490667978922526
+
+ * 9 step xentrop:  1.5743927001953124
+
+ * 10 step xentrop:  2.019595406272195
+
+ * 11 step xentrop:  1.910634994506836
+
+ * 12 step xentrop:  1.778480969942533
+
+
+ Loss: 1.778480969942533
+
+ ----- 1870 Epoch -----
+ * 0 step xentrop:  0.040353670716285706
+
+ * 1 step xentrop:  0.0543147511780262
+
+ * 2 step xentrop:  0.05433003604412079
+
+ * 3 step xentrop:  0.04897240176796913
+
+ * 4 step xentrop:  0.04738499522209168
+
+ * 5 step xentrop:  1.2560644149780273
+
+ * 6 step xentrop:  1.4831101553780692
+
+ * 7 step xentrop:  1.3377234935760498
+
+ * 8 step xentrop:  1.2715205086602106
+
+ * 9 step xentrop:  1.2419012069702149
+
+ * 10 step xentrop:  1.244532498446378
+
+ * 11 step xentrop:  1.7316441535949707
+
+ * 12 step xentrop:  1.6421764080341046
+
+ * 13 step xentrop:  1.5278237206595284
+
+
+ Loss: 1.5278237206595284
+
+ ----- 1871 Epoch -----
+ * 0 step xentrop:  0.039848506450653076
+
+ * 1 step xentrop:  4.31699275970459
+
+ * 2 step xentrop:  2.898768107096354
+
+ * 3 step xentrop:  2.191344976425171
+
+ * 4 step xentrop:  2.115329360961914
+
+ * 5 step xentrop:  2.5747079849243164
+
+ * 6 step xentrop:  3.256084987095424
+
+ * 7 step xentrop:  2.9010167121887207
+
+ * 8 step xentrop:  3.4697142706976996
+
+ * 9 step xentrop:  3.4379837036132814
+
+ * 10 step xentrop:  3.4356855912642046
+
+ * 11 step xentrop:  3.382688522338867
+
+ * 12 step xentrop:  3.6559219360351562
+
+ * 13 step xentrop:  3.5723255702427457
+
+ * 14 step xentrop:  3.8570645650227866
+
+ * 15 step xentrop:  3.811079502105713
+
+ * 16 step xentrop:  3.767048106474035
+
+ * 17 step xentrop:  3.5743272569444446
+
+ * 18 step xentrop:  3.6010669909025492
+
+ * 19 step xentrop:  3.5728786468505858
+
+ * 20 step xentrop:  3.535890125093006
+
+ * 21 step xentrop:  3.3839603770862925
+
+ * 22 step xentrop:  3.2388040293817935
+
+
+ Loss: 3.2388040293817935
+
+ ----- 1872 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.03630669787526131
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.08247898519039154
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.07103922466437022
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.06208484619855881
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.058015447854995725
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  0.09134113788604736
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  0.2860659190586635
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type dbo_Film
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  0.8614192605018616
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type dbo_Film sep_dot
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.1052756839328342
+
+
+
+ Loss: [1.9894962]
+
+ ----- 1873 Epoch -----
+ * 0 step xentrop:  0.03502362221479416
+
+ * 1 step xentrop:  0.07236477732658386
+
+ * 2 step xentrop:  0.06283111373583476
+
+ * 3 step xentrop:  0.05568103492259979
+
+ * 4 step xentrop:  0.05258288383483887
+
+ * 5 step xentrop:  0.07493504385153453
+
+ * 6 step xentrop:  0.37539802278791157
+
+ * 7 step xentrop:  1.2024457454681396
+
+ * 8 step xentrop:  1.1070265240139432
+
+ * 9 step xentrop:  1.4710323333740234
+
+ * 10 step xentrop:  1.8063670071688565
+
+ * 11 step xentrop:  1.6967728932698567
+
+ * 12 step xentrop:  2.060622288630559
+
+ * 13 step xentrop:  2.118614877973284
+
+ * 14 step xentrop:  2.0803148905436197
+
+ * 15 step xentrop:  1.986055612564087
+
+ * 16 step xentrop:  1.9660005008473116
+
+ * 17 step xentrop:  2.132351557413737
+
+ * 18 step xentrop:  2.1422488563939144
+
+ * 19 step xentrop:  2.0909841537475584
+
+ * 20 step xentrop:  2.0045743669782365
+
+ * 21 step xentrop:  1.9314082752574573
+
+
+ Loss: 1.9314082752574573
+
+ ----- 1874 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.030762063339352608
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  2.356194257736206
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  3.563255945841471
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  3.9596495628356934
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  4.223019409179687
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  3.548405647277832
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  3.760495049612863
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type dbo_Film
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  3.760634660720825
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type dbo_Film brack_close
+
+F:\Anaconda3_5_2_0\Anaconda3\envs\envx\lib\site-packages\SPARQLWrapper\Wrapper.py:676: RuntimeWarning: not detected query type for query '<<<S<<<E<<<L<<<E<<<C<<<T<<< <<<D<<<I<<<S<<<T<<<I<<<N<<<C<<<T<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<W<<<H<<<E<<<R<<<E<<< <<<b<<<r<<<a<<<c<<<k<<<:<<<o<<<p<<<e<<<n<<< <<<v<<<a<<<r<<<:<<<u<<<r<<<i<<< <<<r<<<d<<<f<<<:<<<t<<<y<<<p<<<e<<< <<<d<<<b<<<o<<<:<<<F<<<i<<<l<<<m<<< <<<b<<<r<<<a<<<c<<<k<<<:<<<c<<<l<<<o<<<s<<<e<<<'
+  warnings.warn("not detected query type for query '%s'" % query.replace("\n", " "), RuntimeWarning)
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  3.931918250189887
+
+
+
+ Loss: [4.1632075]
+
+ ----- 1875 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.031012417748570442
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  3.749662399291992
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  3.8799829483032227
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  3.861598253250122
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  5.068258666992188
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  5.792081197102864
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  6.271123613630023
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type dbo_Film
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  6.055574893951416
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type dbo_Film brack_close
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  5.603838602701823
+
+
+
+ Loss: [11.207677]
+
+ ----- 1876 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.027373701333999634
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  1.8609466552734375
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  1.9441064198811848
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  2.0825979709625244
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  2.532138442993164
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  2.9691810607910156
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  3.337066650390625
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type dbo_Film
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  3.2470703125
+
+
+
+ Loss: [5.7725697]
+
+ ----- 1877 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  3.9449172019958496
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  3.513249397277832
+
+
+
+ --query-->  SELECT DISTINCT WHERE
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  3.367001533508301
+
+
+
+ --query-->  SELECT DISTINCT WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  3.663886070251465
+
+
+
+ --query-->  SELECT DISTINCT WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  3.8351791381835936
+
+
+
+ --query-->  SELECT DISTINCT WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  4.257196108500163
+
+
+
+ --query-->  SELECT DISTINCT WHERE brack_open var_uri a brack_close
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  4.709710257393973
+
+
+
+ Loss: [4.70971]
+
+ ----- 1878 Epoch -----
+ * 0 step xentrop:  0.23528289794921875
+
+ * 1 step xentrop:  0.9480019807815552
+
+ * 2 step xentrop:  1.2655186653137207
+
+ * 3 step xentrop:  1.1928439140319824
+
+ * 4 step xentrop:  1.1751712799072265
+
+ * 5 step xentrop:  1.2518065770467122
+
+ * 6 step xentrop:  1.3476043428693498
+
+ * 7 step xentrop:  2.202449321746826
+
+ * 8 step xentrop:  2.0035516950819225
+
+ * 9 step xentrop:  2.4302797317504883
+
+ * 10 step xentrop:  2.639224312522195
+
+ * 11 step xentrop:  2.7649923960367837
+
+ * 12 step xentrop:  2.9679078322190504
+
+ * 13 step xentrop:  3.046387263706752
+
+ * 14 step xentrop:  3.2372767130533853
+
+ * 15 step xentrop:  3.0790865421295166
+
+ * 16 step xentrop:  3.077376870548024
+
+ * 17 step xentrop:  2.921181148952908
+
+ * 18 step xentrop:  3.127321343672903
+
+ * 19 step xentrop:  3.166487693786621
+
+ * 20 step xentrop:  3.3633971441359747
+
+ * 21 step xentrop:  3.28561054576527
+
+ * 22 step xentrop:  3.44200266962466
+
+ * 23 step xentrop:  3.4703197479248047
+
+ * 24 step xentrop:  3.5224920654296876
+
+ * 25 step xentrop:  3.4075927734375
+
+ * 26 step xentrop:  3.3982987580475985
+
+ * 27 step xentrop:  3.2864886692592075
+
+
+ Loss: 3.2864886692592075
+
+ ----- 1879 Epoch -----
+ * 0 step xentrop:  0.2030828297138214
+
+ * 1 step xentrop:  0.660274863243103
+
+ * 2 step xentrop:  2.134685198465983
+
+ * 3 step xentrop:  1.6311930418014526
+
+ * 4 step xentrop:  1.3629257202148437
+
+ * 5 step xentrop:  2.255354881286621
+
+ * 6 step xentrop:  2.629620688302176
+
+ * 7 step xentrop:  2.8299150466918945
+
+ * 8 step xentrop:  2.539705276489258
+
+ * 9 step xentrop:  2.3781856536865233
+
+
+ Loss: 2.3781856536865233
+
+ ----- 1880 Epoch -----
+ * 0 step xentrop:  0.17244848608970642
+
+ * 1 step xentrop:  0.48156070709228516
+
+ * 2 step xentrop:  2.1181321144104004
+
+ * 3 step xentrop:  1.6192660331726074
+
+ * 4 step xentrop:  1.3626489639282227
+
+ * 5 step xentrop:  2.1481030782063804
+
+ * 6 step xentrop:  2.2104928152901784
+
+ * 7 step xentrop:  2.6024534702301025
+
+ * 8 step xentrop:  2.354418224758572
+
+ * 9 step xentrop:  2.1348424911499024
+
+
+ Loss: 2.1348424911499024
+
+ ----- 1881 Epoch -----
+ * 0 step xentrop:  0.13970501720905304
+
+ * 1 step xentrop:  0.35329359769821167
+
+ * 2 step xentrop:  0.703134298324585
+
+ * 3 step xentrop:  0.7388569712638855
+
+ * 4 step xentrop:  0.6927890300750732
+
+ * 5 step xentrop:  0.8202749093373617
+
+ * 6 step xentrop:  1.025923183986119
+
+ * 7 step xentrop:  1.6432783603668213
+
+ * 8 step xentrop:  1.8268905215793185
+
+ * 9 step xentrop:  1.7271024703979492
+
+ * 10 step xentrop:  1.8183942274613814
+
+ * 11 step xentrop:  2.084340254465739
+
+ * 12 step xentrop:  1.947363486656776
+
+ * 13 step xentrop:  1.9512718745640345
+
+ * 14 step xentrop:  1.8251646677652995
+
+ * 15 step xentrop:  1.7709401845932007
+
+ * 16 step xentrop:  1.8343574299531824
+
+ * 17 step xentrop:  2.0421066284179688
+
+ * 18 step xentrop:  2.049277054636102
+
+ * 19 step xentrop:  2.3592906951904298
+
+ * 20 step xentrop:  2.431167965843564
+
+ * 21 step xentrop:  2.5126306360418145
+
+ * 22 step xentrop:  2.408824920654297
+
+ * 23 step xentrop:  2.370591322580973
+
+ * 24 step xentrop:  2.292056121826172
+
+
+ Loss: 2.292056121826172
+
+ ----- 1882 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.12276415526866913
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.2843840420246124
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  2.705852826436361
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  2.1768715381622314
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  1.81287841796875
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  2.8513428370157876
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  3.4774281638009206
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type brack_close
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  3.9882586002349854
+
+
+
+ Loss: [5.8011036]
+
+ ----- 1883 Epoch -----
+ * 0 step xentrop:  0.09138268232345581
+
+ * 1 step xentrop:  0.1871677190065384
+
+ * 2 step xentrop:  0.6378388404846191
+
+ * 3 step xentrop:  0.5445919632911682
+
+ * 4 step xentrop:  0.4903679847717285
+
+ * 5 step xentrop:  0.6146297454833984
+
+ * 6 step xentrop:  0.8355043275015694
+
+ * 7 step xentrop:  1.3970661163330078
+
+ * 8 step xentrop:  1.2956970002916124
+
+ * 9 step xentrop:  1.7298839569091797
+
+ * 10 step xentrop:  2.0167069868607954
+
+ * 11 step xentrop:  1.9489283561706543
+
+ * 12 step xentrop:  2.1993832221397986
+
+ * 13 step xentrop:  2.2141877583095004
+
+ * 14 step xentrop:  2.204718271891276
+
+ * 15 step xentrop:  2.331843376159668
+
+ * 16 step xentrop:  2.2607381484087776
+
+ * 17 step xentrop:  2.284325281778971
+
+ * 18 step xentrop:  2.1658160561009456
+
+ * 19 step xentrop:  2.1998016357421877
+
+ * 20 step xentrop:  2.097858428955078
+
+ * 21 step xentrop:  2.1335182189941406
+
+ * 22 step xentrop:  2.1684124158776323
+
+ * 23 step xentrop:  2.0842493375142417
+
+ * 24 step xentrop:  2.133290252685547
+
+
+ Loss: 2.133290252685547
+
+ ----- 1884 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.08520739525556564
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.16675418615341187
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.3958011865615845
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.3501843214035034
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.3322704315185547
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  0.4069149891535441
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  0.6576533998761859
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.0998048782348633
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri a var_uri sep_dot
+
+
+
+ --reward-->  2.0
+
+ * 8 step xentrop:  1.0287859174940321
+
+
+
+ Loss: [0.7407259]
+
+ ----- 1885 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.07379891723394394
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.1283772587776184
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.20129428307215372
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.19723588228225708
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.19381754398345946
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  0.21528106927871704
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  0.9388061932155064
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type brack_close
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.3856264352798462
+
+
+
+ Loss: [0.821112]
+
+ ----- 1886 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.06393109261989594
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  3.1322693824768066
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  3.056407610575358
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  2.962663173675537
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  3.7727779388427733
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  4.423081715901692
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  4.81153324672154
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type brack_close
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  4.4709343910217285
+
+
+
+ Loss: [6.503177]
+
+ ----- 1887 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.05020532384514809
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.25742480158805847
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  1.5487744013468425
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  1.253833293914795
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  1.0621149063110351
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  1.8720566431681316
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  2.390777587890625
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type brack_close
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  2.9226248264312744
+
+
+
+ Loss: [4.6762]
+
+ ----- 1888 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.04639910161495209
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.1762775182723999
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.5686437288920084
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.4942721724510193
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.4433096408843994
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  0.5771002372105917
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  0.760263306753976
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type brack_close
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.0847692489624023
+
+
+
+ Loss: [0.7889231]
+
+ ----- 1889 Epoch -----
+ * 0 step xentrop:  0.045868176966905594
+
+ * 1 step xentrop:  0.13054035604000092
+
+ * 2 step xentrop:  0.2528493404388428
+
+ * 3 step xentrop:  0.25025177001953125
+
+ * 4 step xentrop:  0.23377776145935059
+
+ * 5 step xentrop:  1.3338831265767415
+
+ * 6 step xentrop:  1.8080832617623466
+
+ * 7 step xentrop:  1.692049264907837
+
+ * 8 step xentrop:  1.6612929238213434
+
+ * 9 step xentrop:  1.5047450065612793
+
+
+ Loss: 1.5047450065612793
+
+ ----- 1890 Epoch -----
+ * 0 step xentrop:  0.040604494512081146
+
+ * 1 step xentrop:  0.11450260877609253
+
+ * 2 step xentrop:  0.19772905111312866
+
+ * 3 step xentrop:  0.19658157229423523
+
+ * 4 step xentrop:  0.19172126054763794
+
+ * 5 step xentrop:  1.1375526587168376
+
+ * 6 step xentrop:  1.1049092156546456
+
+ * 7 step xentrop:  1.3324260711669922
+
+ * 8 step xentrop:  1.906333287556966
+
+ * 9 step xentrop:  1.733200454711914
+
+ * 10 step xentrop:  1.8418069319291548
+
+ * 11 step xentrop:  1.9711349805196126
+
+ * 12 step xentrop:  1.8752712836632361
+
+ * 13 step xentrop:  1.8608384813581194
+
+ * 14 step xentrop:  1.7400152842203775
+
+ * 15 step xentrop:  1.644250512123108
+
+ * 16 step xentrop:  1.7063799465403837
+
+ * 17 step xentrop:  2.0393350389268665
+
+ * 18 step xentrop:  2.0020085384971216
+
+ * 19 step xentrop:  2.042798614501953
+
+ * 20 step xentrop:  1.9641687302362352
+
+
+ Loss: 1.9641687302362352
+
+ ----- 1891 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.04358885437250137
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.10572320222854614
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.172632098197937
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.1723932921886444
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.16003159284591675
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  1.3447691599527996
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  1.9716033935546875
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type brack_close
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  2.360537052154541
+
+
+
+ Loss: [2.6977565]
+
+ ----- 1892 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.03584606572985649
+
+
+
+ --query-->  SELECT DISTINCT
+
+
+
+ --reward-->  2.0
+
+ * 1 step xentrop:  0.08653368800878525
+
+
+
+ --query-->  SELECT DISTINCT var_uri
+
+
+
+ --reward-->  2.0
+
+ * 2 step xentrop:  0.1368692914644877
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE
+
+
+
+ --reward-->  2.0
+
+ * 3 step xentrop:  0.13428810238838196
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open
+
+
+
+ --reward-->  2.0
+
+ * 4 step xentrop:  0.130814528465271
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri
+
+
+
+ --reward-->  2.0
+
+ * 5 step xentrop:  0.27782660722732544
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type
+
+
+
+ --reward-->  2.0
+
+ * 6 step xentrop:  1.1368496758597237
+
+
+
+ --query-->  SELECT DISTINCT var_uri WHERE brack_open var_uri rdf_type brack_close
+
+
+
+ --reward-->  2.0
+
+ * 7 step xentrop:  1.7797273397445679
+
+
+
+ Loss: [2.1904337]
+
+ ----- 1893 Epoch -----
+ * 0 step xentrop:  3.5873563289642334
+
+ * 1 step xentrop:  1.8578153848648071
+
+ * 2 step xentrop:  1.2825164794921875
+
+ * 3 step xentrop:  1.0089657306671143
+
+ * 4 step xentrop:  0.9091283798217773
+
+ * 5 step xentrop:  0.8365943431854248
+
+ * 6 step xentrop:  0.7976177760532924
+
+ * 7 step xentrop:  0.7435991168022156
+
+ * 8 step xentrop:  0.698781066470676
+
+ * 9 step xentrop:  1.2077190399169921
+
+ * 10 step xentrop:  1.4827192479913884
+
+ * 11 step xentrop:  1.5677660306294758
+
+ * 12 step xentrop:  1.5414352416992188
+
+ * 13 step xentrop:  1.8556615284511022
+
+ * 14 step xentrop:  2.0297154744466144
+
+ * 15 step xentrop:  2.0010995864868164
+
+ * 16 step xentrop:  1.9303943409639246
+
+ * 17 step xentrop:  1.838075425889757
+
+ * 18 step xentrop:  1.8254900480571545
+
+ * 19 step xentrop:  1.9659238815307618
+
+ * 20 step xentrop:  1.9345842997233074
+
+ * 21 step xentrop:  1.8927553350275212
+
+ * 22 step xentrop:  1.8157297217327615
+
+ * 23 step xentrop:  1.7936731974283855
+
+
+ Loss: 1.7936731974283855
+
+ ----- 1894 Epoch -----
+ * 0 step xentrop:  2.2824227809906006
+
+ * 1 step xentrop:  1.201502799987793
+
+ * 2 step xentrop:  0.8433664639790853
+
+ * 3 step xentrop:  0.6694153547286987
+
+ * 4 step xentrop:  0.5840682983398438
+
+ * 5 step xentrop:  0.5343699057896932
+
+ * 6 step xentrop:  0.508906466620309
+
+ * 7 step xentrop:  0.47621437907218933
+
+ * 8 step xentrop:  0.45150110456678605
+
+ * 9 step xentrop:  0.8359668731689454
+
+ * 10 step xentrop:  1.0762419267134233
+
+ * 11 step xentrop:  1.5236916542053223
+
+ * 12 step xentrop:  1.4848515437199519
+
+ * 13 step xentrop:  1.7856033870152064
+
+ * 14 step xentrop:  2.1495821634928385
+
+ * 15 step xentrop:  2.499210834503174
+
+ * 16 step xentrop:  2.4107434889849495
+
+ * 17 step xentrop:  2.347109900580512
+
+
+ Loss: 2.347109900580512
+
+ ----- 1895 Epoch -----
+ * 0 step xentrop:  0.32138776779174805
+
+ * 1 step xentrop:  3.433544874191284
+
+ * 2 step xentrop:  2.323575814565023
+
+ * 3 step xentrop:  1.763962745666504
+
+ * 4 step xentrop:  2.856471824645996
+
+ * 5 step xentrop:  3.0482101440429688
+
+ * 6 step xentrop:  3.569362095424107
+
+ * 7 step xentrop:  3.1945133209228516
+
+ * 8 step xentrop:  2.8567973242865667
+
+
+ Loss: 2.8567973242865667
+
+ ----- 1896 Epoch -----
+ * 0 step xentrop:  0.23770885169506073
+
+ * 1 step xentrop:  0.22664934396743774
+
+ * 2 step xentrop:  0.20985354979832968
+
+ * 3 step xentrop:  0.18296876549720764
+
+ * 4 step xentrop:  0.1655681848526001
+
+ * 5 step xentrop:  1.2330656051635742
+
+ * 6 step xentrop:  1.963860239301409
+
+ * 7 step xentrop:  1.8981646299362183
+
+ * 8 step xentrop:  1.7776190439860027
+
+ * 9 step xentrop:  1.6022499084472657
+
+
+ Loss: 1.6022499084472657
+
+ ----- 1897 Epoch -----
+
+ --query-->  SELECT
+
+
+
+ --reward-->  2.0
+
+ * 0 step xentrop:  0.18115852773189545
+
+
+
+ --query-->  SELECT DISTINCT
+
+

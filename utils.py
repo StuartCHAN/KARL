@@ -81,7 +81,7 @@ def loadData(fp):
 
  
 def readLangs(fp, reverse=False):
-    print(" Reading lines...")
+    print("\n Reading lines...")
     # Read the file and split into lines
     #lines = open('../input/%s-%s.txt' % (lang1, lang2), encoding='utf-8').read().strip().split('\n')
     

@@ -145,7 +145,7 @@ def evaluateRandomly(encoder, decoder, pairs, input_lang, output_lang, n=10):
 
 
 # Training the Model 
-teacher_forcing_ratio = 0.5
+teacher_forcing_ratio = 0.6
 
 def trainBert(input_tensor, target_tensor, encoder, decoder, training_ans, input_lang, output_lang, encoder_optimizer, decoder_optimizer, criterion, max_length=utils.MAX_LENGTH):
 
@@ -157,7 +157,7 @@ def trainBert(input_tensor, target_tensor, encoder, decoder, training_ans, input
 
     #encoder_outputs = torch.zeros(max_length, encoder.hidden_size, device=device)
 
-    loss = 0
+    loss = 0.0
     
     encoder_hidden = encoder(input_tensor)
     
@@ -183,7 +183,8 @@ def trainBert(input_tensor, target_tensor, encoder, decoder, training_ans, input
                 decoder_input, decoder_hidden)
             loss += criterion(decoder_output, target_tensor[di])
             decoder_input = target_tensor[di]  # Teacher forcing
-            print(" * %s step: "%str(di), loss.detach() ) #!
+            v = loss.detach().numpy()
+            print("\t * %s step xentrop: "%str(di), float(v/(di+1.0)), " \n" ) #!
     else:
         # Without teacher forcing: use its own predictions as the next input
         decoded_words = [] #!
@@ -202,19 +203,26 @@ def trainBert(input_tensor, target_tensor, encoder, decoder, training_ans, input
             decoder_input = topi.squeeze().detach()  # detach from history as input
 
             decoded_sentence = str(" ").join(decoded_words) 
-            print("\n --query--> ", decoded_sentence, "\n ")
+            print("\n  --query--> ", decoded_sentence, "\n ")
             rew = reward.get_reward(decoded_sentence, training_ans )
             rewards.append(rew)
-            print("\n --reward--> ", rew)
+            print("\n  --reward--> ", rew)
             loss += criterion(decoder_output, target_tensor[di])
-            print(" * %s step: "%str(di), loss.detach() )#!
+            v = loss.detach().numpy()
+            print("\n\t * %s step xentrop: "%str(di), float(v/(di+1.0)) )#!
             print("\n ")#!
             if decoder_input.item() == utils.EOS_token:
                 break;
                
     #_, rewrd = evaluateRandomly(encoder, decoder, pairs, input_lang, output_lang, n=target_length)
-    loss = loss*torch.FloatTenso([np.mean(rewards)])
+    if np.mean(rewards) >= 1.0:
+        loss = torch.mul(loss, torch.FloatTensor([np.mean(rewards)]))
+    else:
+        pass;
     
+    var = loss.detach().numpy()/target_length
+    print("\n Loss:",  var)
+
     loss.backward()
 
     encoder_optimizer.step()
@@ -250,7 +258,7 @@ def trainItersBert(encoder, decoder, n_iters, pairs, input_lang, output_lang, pr
     for iter in range(1, n_iters + 1):
         #encoder_scheduler.step()
         #decoder_scheduler.step()
-        print("\n ----- %s Epoch ----- "%str(iter) )
+        print("\n\t -----* Epoch %s *----- "%str(iter) )
         training_pair = training_pairs[iter - 1]
         training_ans = training_answers[iter - 1]
         input_tensor = training_pair[0]
