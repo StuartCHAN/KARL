@@ -6,6 +6,9 @@ Created on Sat Oct 12 17:14:59 2019
 """
 import torch
 import json 
+import math 
+import os
+import ast
 import kg_utils.queries as queries 
 import kg_utils.kgutils as kgutils
 
@@ -72,13 +75,26 @@ def normalizeString(s):
 # 
 # 
 
-     
+    
 def loadData(fp):
-    #e.g. fp = "../data/qald9/qald-9-train-multilingual.json"
-    data = json.load(open( fp, "r", encoding="UTF-8"))
-    pairs = [ (str(qa["question"][3]["string"]).lower().strip()[:-1], kgutils.encode(kgutils.select(qa["query"]["sparql"])), queries.preprocess(qa["answers"][0]) )  for qa in data["questions"] ] 
-    return pairs
-
+    if fp.endswith(".json"):
+        #e.g. fp = "./data/qald9/qald-9-test-multilingual.json"
+        data = json.load(open( fp, "r", encoding="UTF-8"))
+        pairs = [ (kgutils.get_en(qa["question"])[:-1], kgutils.encode(kgutils.select(qa["query"]["sparql"])) )  for qa in data["questions"] ] 
+        #pairs = [ ( str(kgutils.get_en(qa["question"]))[:-1], kgutils.encode(kgutils.select(qa["query"]["sparql"])), str(queries.preprocess(qa["answers"][0])) )  for qa in data["questions"] ] 
+    elif fp.endswith(".txt") or fp.endswith(".bin") or fp.endswith(".tsv"):
+        pairs = [line.split("\t") for line in open(fp, "r", encoding="UTF-8").readlines()]
+    else:
+        print(" The dataset file format is not supported... ")
+        pairs = None
+    return pairs 
+ 
+    
+def loadEvalData(fp):
+    data = [ line.split("\t") for line in open( fp, "r", encoding="UTF-8").readlines() ]
+    pairs = [ (pair[0], pair[1], ast.literal_eval(pair[-1])) for pair in data ] 
+    return filterPairs(pairs)
+    
  
 def readLangs(fp, reverse=False):
     print("\n Reading lines...")
@@ -129,10 +145,12 @@ def filterPairs(pairs):
 #  
 
  
-def prepareData(fp, reverse=False):
-    input_lang, output_lang, pairs = readLangs(fp, reverse)
-    print("\n Read %s sentence pairs"%len(pairs))
-    pairs = filterPairs(pairs)
+def prepareData(training_fp, eval_fp, reverse=False):
+    input_lang, output_lang, training_pairs = readLangs(training_fp, reverse)
+    print("\n Read %s sentence pairs"%len(training_pairs))
+    eval_pairs = loadEvalData(eval_fp)
+    #all_pairs = training_pairs + eval_pairs
+    pairs = filterPairs(training_pairs) 
     print(" Trimmed to %s sentence pairs"%len(pairs))
     print("\n Counting words...")
     for pair in pairs:
@@ -140,9 +158,10 @@ def prepareData(fp, reverse=False):
         output_lang.addSentence(pair[1])
     print(" Counted words:")
     print("\t", input_lang.name, input_lang.n_words)
+    VOCAB_SIZE = int(input_lang.n_words)
     print("\t", output_lang.name, output_lang.n_words)
     print("")
-    return input_lang, output_lang, pairs
+    return input_lang, output_lang, pairs, eval_pairs, VOCAB_SIZE ;
 
 # e.g.
 #input_lang, output_lang, pairs = prepareData(fp, True)
@@ -212,3 +231,30 @@ def timeSince(since, percent):
     rs = es - s
     return '%s (- %s)' % (asMinutes(s), asMinutes(rs))
 
+
+def teacher_force(loss):
+    if loss >= 1.0 :
+        ratio = loss/math.pow(10, len(str(int(loss)))) 
+        force = ratio if ratio >= 0.5 else 0.5
+    elif 1.0 > loss > 0.5:
+        force = 0.5
+    else:
+        force = loss if loss <= 0.5 else 0.5 
+    return force 
+
+
+MODELPATH = "./model"
+
+def prepare_dir( model_name, stamp):    
+    files= os.listdir(MODELPATH)
+    models_pool = []
+    for file in files: #iterate to get the folders
+         if os.path.isdir(MODELPATH+"/"+file): # whether a folder 
+              models_pool.append(file)
+    savepath = MODELPATH+"/"+model_name+"/"+stamp
+    if (model_name not in models_pool) or not( os.path.exists(savepath)) :
+        try:
+            os.makedirs(savepath)
+        except:
+            os.makedir(savepath)
+    return savepath

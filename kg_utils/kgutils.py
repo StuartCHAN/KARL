@@ -121,10 +121,22 @@ def fix_URI(query):
 
 
 def select(query):
-    sparql =  str(list(str(query).split("SELECT"))[-1])
-    if "SELECT" in query:
-        sparql = "SELECT"+ sparql
-    return sparql
+    if "SELECT " in query:
+        sparql =  str(list(str(query).split("SELECT "))[-1])
+        sparql = "SELECT "+ sparql
+        return sparql
+    elif "ASK " in query:
+        sparql =  str(list(str(query).split("ASK "))[-1])
+        sparql = "ASK "+ sparql
+        return sparql
+    else:
+        return query
+    
+    
+def get_en(question_dict):
+    for quest in question_dict:
+        if quest["language"] == "en":
+            return str(quest["string"]).lower().strip() ;
     
     
 def interprete(enocoded_sentence):

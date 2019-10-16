@@ -29,22 +29,25 @@ def process(query):
     #print("\n ", response)
     entity = preprocess(response)
     #!
-    print()
+    print(" entity: ", entity)
     return entity ;
 
 
 def preprocess(response):
     try:
         if "boolean" in response.keys():
-            value = response["boolean"]
+            value = [ str(response["boolean"]) ]
         else:
-            result = response["results"]["bindings"] 
+            try:
+                result = response["results"]["bindings"] 
+            except:
+                return ["empty"]
             value = [ list(item.values())[0]["value"] for item in result]
             if 0==len(value):
-                return "empty"
+                return ["empty"]
         return value
     except :
-       return "error";
+       return ["error"];
 
        
 def getVirtuoso(query):

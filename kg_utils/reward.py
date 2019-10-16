@@ -15,23 +15,28 @@ sim = EntitySimilarity()
 
 
 def get_reward(cand_sent, ref_ent):
-	cand_query = kgutils.interprete(cand_sent)
-	entity = queries.process(cand_query)
-	if entity == ref_ent:
-		return 1.0
-	elif entity is "empty":
-		return 1.0
-	elif entity is "error":
-		return 2.0
-	else:
-		#cand_embedding, ref_embedding = queries.lookup_embedding(entity), queries.lookup_embedding(ref_answer)  
-		reward = calculate_reward(entity, ref_ent ) 
-		return reward ; 
+    try:
+    	cand_query = kgutils.interprete(cand_sent)
+    	entity = queries.process(cand_query)
+    	if entity == ref_ent:
+    		return 1.0
+    	elif entity is "empty":
+    		return 1.0
+    	elif entity is "error":
+    		return 2.0
+    	else: 
+    		reward = calculate_reward(entity, ref_ent ) 
+    		return reward  
+    except:
+        return 2.0 ;
 
 
-def calculate_reward(cand_ent, ref_ent ):   
-	#distance = sim.similarity('http://dbpedia.org/resource/Madrid','http://dbpedia.org/resource/Barcelona') #0.409923677282
-	rewrd = 2.0-sim.similarity(cand_ent, ref_ent )
+def calculate_reward(cand_ent, ref_ent ):
+	rewrd = 2.0
+	try:
+		rewrd = 2.0-sim.similarity(cand_ent, ref_ent )
+	except:
+		rewrd = 2.0
 	return rewrd ;
 
 """
