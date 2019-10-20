@@ -22,6 +22,9 @@ import torch.nn as nn
 from torch import optim
 import torch.nn.functional as F
 
+import torch.utils.data as Data
+import torch.nn.utils.rnn as rnn_utils
+
 from pytorch_pretrained_bert import BertTokenizer, BertModel, BertForMaskedLM, BertForSequenceClassification
 
 import kg_utils.reward as reward 
@@ -399,7 +402,7 @@ def trainBert(input_tensor, target_tensor, encoder, decoder, eval_pairs, input_l
 
     decoder_input = torch.tensor([[utils.SOS_token]], device=device)
 
-    decoder_hidden = encoder_hidden
+    decoder_hidden = encoder_hidden[0, 0].view(1,1,-1) #!!! v02 
 
     use_teacher_forcing = True if random.random() < teacher_forcing_ratio else False
 
@@ -418,6 +421,8 @@ def trainBert(input_tensor, target_tensor, encoder, decoder, eval_pairs, input_l
              
             decoder_input = target_tensor[di]  # Teacher forcing
 
+            if decoder_input.item() == utils.EOS_token:
+                break
     else:
         # Without teacher forcing: use its own predictions as the next input
         print("  * Not teacher forcing: ")
@@ -452,7 +457,7 @@ def trainBert(input_tensor, target_tensor, encoder, decoder, eval_pairs, input_l
     
 
 
-def trainItersBert(encoder, decoder, n_iters, training_pairs, eval_pairs, input_lang, output_lang, print_every=1000, plot_every=100, learning_rate=0.01, mom=0,  model_name="QALD"):
+def trainItersBert(encoder, decoder, n_iters, training_pairs, eval_pairs, input_lang, output_lang, print_every=1000, plot_every=100, learning_rate=0.01, mom=0,  model_name="QALD-dev"):
     start = time.time()
     plot_losses = []
     print_loss_total = 0  # Reset every print_every
@@ -471,43 +476,57 @@ def trainItersBert(encoder, decoder, n_iters, training_pairs, eval_pairs, input_
     teacher_forcing_ratio = 1.0
 
     criterion = nn.NLLLoss()
+    
+    input_tensors, target_tensors, train_pairs = [], [], []
+    for pair in training_pairs:
+        tensors = utils.tensorsFromPair(pair, input_lang, output_lang, device)
+        train_pairs.append(tensors)
+        '''print("tensor shape--> ", tensors[0].size())
+        print(tensors[0])'''
+        input_tensors.append(tensors[0].view(-1,1).long()) #float() #!!! 
+        target_tensors.append(tensors[1].view(-1,1).long()) #!!! 
 
-    train_pairs = [utils.tensorsFromPair(random.choice(training_pairs), input_lang, output_lang, device)  for i in range(n_iters) ]
-    for iter in range(1, n_iters + 1):
-        #encoder_scheduler.step()
-        #decoder_scheduler.step()
-        
-        train_pair = train_pairs[iter - 1]
-        input_tensor = train_pair[0]
-        target_tensor = train_pair[1]
-        input_tensor.transpose_(0,1)
-        #print(input_tensor.size())
+    print("\n Dataset preparing... ")
+    input_tensors  = rnn_utils.pad_sequence(input_tensors, batch_first=True, padding_value=0)
+    target_tensors  = rnn_utils.pad_sequence(target_tensors, batch_first=True, padding_value=0)
+    #input_tensors, target_tensors = utils.padding(input_tensors, target_tensors )
+    torch_dataset = utils.TxtDataset(input_tensors, target_tensors  )
+    
+    # put the dataset into DataLoader
+    loader = Data.DataLoader(
+        dataset=torch_dataset,
+        batch_size=6,  # MINIBATCH_SIZE
+        shuffle=True,
+        #num_workers=1           # set multi-work num read data
+        #collate_fn= utils.collate_fn  #!!! 
+    ) 
+    print(" Dataset loader ready, begin training. \n")
 
-        '''loss = trainBert(input_tensor, target_tensor, encoder,
-                     decoder, encoder_optimizer, decoder_optimizer, criterion) '''
-        rl = True if (iter > 1000) and (plot_loss_avg < 1.0 ) else False 
-        
-        loss = trainBert(input_tensor, target_tensor, encoder, decoder, eval_pairs, input_lang, output_lang, encoder_optimizer, decoder_optimizer, criterion, teacher_forcing_ratio = teacher_forcing_ratio, rl=rl )
-        print_loss_total += loss
-        plot_loss_total += loss
+    for epoch in range(1, n_iters + 1):
+    # an epoch goes the whole data
+        for step, (batch_input, batch_target) in enumerate(loader):
+            # here to train your model
+            print('\n\n  - epoch: ', epoch, ' | step: ', step, '\n | batch_input: \n', batch_input.size(), '\n | batch_target: \n', batch_target.size() ) 
+            
+            #input_tensor, target_tensor = batch_input, batch_target  #!!! 
 
-        print("\t -  %s step xentropy loss: "%str(iter), loss, " \n" )
+            batch_input = batch_input.reshape( [6,  -1, 1] ) #!!!  [6, 1, -1] 
+            batch_target = batch_target.reshape( [6,  -1, 1] )
+             
+            rl = True if (epoch > 1) and (np.mean(plot_losses) < 1.0 ) else False 
 
-        teacher_forcing_ratio = utils.teacher_force(float(loss) )
+            loss = 0
+            for batch_input_item, batch_target_item in zip(batch_input, batch_target):
+                #print("\n\t batch_input_item, batch_target_item : ", batch_input_item.size(), batch_target_item.size() )
+                loss += trainBert(batch_input_item, batch_target_item, encoder, decoder, eval_pairs, \
+                                    input_lang, output_lang, encoder_optimizer, decoder_optimizer, criterion, \
+                                      teacher_forcing_ratio = teacher_forcing_ratio, rl=rl )
+            loss = loss/6
+            plot_losses.append( loss )
 
-        if iter % print_every == 0:
-            print_loss_avg = print_loss_total / print_every
-            print_loss_total = 0
-            print('%s (%d %d%%) %.4f' % (utils.timeSince(start, iter / n_iters),
-                                         iter, iter / n_iters * 100, print_loss_avg))
+            print("\t -  %s step xentropy loss: "%str(epoch)+" - "+str(step)), loss, " \n" )
 
-        if iter % plot_every == 0:
-            plot_loss_avg = plot_loss_total / plot_every
-            plot_losses.append(plot_loss_avg)
-            plot_loss_total = 0
-
-        if ( 0==iter%print_every or (n_iters + 1)==iter ):# and iter > 1 :
-            save_model(encoder, decoder, plot_losses, model_name ) ;
+            teacher_forcing_ratio = utils.teacher_force(float(loss) ) ;
 
 
 def save_model(encoder, decoder, plot_losses, model_name ):

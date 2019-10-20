@@ -5,6 +5,7 @@ Created on Sat Oct 12 17:14:59 2019
 @author: Stuart
 """
 import torch
+import torch.nn.utils.rnn as rnn_utils
 import json 
 import math 
 import os
@@ -197,19 +198,26 @@ def showPlot(points):
 # 
 # 
  
-def indexesFromSentence(lang, sentence):
-    return [lang.word2index[word] for word in sentence.split(' ')]
+def indexesFromSentence(lang, sentence,  ):
+    idxs = [lang.word2index[word] for word in sentence.split(' ')]
+    return idxs ;
+
+"""l = len(idxs)
+    assert(l <= size)
+    gap = size - l
+    if gap > 0:
+        _ = [idxs.append(EOS_token)  for _ in range(gap)]"""
 
 
 def tensorFromSentence(lang, sentence, device):
-    indexes = indexesFromSentence(lang, sentence)
+    indexes = indexesFromSentence(lang, sentence,  )
     indexes.append(EOS_token)
     return torch.tensor(indexes, dtype=torch.long, device=device).view(-1, 1)
 
 
-def tensorsFromPair(pair, input_lang, output_lang,  device):
-    input_tensor = tensorFromSentence(input_lang, pair[0], device)
-    target_tensor = tensorFromSentence(output_lang, pair[1], device)
+def tensorsFromPair(pair, input_lang, output_lang, device):
+    input_tensor = tensorFromSentence(input_lang, pair[0],  device)
+    target_tensor = tensorFromSentence(output_lang, pair[1],  device)
     return (input_tensor, target_tensor)
 
 
@@ -258,3 +266,80 @@ def prepare_dir( model_name, stamp):
         except:
             os.makedir(savepath)
     return savepath
+
+
+class TxtDataset(torch.utils.data.Dataset):#????Dataset??
+    def __init__(self, input_tensors, target_tensors ):
+        self.input_tensors = input_tensors
+        self.target_tensors = target_tensors
+        assert(len(input_tensors) == len(target_tensors) )
+        self.length = len(input_tensors)
+ 
+    def __getitem__(self, index):
+        input_tensor = torch.LongTensor(self.input_tensors[index].long()) #torch.FloatTensor(self.input_tensors[index]) #!!! 
+        target_tensor = torch.LongTensor(self.target_tensors[index].long()) #!!! 
+        #pair = torch.LongTensor(self.train_pairs[index])
+        return input_tensor, target_tensor ;  #????
+ 
+    def __len__(self):
+        return self.length ;
+
+'''
+def padding(src, tgt ):
+    src_len, tgt_len = len(src), len(tgt )
+
+    src_maxsize = [int(s.size(0))  for s in src ]
+    tgt_maxsize = [int(s.size(0))  for s in tgt ]
+
+    src_pad = [torch.ones(src_maxsize, ).long() for _ in range(src_len) ] #[torch.ones(src_maxsize, ).float() for _ in range(src_len) ] #!!! 
+    tgt_pad = [torch.ones(tgt_maxsize, ).long() for _ in range(tgt_len) ] #!!! 
+
+    for i in src_len:
+        end = src[i].size(0)
+        src_pad[i][:end, 1] = src[i] 
+
+    for i in tgt_len:
+        end = tgt[i].size(0)
+        tgt_pad[i][:end, 1] = tgt[i]
+
+    return torch.LongTensor(src_pad), torch.LongTensor(tgt_pad) ; #torch.FloatTensor(src_pad), torch.FloatTensor(tgt_pad) #!!! 
+
+
+def max_size(src_sents, tgt_sents):
+    src_size = max([ len(sent.split(" "))  for sent in src_sents ])
+    tgt_size = max([ len(sent.split(" "))  for sent in tgt_sents ])
+    return src_size, tgt_size ; 
+'''
+
+'''
+def collate_fn(src):
+    src.sort(key=lambda x: len(x), reverse=True)
+    src_length = [len(sq) for sq in src]
+    src = rnn_utils.pad_sequence(src, batch_first=True, padding_value=0) 
+    tgt.sort(key=lambda x: len(x), reverse=True)
+    tgt_length = [len(sq) for sq in tgt]
+    tgt = rnn_utils.pad_sequence(tgt, batch_first=True, padding_value=0)
+    return src.unsqueeze(-1), tgt.unsqueeze(-1), src_length, tgt_length 
+'''
+
+
+"""
+def myfunction(data):
+    src, tgt, original_src, original_tgt = zip(*data)
+
+    src_len = [len(s) for s in src]
+    src_pad = torch.zeros(len(src), max(src_len)).long()
+    for i, s in enumerate(src):
+        end = src_len[i]
+        src_pad[i, :end] = torch.LongTensor(s[end-1::-1])
+
+    tgt_len = [len(s) for s in tgt]
+    tgt_pad = torch.zeros(len(tgt), max(tgt_len)).long()
+    for i, s in enumerate(tgt):
+        end = tgt_len[i]
+        tgt_pad[i, :end] = torch.LongTensor(s)[:end]
+
+    return src_pad, tgt_pad, \
+           torch.LongTensor(src_len), torch.LongTensor(tgt_len), \
+           original_src, original_tgt
+           """
