@@ -32,8 +32,6 @@ import kg_utils.reward as reward
 import utils
 from utils import *
 
-import transf_decoder 
-
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print("\n device: ", device)
 
@@ -482,7 +480,7 @@ def trainBert(input_tensor, target_tensor, encoder, decoder, training_ans, input
 """
 
 
-"""def trainBert(input_tensor, target_tensor, encoder, decoder, eval_pairs, input_lang, output_lang, encoder_optimizer, decoder_optimizer, criterion, max_length=MAX_LENGTH, teacher_forcing_ratio=0.5, rl=True ):
+def trainBert(input_tensor, target_tensor, encoder, decoder, eval_pairs, input_lang, output_lang, encoder_optimizer, decoder_optimizer, criterion, max_length=MAX_LENGTH, teacher_forcing_ratio=0.5, rl=True ):
 
     encoder_optimizer.zero_grad()
     decoder_optimizer.zero_grad()
@@ -581,44 +579,17 @@ def trainBert(input_tensor, target_tensor, encoder, decoder, training_ans, input
     encoder_optimizer.step()
     decoder_optimizer.step()
 
-    return loss.item()/target_length """
-
-def trainBert(input_tensor,  target_tensor,  model, eval_pairs, input_lang, output_lang, optimizer, criterion, max_length=MAX_LENGTH, teacher_forcing_ratio=0.5, rl=True ):
-
-    #encoder_optimizer.zero_grad()
-    #decoder_optimizer.zero_grad()
-    optimizer.zero_grad()
-
-    #input_length = input_tensor.size(0)
-    #target_length = target_tensor.size(0)
-
-    model = transf_decoder.Transformer(input_lang, output_lang)
-
-    output = model(input_tensor, target_tensor )
-
-    batch_size, seq_len = target_tensor.size(0), target_tensor.size(1)
-    target_tensor = target_tensor.reshape([batch_size, seq_len])
-
-    loss = criterion(output, target_tensor)
+    return loss.item()/target_length
     
-    loss.backward()
-
-    #encoder_optimizer.step()
-    #decoder_optimizer.step()
-    optimizer.step()
-
-    return loss.item()
-       
 
 
-def trainItersBert(model, n_iters, training_pairs, eval_pairs, input_lang, output_lang, batch_size, learning_rate=0.01, mom=0,  model_name="qald-test"):
+def trainItersBert(encoder, decoder, n_iters, training_pairs, eval_pairs, input_lang, output_lang, print_every=1000, plot_every=100, learning_rate=0.01, mom=0,  model_name="qald-test"):
     #start = time.time()
     plot_losses = []
     losses_trend = []
      
-    #encoder_optimizer = optim.SGD(encoder.parameters(), lr=learning_rate, momentum=mom)
-    #decoder_optimizer = optim.SGD(decoder.parameters(), lr=learning_rate, momentum=mom)
-    optimizer = optim.SGD(model.parameters(), lr=learning_rate, momentum=mom)
+    encoder_optimizer = optim.SGD(encoder.parameters(), lr=learning_rate, momentum=mom)
+    decoder_optimizer = optim.SGD(decoder.parameters(), lr=learning_rate, momentum=mom)
     
     #encoder_optimizer = optim.Adam(encoder.parameters(), lr=learning_rate, amsgrad=True)
     #encoder_scheduler = optim.lr_scheduler.CosineAnnealingLR(encoder_optimizer, n_iters)
@@ -659,45 +630,49 @@ def trainItersBert(model, n_iters, training_pairs, eval_pairs, input_lang, outpu
     # put the dataset into DataLoader
     loader = Data.DataLoader(
         dataset=torch_dataset,
-        batch_size=batch_size,  # MINIBATCH_SIZE = 6
+        batch_size=6,  # MINIBATCH_SIZE
         shuffle=True,
-        drop_last= False,
-        num_workers= 2 if utils.getOSystPlateform() else 0  # set multi-work num read data based on OS plateform
+        drop_last= True,
+        num_workers= 2 if utils.getOSystPlateform() else 0       # set multi-work num read data
         #collate_fn= utils.collate_fn  #!!! 
     ) 
     print(" Dataset loader ready, begin training. \n") 
 
     datset_len = len(loader)
-    
-    print("\n Dataset loader length is ", datset_len, ", save model every batch. " )
+    savepoint = datset_len//4  #12
+    print("\n Dataset loader length is ", datset_len, ", save model every %d batches. "%savepoint )
 
     for epoch in range(1, n_iters + 1):
     # an epoch goes the whole data
         for batch, (batch_input, batch_target) in enumerate(loader):
             # here to train your model
-            print('\n\n  - Epoch ', epoch, ' | batch ', batch, '\n | input lenght:   ', batch_input.size(), '\n | target length:   ', batch_target.size() ," \n")  
+            print('\n\n  - Epoch ', epoch, ' | batch ', batch, '\n | input lenght:   ', batch_input.size(1), '\n | target length:   ', batch_target.size(1) ," \n")  
             
             #input_tensor, target_tensor = batch_input, batch_target  #!!! 
-            #print("  * T-forcing ratio: ", teacher_forcing_ratio  )
-            '''try:
-                input_seq_len, target_seq_len = batch_input.size(1), batch_target.size(1)
-                batch_input = batch_input.reshape( [input_seq_len, batch_size] ) #!!!  [6, 1, -1] 
-                batch_target = batch_target.reshape( [target_seq_len, batch_size] )
-                print("\n input_seq_len, target_seq_len : ", input_seq_len, target_seq_len )
+            print("  * T-forcing ratio: ", teacher_forcing_ratio  )
+            try:
+                batch_input = batch_input.reshape( [6,  -1, 1] ) #!!!  [6, 1, -1] 
+                batch_target = batch_target.reshape( [6,  -1, 1] )
             except:
-                pass ; '''
+                pass ;
 
-            """input_lens = [utils.getNzeroSize(tensor) for tensor in batch_input ]
-            target_lens = [utils.getNzeroSize(tensor) for tensor in batch_target ]"""
+            input_lens = [utils.getNzeroSize(tensor) for tensor in batch_input ]
+            target_lens = [utils.getNzeroSize(tensor) for tensor in batch_target ]
 
             rl = False #True if (epoch > 1) and ( np.mean(losses_trend)<1.0 and len(losses_trend)>1 ) else False  #!!! and / or 
 
-            loss = trainBert(batch_input,  batch_target,  model, eval_pairs, \
-                                    input_lang, output_lang, optimizer, criterion, \
+            loss = 0
+            for batch_input_item, batch_target_item in zip(batch_input, batch_target):
+                #print("\n\t batch_input_item, batch_target_item : ", batch_input_item.size(), batch_target_item.size() )
+                loss += trainBert(batch_input_item, batch_target_item, encoder, decoder, eval_pairs, \
+                                    input_lang, output_lang, encoder_optimizer, decoder_optimizer, criterion, \
                                       teacher_forcing_ratio = teacher_forcing_ratio, rl=rl )
+            loss = loss/6.0
             plot_losses.append( loss )
 
             print("\t- the %s batch xentropy loss: "%str(str(epoch)+"."+str(batch)), loss, " " )
+
+            teacher_forcing_ratio = utils.teacher_force(float(loss) ) ;
 
             '''if 0 == batch%savepoint and batch > 1:
                 print("\n Batch %d savepoint, save the trained model...\n"%batch )
@@ -706,17 +681,18 @@ def trainItersBert(model, n_iters, training_pairs, eval_pairs, input_lang, outpu
         losses_trend.append(np.mean(plot_losses))
         plot_losses.clear()
 
-        if epoch > 1 :#and 0 == epoch%5 :
-            save_model(model, losses_trend, model_name ) 
+        if epoch > 1 and 0 == epoch%5 :
+            save_model(encoder, decoder, losses_trend, model_name ) 
             '''if epoch > 5 and 0 == epoch%5 :
                 utils.showPlot(losses_trend, model_name, "epoch"+str(epoch) )'''
             print("\n Finish Epoch %d -- model saved. \n "%epoch ); #!!!
 
 
-def save_model(model, plot_losses, model_name ):
+def save_model(encoder, decoder, plot_losses, model_name ):
     stamp = str(time.time())
     savepath = utils.prepare_dir( model_name, stamp)
-    torch.save(model.state_dict(), savepath+"/%s.model"%stamp )
+    torch.save(encoder.state_dict(), savepath+"/%s.encoder"%stamp )
+    torch.save(decoder.state_dict(), savepath+"/%s.decoder"%stamp )
     try:
         utils.showPlot(plot_losses, model_name, stamp ) 
     except:

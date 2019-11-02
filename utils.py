@@ -8,8 +8,10 @@ import torch
 import torch.nn.utils.rnn as rnn_utils
 import json 
 import math 
+import pickle
 import os
 import ast
+import platform
 import kg_utils.queries as queries 
 import kg_utils.kgutils as kgutils
 
@@ -26,9 +28,12 @@ class Lang:
         self.word2count = {}
         self.index2word = {0: "SOS", 1: "EOS"}
         self.n_words = 2  # Count SOS and EOS
-
+        self.sents_lens = []
+        
     def addSentence(self, sentence):
-        for word in sentence.split(' '):
+        words = sentence.split(' ')
+        self.sents_lens.append(len(words))
+        for word in words:
             self.addWord(word)
 
     def addWord(self, word):
@@ -38,8 +43,19 @@ class Lang:
             self.index2word[self.n_words] = word
             self.n_words += 1
         else:
-            self.word2count[word] += 1
+            self.word2count[word] += 1 
 
+    def saveData(self):
+        json.dump(self.word2index , 
+                    open("./data/%(name)s.%(n_words)s.word2index.json"%{"name":self.name, "n_words":self.n_words}, "w", encoding="UTF-8") )
+        json.dump(self.index2word , 
+                    open("./data/%(name)s.%(n_words)s.index2word.json"%{"name":self.name, "n_words":self.n_words}, "w", encoding="UTF-8") ) ;
+
+    def max_len(self):
+        if len(self.sents_lens) > 0:
+            return max(self.sents_lens)
+        
+            
 
 # The files are all in Unicode, to simplify we will turn Unicode
 # characters to ASCII, make everything lowercase, and trim most
@@ -93,8 +109,9 @@ def loadData(fp):
     
 def loadEvalData(fp):
     data = [ line.split("\t") for line in open( fp, "r", encoding="UTF-8").readlines() ]
-    pairs = [ (pair[0], pair[1], ast.literal_eval(pair[-1])) for pair in data ] 
-    return filterPairs(pairs)
+    pairs = [ [pair[0], pair[1], ast.literal_eval(pair[-1])] for pair in data ] 
+    filtered_pairs = filterPairs(pairs)
+    return filtered_pairs
     
  
 def readLangs(fp, reverse=False):
@@ -132,7 +149,7 @@ def readLangs(fp, reverse=False):
 MAX_LENGTH = 30
 
 def filterPair(p):
-    return ( len(p[0].split(' ')) < MAX_LENGTH )and( len(p[1].split(' ')) < MAX_LENGTH )
+    return ( len(p[0].split(' ')) < MAX_LENGTH ) and( len(p[1].split(' ')) < MAX_LENGTH )
 
 def filterPairs(pairs):
     return [pair for pair in pairs if filterPair(pair)]
@@ -151,7 +168,7 @@ def prepareData(training_fp, eval_fp, reverse=False):
     print("\n Read %s sentence pairs"%len(training_pairs))
     eval_pairs = loadEvalData(eval_fp)
     #all_pairs = training_pairs + eval_pairs
-    pairs = filterPairs(training_pairs) 
+    pairs = training_pairs #filterPairs(training_pairs) #!!!
     print(" Trimmed to %s sentence pairs"%len(pairs))
     print("\n Counting words...")
     for pair in pairs:
@@ -161,6 +178,8 @@ def prepareData(training_fp, eval_fp, reverse=False):
     print("\t", input_lang.name, input_lang.n_words)
     VOCAB_SIZE = int(input_lang.n_words)
     print("\t", output_lang.name, output_lang.n_words)
+    #input_lang.saveData() 
+    #output_lang.saveData() 
     print("")
     return input_lang, output_lang, pairs, eval_pairs, VOCAB_SIZE ;
 
@@ -178,13 +197,17 @@ import matplotlib.ticker as ticker
 import numpy as np
 
 
-def showPlot(points):
+def showPlot(points, model_name, stamp ):
     plt.figure()
     fig, ax = plt.subplots()
     # this locator puts ticks at regular intervals
     loc = ticker.MultipleLocator(base=0.2)
     ax.yaxis.set_major_locator(loc)
     plt.plot(points)
+    try:
+        plt.savefig('./model/%(model_name)s/%(stamp)s/%(stamp)s.png'%{ "model_name":model_name, "stamp":stamp } )
+    except:
+        plt.savefig('./model/%(model_name)s/%(stamp)s.png'%{ "model_name":model_name, "stamp":stamp } )
 
 
 # Preparing Training Data
@@ -199,9 +222,19 @@ def showPlot(points):
 # 
  
 def indexesFromSentence(lang, sentence,  ):
-    idxs = [lang.word2index[word] for word in sentence.split(' ')]
+    idxs = []
+    for word in sentence.split(' '):
+        try:
+            idxs.append(lang.word2index[word] )
+        except:
+            #lang.addWord(word)
+            #idxs.append(lang.word2index[word] )
+            idxs.append(SOS_token)
+            print(" sentence: ", sentence )
+            print(" word: ", word )
     return idxs ;
-
+    
+        
 """l = len(idxs)
     assert(l <= size)
     gap = size - l
@@ -267,7 +300,7 @@ def prepare_dir( model_name, stamp):
             os.makedir(savepath)
     return savepath
 
-
+#torch.utils.data.IterableDataset
 class TxtDataset(torch.utils.data.Dataset):#????Dataset??
     def __init__(self, input_tensors, target_tensors ):
         self.input_tensors = input_tensors
@@ -343,3 +376,20 @@ def myfunction(data):
            torch.LongTensor(src_len), torch.LongTensor(tgt_len), \
            original_src, original_tgt
            """
+
+def getOSystPlateform():
+    sysstr = platform.system()
+    if(sysstr =="Windows"):
+        return False
+    elif(sysstr == "Linux"):
+        return True 
+    else:
+        return False ; 
+
+
+def getNzeroSize(tensor):
+    idxs = torch.nonzero(tensor)
+    return idxs.size(0)
+    
+
+ 

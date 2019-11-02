@@ -23,6 +23,7 @@ from torch import optim
 import torch.nn.functional as F
 
 import torch.utils.data as Data
+
 import torch.nn.utils.rnn as rnn_utils
 
 from pytorch_pretrained_bert import BertTokenizer, BertModel, BertForMaskedLM, BertForSequenceClassification
@@ -32,7 +33,7 @@ import kg_utils.reward as reward
 import utils
 from utils import *
 
-import transf_decoder 
+torch.manual_seed(1) 
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print("\n device: ", device)
@@ -70,6 +71,13 @@ class BERTEncoder(BertForSequenceClassification):
         print(self.bert.embeddings)
         
     def forward(self, input_ids, token_type_ids=None, attention_mask=None, labels=None):
+        '''print("\n ", input_ids.size())
+        print("\n ", token_type_ids.size())
+        print("\n ", attention_mask.size())'''
+        print("\n ------------ " )
+        print("\n input_ids: ", input_ids)
+        print("\n token_type_ids: ", token_type_ids)
+        print("\n attention_mask: ", attention_mask)
         _, pooled_output = self.bert(input_ids, token_type_ids, attention_mask, output_all_encoded_layers=False)
         pooled_output = self.dropout(pooled_output)
         logits = self.classifier(pooled_output)
@@ -92,68 +100,37 @@ class DecoderRNN(nn.Module):
         self.hidden_size = hidden_size
 
         self.embedding = nn.Embedding(output_size, hidden_size)
-        self.gru = nn.GRU(hidden_size, hidden_size ) #!!! , num_layers=3 ) 
-        #self.gru2 = nn.GRU(hidden_size, hidden_size ) #!!! , num_layers=3 ) 
+        #self.gru = nn.GRU(hidden_size, hidden_size,  ) #batch_first=True #!!! 
+        self.gru = nn.GRU(hidden_size, hidden_size, batch_first=True )
+        
         self.out = nn.Linear(hidden_size, output_size)
         self.softmax = nn.LogSoftmax(dim=1)
 
     def forward(self, input, hidden):
-        output = self.embedding(input).view(1, 1, -1)
-        output = F.relu(output)
+        print("\n input--> ", input.size()) 
+        #output = self.embedding(input).view(1, 1, -1)
+        output = self.embedding(input).view( 6, -1)
+        print(output.size())
+        output = F.relu(output) 
+        output = output.reshape([1, 6, 256])
+        hidden = hidden.reshape([1, 6, 256])
+        hidden = hidden[0,0].reshape([1, 1, -1])
+        print("\n output--> ", output.size()) 
+        print(" hidden--> ", hidden.size(), " \n ")
+
         output, hidden = self.gru(output, hidden)
-        #output, hidden = self.gru2(output, hidden)
+        print("\t *output--> ", output.size())
+        print("\t *output[0]--> ", output[0].size())
+        print("\t *hidden--> ", hidden.size(), " \n ")
         output = self.softmax(self.out(output[0]))
+        print("\t *output after softmax--> ", output.size())
         return output, hidden
 
     def initHidden(self):
-        return torch.zeros(1, 1, self.hidden_size, device=device) ;
+        return torch.zeros(1, 6, self.hidden_size, device=device) ;#!!!
  
     
- 
-class AttnDecoderRNN(nn.Module):
-    def __init__(self, hidden_size, output_size, dropout_p=0.1, max_length=MAX_LENGTH):
-        super(AttnDecoderRNN, self).__init__()
-        self.hidden_size = hidden_size
-        self.output_size = output_size
-        self.dropout_p = dropout_p
-        self.max_length = max_length
 
-        self.embedding = nn.Embedding(self.output_size, self.hidden_size)
-        self.attn = nn.Linear(self.hidden_size * 2, self.max_length)
-        self.attn_combine = nn.Linear(self.hidden_size * 2, self.hidden_size)
-        self.dropout = nn.Dropout(self.dropout_p)
-        self.birnn = nn.GRU(self.hidden_size, self.hidden_size, bidirectional=True ) #!!! added
-        self.gru = nn.GRU(self.hidden_size, self.hidden_size)
-        self.out = nn.Linear(self.hidden_size, self.output_size)
-
-    def forward(self, input, hidden, encoder_outputs):
-        #input, hidden = input_and_hidden
-        embedded = self.embedding(input).view(1, 1, -1)
-        embedded = self.dropout(embedded)
-
-        attn_weights = F.softmax(
-            F.relu(self.attn(torch.cat((embedded[0], hidden[0]), 1))), dim=1)
-        attn_applied = torch.bmm(attn_weights.unsqueeze(0),
-                                 encoder_outputs.unsqueeze(0))
-
-        output = torch.cat((embedded[0], attn_applied[0]), 1)
-        output = self.attn_combine(output).unsqueeze(0)
-
-        output = F.relu(output)
-
-        bihidden = hidden.repeat(2,1,1).view(2,1,-1)
-        bioutput, bihidden = self.birnn(output, bihidden ) #!!! added
-        #print("\n birnn--> output, hidden : ", output.size(), hidden.size() )
-        bioutput, bihidden = bioutput.view([-1,1,256]), torch.mean(bihidden,dim=0,keepdim=True)
-        output, hidden = self.gru(bioutput, bihidden)
-
-        output = F.log_softmax(self.out(output[0]), dim=1)
-        return output, hidden, attn_weights
-
-    def initHidden(self):
-        return torch.zeros(1, 1, self.hidden_size, device=device)
-
- 
    
 # Evaluation for the Model 
 """
@@ -251,21 +228,13 @@ def evaluate(encoder, decoder, sentence, training_ans, input_lang, output_lang, 
 #            return rewrd 
 #            
 
-
 def evaluate(encoder, decoder, sentence, training_ans, input_lang, output_lang, max_length=utils.MAX_LENGTH, rl=True):
     with torch.no_grad():
         
         input_tensor = utils.tensorFromSentence(input_lang, sentence, device )
         
         input_length = input_tensor.size(0)
-        print(" evaluation input_length: ", input_length) 
-
-        """#!!! 
-        encoder_hidden = encoder.initHidden() 
-        encoder_outputs = torch.zeros(max_length, encoder.hidden_size, device=device)
-        for ei in range(input_length):
-            encoder_output, encoder_hidden = encoder(input_tensor[ei] )
-            encoder_outputs[ei] = encoder_output[0, 0] ; """ 
+        print(" evaluation input_length: ", input_length)
         
         encoder_hidden = encoder(input_tensor)
         
@@ -277,25 +246,19 @@ def evaluate(encoder, decoder, sentence, training_ans, input_lang, output_lang, 
         
         #decoder_hidden_input = decoder_hidden #!!!
 
-        src = encoder_hidden.reshape([-1, 256])
-        #print("\n src: ", src.size(), "\t", src.size(1) )
-        #print(max_length, src.size(0))
-        encoder_outputs = F.pad(src, (0,0,0,int(max_length-src.size(0))), "constant", 0)
-        #print(encoder_outputs.size())
-
         # Without teacher forcing: use its own predictions as the next input
         decoded_words = [] #!
 
         for di in range(max_length):
             #print(di, " decoder_hidden shape: ", decoder_hidden.size(), " \n ",  decoder_hidden )
-            decoder_hidden = decoder_hidden[:, 0, :]  
+            decoder_hidden = decoder_hidden[:, 0, :]
             decoder_hidden = decoder_hidden.view(1,1,256)
             
-            decoder_output, decoder_hidden, decoder_attention = decoder( #decoder_input, decoder_hidden)
-                decoder_input, decoder_hidden, encoder_outputs )
+            decoder_output, decoder_hidden = decoder(
+                decoder_input, decoder_hidden)
             topv, topi = decoder_output.topk(1)
             #!!!
-            if topi.item() == utils.EOS_token or (topi.item() == utils.SOS_token and di>1 ):
+            if topi.item() == utils.EOS_token:
                 decoded_words.append('<EOS>')
                 break
             else:
@@ -303,7 +266,7 @@ def evaluate(encoder, decoder, sentence, training_ans, input_lang, output_lang, 
             #!!!
             decoder_input = topi.squeeze().detach()  # detach from history as input
 
-            if decoder_input.item() == utils.EOS_token or (decoder_input.item() == utils.SOS_token and di>1 ):
+            if decoder_input.item() == utils.EOS_token:
                 break;
                 
         decoded_sentence = str(" ").join(decoded_words) 
@@ -313,53 +276,12 @@ def evaluate(encoder, decoder, sentence, training_ans, input_lang, output_lang, 
             return decoded_sentence 
         else:
             rewrd = reward.get_reward(decoded_sentence, training_ans )
-            print("  --reward--> ", rewrd, "\n")
-            return rewrd 
-'''                 
-def evaluate(encoder, decoder, sentence, training_ans, input_lang, output_lang, max_length=utils.MAX_LENGTH, rl=True):
-    with torch.no_grad():
-        input_tensor = utils.tensorFromSentence(input_lang, sentence, device=device)
-        input_length = input_tensor.size()[0]
-        encoder_hidden = encoder.initHidden()
-
-        encoder_outputs = torch.zeros(max_length, encoder.hidden_size, device=device)
-
-        for ei in range(input_length):
-            encoder_output, encoder_hidden = encoder(input_tensor[ei],
-                                                     encoder_hidden)
-            encoder_outputs[ei] += encoder_output[0, 0]
-
-        decoder_input = torch.tensor([[SOS_token]], device=device)  # SOS
-
-        decoder_hidden = encoder_hidden
-
-        decoded_words = []
-        decoder_attentions = torch.zeros(max_length, max_length)
-
-        for di in range(max_length):
-            decoder_output, decoder_hidden, decoder_attention = decoder(
-                decoder_input, decoder_hidden, encoder_outputs)
-            decoder_attentions[di] = decoder_attention.data
-            topv, topi = decoder_output.data.topk(1)
-            if topi.item() == EOS_token:
-                decoded_words.append('<EOS>')
-                break
-            else:
-                decoded_words.append(output_lang.index2word[topi.item()])
-
-            decoder_input = topi.squeeze().detach()
-
-        decoded_sentence = str(" ").join(decoded_words)
-        print("\n  --query--> ", decoded_sentence, "\n ") 
-        
-        if (not rl) or (training_ans is None):
-            return decoded_sentence 
-        else:
-            rewrd = reward.get_reward(decoded_sentence, training_ans )
             print("\n  --reward--> ", rewrd)
             return rewrd 
-'''         
-       
+                 
+          
+    
+    
 def evaluateRandomly(encoder, decoder, eval_pairs, input_lang, output_lang, n=10, rl=True):
     #output_sentences = []
     rewrds = 0.0
@@ -482,50 +404,50 @@ def trainBert(input_tensor, target_tensor, encoder, decoder, training_ans, input
 """
 
 
-"""def trainBert(input_tensor, target_tensor, encoder, decoder, eval_pairs, input_lang, output_lang, encoder_optimizer, decoder_optimizer, criterion, max_length=MAX_LENGTH, teacher_forcing_ratio=0.5, rl=True ):
+def trainBert(input_tensor, target_tensor, encoder, decoder, eval_pairs, input_lang, output_lang, encoder_optimizer, decoder_optimizer, criterion, max_length=MAX_LENGTH, teacher_forcing_ratio=0.5, rl=True ):
 
     encoder_optimizer.zero_grad()
     decoder_optimizer.zero_grad()
-
+    print("\n\t input_tensor.size(): ", input_tensor.size())
     input_length = input_tensor.size(0)
+    print("\t input_length: ", input_length)
     target_length = target_tensor.size(0)
 
-    #encoder_outputs = torch.zeros(max_length, 256, device=device) #!!! (max_length, encoder.hidden_size, device=device)
-    
+    #encoder_outputs = torch.zeros(max_length, encoder.hidden_size, device=device)
+
     loss = 0
-    
+
+    print("\n encoder(input_tensor) : ", input_tensor.size())
     encoder_hidden = encoder(input_tensor)
-    
+    print("\n encoder_hidden : ", encoder_hidden.size())
+
     encoder_hidden = encoder_hidden.unsqueeze(0)
-    #print("\n real encoder_hidden: ", encoder_hidden.size(), " \n")
 
-    src = encoder_hidden.reshape([-1, 256])
-    #print("\n src: ", src.size(), "\t", src.size(1) )
-    #print(MAX_LENGTH, src.size(0))
-    encoder_outputs = F.pad(src, (0,0,0,int(MAX_LENGTH-src.size(0))), "constant", 0)
-    #print(encoder_outputs.size())
+    #for ei in range(input_length):
+        #encoder_output, encoder_hidden = encoder(
+            #input_tensor[ei], encoder_hidden)
+        #encoder_outputs[ei] = encoder_output[0, 0]
 
-    decoder_input = torch.tensor([[utils.SOS_token]], device=device)
+    decoder_input = torch.tensor([[utils.SOS_token]], device=device) 
+    decoder_input = torch.cat((decoder_input, decoder_input, decoder_input,decoder_input, decoder_input, decoder_input), 0)
+    print("\n decoder_input: ", decoder_input.size() )
+    #decoder_input = decoder_input.reshape([1,-1,256]) 
 
-    decoder_hidden = encoder_hidden[0, 0].view(1,1,-1) #!!! v02 
-    #encoder_outputs = decoder_hidden
+    #decoder_hidden = encoder_hidden
+    decoder_hidden = encoder_hidden[0].reshape([1, 1, -1]) #!!! 
 
-    use_teacher_forcing = False #True if random.random() < teacher_forcing_ratio else False
-    #print("  * T-forcing ratio: ", teacher_forcing_ratio , str(use_teacher_forcing) )
-    #!!!
-    decoded_words = []
-    
-    #!!!
+    use_teacher_forcing = True if random.random() < teacher_forcing_ratio else False
+
     losses = []
     if use_teacher_forcing:
         # Teacher forcing: Feed the target as the next input
-        #print("  * Teacher forcing: ")
-        #print("\n decoder_input, decoder_hidden, encoder_outputs : ",
-        #    decoder_input.size(), decoder_hidden.size(), encoder_outputs.size() )
+        print("  * Teacher forcing: ")
         for di in range(target_length):
-            decoder_output, decoder_hidden, decoder_attention = decoder(input=decoder_input, \
-                hidden=decoder_hidden, encoder_outputs=encoder_outputs )#!!!
-            #    decoder_input, decoder_hidden)
+            decoder_output, decoder_hidden = decoder(
+                decoder_input, decoder_hidden)
+            print("\n\t --- decoder_output: ", decoder_output.size() )
+            print("\t --- decoder_output[0]: ", decoder_output[0].size(), "\n\t ", decoder_output[0] )
+            print("\t --- target_tensor[%d]: "%di, target_tensor[di].size(), "\n\t ", target_tensor[di] )
             loss += criterion(decoder_output, target_tensor[di])
 
             loss_ = loss
@@ -534,24 +456,16 @@ def trainBert(input_tensor, target_tensor, encoder, decoder, training_ans, input
              
             decoder_input = target_tensor[di]  # Teacher forcing
 
-            if decoder_input.item() == utils.EOS_token or (decoder_input.item() == utils.SOS_token and di>1 ):
+            if decoder_input.item() == utils.EOS_token: #!!!added
                 break
+
     else:
         # Without teacher forcing: use its own predictions as the next input
-        #print("  * Not teacher forcing: ")
+        print("  * Not teacher forcing: ")
         for di in range(target_length):
-            decoder_output, decoder_hidden, decoder_attention = decoder(input=decoder_input, \
-                hidden=decoder_hidden, encoder_outputs=encoder_outputs )#!!!
-            #    decoder_input, decoder_hidden)
+            decoder_output, decoder_hidden = decoder(
+                decoder_input, decoder_hidden)
             topv, topi = decoder_output.topk(1)
-            #!!!
-            if topi.item() == utils.EOS_token :#or (topi.item() == utils.SOS_token and di>1 ):
-                decoded_words.append('<EOS>')
-                break
-            else:
-                decoded_words.append(output_lang.index2word[topi.item()])
-            
-            #!!!
             decoder_input = topi.squeeze().detach()  # detach from history as input
 
             loss += criterion(decoder_output, target_tensor[di])
@@ -560,19 +474,13 @@ def trainBert(input_tensor, target_tensor, encoder, decoder, training_ans, input
             v = float(loss_.detach().numpy()/(di+1.0))
             losses.append(v) 
 
-            if decoder_input.item() == utils.EOS_token :#or (decoder_input.item() == utils.SOS_token and di>1 ):
+            if decoder_input.item() == utils.EOS_token:
                 break
-
-    #tgt_sent = str(" ").join([output_lang.index2word[i] for i in list(target_tensor.detach().numpy()) if i in output_lang.index2word.keys()])
-    nmt_sent = str(" ").join(decoded_words)
-    '''print("  tgt: ", target_tensor.detach().numpy())
-    print("  output: ", output_tensor.detach().numpy())'''
-    print("\n  nmt_sent: ", nmt_sent, " \n")
-
+    
     if rl and (np.mean(losses) < 1.0) :
         reward_value = evaluateRandomly(encoder, decoder, eval_pairs, input_lang, output_lang, n=10, rl=rl) 
         if 2.0 > reward_value > 1.0:
-            loss = torch.mul(loss, torch.FloatTensor([reward_value]) )
+            loss = torch.mul(loss, torch.LongTensor([reward_value]) ) #torch.mul(loss, torch.FloatTensor([reward_value]) ) #!!! 
     else:
         pass;
 
@@ -581,44 +489,20 @@ def trainBert(input_tensor, target_tensor, encoder, decoder, training_ans, input
     encoder_optimizer.step()
     decoder_optimizer.step()
 
-    return loss.item()/target_length """
-
-def trainBert(input_tensor,  target_tensor,  model, eval_pairs, input_lang, output_lang, optimizer, criterion, max_length=MAX_LENGTH, teacher_forcing_ratio=0.5, rl=True ):
-
-    #encoder_optimizer.zero_grad()
-    #decoder_optimizer.zero_grad()
-    optimizer.zero_grad()
-
-    #input_length = input_tensor.size(0)
-    #target_length = target_tensor.size(0)
-
-    model = transf_decoder.Transformer(input_lang, output_lang)
-
-    output = model(input_tensor, target_tensor )
-
-    batch_size, seq_len = target_tensor.size(0), target_tensor.size(1)
-    target_tensor = target_tensor.reshape([batch_size, seq_len])
-
-    loss = criterion(output, target_tensor)
+    return loss.item()/target_length
     
-    loss.backward()
-
-    #encoder_optimizer.step()
-    #decoder_optimizer.step()
-    optimizer.step()
-
-    return loss.item()
-       
 
 
-def trainItersBert(model, n_iters, training_pairs, eval_pairs, input_lang, output_lang, batch_size, learning_rate=0.01, mom=0,  model_name="qald-test"):
-    #start = time.time()
+def trainItersBert(encoder, decoder, n_iters, training_pairs, eval_pairs, input_lang, output_lang, print_every=1000, plot_every=100, learning_rate=0.01, mom=0,  model_name="QALD-dev"):
+    start = time.time()
     plot_losses = []
-    losses_trend = []
-     
-    #encoder_optimizer = optim.SGD(encoder.parameters(), lr=learning_rate, momentum=mom)
-    #decoder_optimizer = optim.SGD(decoder.parameters(), lr=learning_rate, momentum=mom)
-    optimizer = optim.SGD(model.parameters(), lr=learning_rate, momentum=mom)
+    print_loss_total = 0  # Reset every print_every
+    plot_loss_total = 0  # Reset every plot_every
+    
+    plot_loss_avg = 1.0 #!!!
+
+    encoder_optimizer = optim.SGD(encoder.parameters(), lr=learning_rate, momentum=mom)
+    decoder_optimizer = optim.SGD(decoder.parameters(), lr=learning_rate, momentum=mom)
     
     #encoder_optimizer = optim.Adam(encoder.parameters(), lr=learning_rate, amsgrad=True)
     #encoder_scheduler = optim.lr_scheduler.CosineAnnealingLR(encoder_optimizer, n_iters)
@@ -628,100 +512,131 @@ def trainItersBert(model, n_iters, training_pairs, eval_pairs, input_lang, outpu
     teacher_forcing_ratio = 1.0
 
     criterion = nn.NLLLoss()
-    '''
+
+    '''src_sents, tgt_sents = [], []
+    for pair in training_pairs:
+        src_sents.append(pair[0])
+        tgt_sents.append(pair[1])
+    src_size, tgt_size = utils.max_size(src_sents, tgt_sents )'''
+    
+    #!!!
     input_tensors, target_tensors, train_pairs = [], [], []
     for pair in training_pairs:
         tensors = utils.tensorsFromPair(pair, input_lang, output_lang, device)
         train_pairs.append(tensors)
-        #print("tensor shape--> ", tensors[0].size())
-        #print(tensors[0])
+        '''print("tensor shape--> ", tensors[0].size())
+        print(tensors[0])'''
         input_tensors.append(tensors[0].view(-1,1).long()) #float() #!!! 
-        target_tensors.append(tensors[1].view(-1,1).long()) #!!!
-
+        target_tensors.append(tensors[1].view(-1,1).long()) #!!! 
     print("\n Dataset preparing... ")
+
+    """input_tensors, target_tensors = torch.Tensor(len(training_pairs), 1, 1, 256), torch.Tensor(len(training_pairs), 1, 1, 256)
+    torch.cat(en_tensors, out=input_tensors)
+    torch.cat(sparql_tensors, out=target_tensors)"""
+
+    '''print(" assert all(tensors[0].size(0) == tensor.size(0) for tensor in tensors) ")
+    print(input_tensors[0].size(0), )'''
+
     input_tensors  = rnn_utils.pad_sequence(input_tensors, batch_first=True, padding_value=0)
     target_tensors  = rnn_utils.pad_sequence(target_tensors, batch_first=True, padding_value=0)
-    
-    torch.save(input_tensors, "./model/input_tensors.pt")
-    torch.save(target_tensors, "./model/target_tensors.pt")'''
-
-    eval_tensors = [utils.tensorsFromPair(pair, input_lang, output_lang, device) for pair in eval_pairs ] 
-    eval_inputs = [ tensors[0] for tensors in eval_tensors ]
-    eval_targets = [ tensors[1] for tensors in eval_tensors ]
-    
-    eval_inputs  = rnn_utils.pad_sequence(eval_inputs, batch_first=True, padding_value=0)
-    eval_targets = rnn_utils.pad_sequence(eval_targets, batch_first=True, padding_value=0)
-
     #input_tensors, target_tensors = utils.padding(input_tensors, target_tensors )
-    '''torch_dataset = utils.TxtDataset(input_tensors, target_tensors  )'''
-    torch_dataset = utils.TxtDataset(eval_inputs, eval_targets  )
+    torch_dataset = utils.TxtDataset(input_tensors, target_tensors  )
     
     # put the dataset into DataLoader
     loader = Data.DataLoader(
         dataset=torch_dataset,
-        batch_size=batch_size,  # MINIBATCH_SIZE = 6
+        batch_size=6,  # MINIBATCH_SIZE
         shuffle=True,
-        drop_last= False,
-        num_workers= 2 if utils.getOSystPlateform() else 0  # set multi-work num read data based on OS plateform
+        #num_workers=1           # set multi-work num read data
         #collate_fn= utils.collate_fn  #!!! 
     ) 
-    print(" Dataset loader ready, begin training. \n") 
-
-    datset_len = len(loader)
-    
-    print("\n Dataset loader length is ", datset_len, ", save model every batch. " )
+    print(" Dataset loader ready, begin training. \n")
 
     for epoch in range(1, n_iters + 1):
-    # an epoch goes the whole data
-        for batch, (batch_input, batch_target) in enumerate(loader):
+    # 1 epoch go the whole data
+        for step, (batch_input, batch_target) in enumerate(loader):
             # here to train your model
-            print('\n\n  - Epoch ', epoch, ' | batch ', batch, '\n | input lenght:   ', batch_input.size(), '\n | target length:   ', batch_target.size() ," \n")  
+            print('\n\n  - epoch: ', epoch, ' | step: ', step, '\n | batch_input: \n', batch_input.size(), '\n | batch_target: \n', batch_target.size() ) 
             
             #input_tensor, target_tensor = batch_input, batch_target  #!!! 
-            #print("  * T-forcing ratio: ", teacher_forcing_ratio  )
-            '''try:
-                input_seq_len, target_seq_len = batch_input.size(1), batch_target.size(1)
-                batch_input = batch_input.reshape( [input_seq_len, batch_size] ) #!!!  [6, 1, -1] 
-                batch_target = batch_target.reshape( [target_seq_len, batch_size] )
-                print("\n input_seq_len, target_seq_len : ", input_seq_len, target_seq_len )
-            except:
-                pass ; '''
 
-            """input_lens = [utils.getNzeroSize(tensor) for tensor in batch_input ]
-            target_lens = [utils.getNzeroSize(tensor) for tensor in batch_target ]"""
+            batch_input = batch_input.reshape( [6,  -1, 1] ) #!!!  [6, 1, -1] 
+            batch_target = batch_target.reshape( [6,  -1, 1] )
+            print("\n input_batch : ", batch_input.size())
+            print("\n target_batch : ", batch_target.size())
 
-            rl = False #True if (epoch > 1) and ( np.mean(losses_trend)<1.0 and len(losses_trend)>1 ) else False  #!!! and / or 
+            '''loss = trainBert(input_tensor, target_tensor, encoder,
+                        decoder, encoder_optimizer, decoder_optimizer, criterion) '''
+            rl = True if (epoch > 1) and (np.mean(plot_losses) < 1.0 ) else False 
 
-            loss = trainBert(batch_input,  batch_target,  model, eval_pairs, \
-                                    input_lang, output_lang, optimizer, criterion, \
-                                      teacher_forcing_ratio = teacher_forcing_ratio, rl=rl )
-            plot_losses.append( loss )
+            '''loss = 0.0
+            for i in range(6):
+                input_tensor, target_tensor = batch_input[i], batch_target[i]
+                print("\n input_tensor : ", input_tensor.size() )
+                print("\n target_tensor : ", target_tensor.size() )
+                loss += trainBert(input_tensor, target_tensor, encoder, decoder, eval_pairs, input_lang, output_lang, encoder_optimizer, decoder_optimizer, criterion, teacher_forcing_ratio = teacher_forcing_ratio, rl=rl )
+            plot_losses.append( loss/6 )
+            '''
+            loss = 0
+            for batch_input_, batch_target_ in zip(batch_input, batch_target):
+                loss += trainBert(batch_input, batch_target, encoder, decoder, eval_pairs, input_lang, output_lang, encoder_optimizer, decoder_optimizer, criterion, teacher_forcing_ratio = teacher_forcing_ratio, rl=rl )
+            
+            plot_losses.append( loss/6 )
 
-            print("\t- the %s batch xentropy loss: "%str(str(epoch)+"."+str(batch)), loss, " " )
+            print("\t -  %s step xentropy loss: "%str(epoch), loss, " \n" )
 
-            '''if 0 == batch%savepoint and batch > 1:
-                print("\n Batch %d savepoint, save the trained model...\n"%batch )
-                save_model(encoder, decoder, plot_losses, model_name ) ;'''
+            teacher_forcing_ratio = utils.teacher_force(float(loss) ) ;
+
+            
+
+"""
+    train_pairs = [utils.tensorsFromPair(random.choice(training_pairs), input_lang, output_lang, device)  for i in range(n_iters) ]
+    for iter in range(1, n_iters + 1):
+        #encoder_scheduler.step()
+        #decoder_scheduler.step()
         
-        losses_trend.append(np.mean(plot_losses))
-        plot_losses.clear()
+        train_pair = train_pairs[iter - 1]
+        input_tensor = train_pair[0]
+        target_tensor = train_pair[1]
+        input_tensor.transpose_(0,1)
+        #print(input_tensor.size())
 
-        if epoch > 1 :#and 0 == epoch%5 :
-            save_model(model, losses_trend, model_name ) 
-            '''if epoch > 5 and 0 == epoch%5 :
-                utils.showPlot(losses_trend, model_name, "epoch"+str(epoch) )'''
-            print("\n Finish Epoch %d -- model saved. \n "%epoch ); #!!!
+        '''loss = trainBert(input_tensor, target_tensor, encoder,
+                     decoder, encoder_optimizer, decoder_optimizer, criterion) '''
+        rl = True if (iter > 1000) and (plot_loss_avg < 1.0 ) else False 
+        
+        loss = trainBert(input_tensor, target_tensor, encoder, decoder, eval_pairs, input_lang, output_lang, encoder_optimizer, decoder_optimizer, criterion, teacher_forcing_ratio = teacher_forcing_ratio, rl=rl )
+        print_loss_total += loss
+        plot_loss_total += loss
 
+        print("\t -  %s step xentropy loss: "%str(iter), loss, " \n" )
 
-def save_model(model, plot_losses, model_name ):
+        teacher_forcing_ratio = utils.teacher_force(float(loss) )
+
+        if iter % print_every == 0:
+            print_loss_avg = print_loss_total / print_every
+            print_loss_total = 0
+            print('%s (%d %d%%) %.4f' % (utils.timeSince(start, iter / n_iters),
+                                         iter, iter / n_iters * 100, print_loss_avg))
+
+        if iter % plot_every == 0:
+            plot_loss_avg = plot_loss_total / plot_every
+            plot_losses.append(plot_loss_avg)
+            plot_loss_total = 0
+
+        if ( 0==iter%print_every or (n_iters + 1)==iter ):# and iter > 1 :
+            save_model(encoder, decoder, plot_losses, model_name ) ;
+"""
+
+def save_model(encoder, decoder, plot_losses, model_name ):
     stamp = str(time.time())
     savepath = utils.prepare_dir( model_name, stamp)
-    torch.save(model.state_dict(), savepath+"/%s.model"%stamp )
+    torch.save(encoder.state_dict(), savepath+"/%s.encoder"%stamp )
+    torch.save(decoder.state_dict(), savepath+"/%s.decoder"%stamp )
     try:
-        utils.showPlot(plot_losses, model_name, stamp ) 
+        utils.showPlot(plot_losses) 
     except:
         pass ;
-    print(" * model save with time stamp: ", stamp )
 
 
 

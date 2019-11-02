@@ -4,21 +4,17 @@ Created on Fri Oct 11 20:36:35 2019
 
 @author: Stuart
 """
-import torch 
-import torch.nn as nn 
-import torch.nn.utils.rnn as rnn_utils
-
-import neural_layers as nl # 
-from transf_decoder import Transformer
+import neural_layers as nl
 import utils
 import matplotlib.pyplot as plt
 plt.switch_backend('agg') 
-
+import torch 
+import torch.nn.utils.rnn as rnn_utils
 import argparse
 
 
 
-"""class Seq2SeqModel:
+class Seq2SeqModel:
     def __init__(self, output_lang, VOCAB_SIZE):
         hidden_size = 256
         #self.encoder = nl.BERTEncoder.from_pretrained('bert-base-multilingual-cased', num_labels=hidden_size ).to(nl.device) 
@@ -43,44 +39,9 @@ import argparse
         self.encoder.eval()
         self.decoder.load_state_dict(torch.load(dec_path)) 
         self.decoder.eval()
-        print("\n ...model loaded.") """
+        print("\n ...model loaded.")
         
-
-"""class Transformer(nn.Module):
-
-    def __init__(self,
-               src_vocab_size,
-               src_max_len,
-               tgt_vocab_size,
-               tgt_max_len,
-               num_layers=6,
-               model_dim=512,
-               num_heads=8,
-               ffn_dim=2048,
-               dropout=0.2):
-        super(Transformer, self).__init__()
-
-        self.encoder = nl.BERTEncoder.from_pretrained('bert-large-cased', num_labels=model_dim ).to(nl.device) 
-        # Encoder(src_vocab_size, src_max_len, num_layers, model_dim, num_heads, ffn_dim, dropout)
-        self.decoder = Decoder(tgt_vocab_size, tgt_max_len, num_layers, model_dim,
-                               num_heads, ffn_dim, dropout)
-
-        self.linear = nn.Linear(model_dim, tgt_vocab_size, bias=False)
-        self.softmax = nn.Softmax(dim=2)
-
-    def forward(self, src_seq, src_len, tgt_seq, tgt_len):
-        context_attn_mask = padding_mask(tgt_seq, src_seq)
-
-        output, enc_self_attn = self.encoder(src_seq, src_len)
-
-        output, dec_self_attn, ctx_attn = self.decoder(
-          tgt_seq, tgt_len, output, context_attn_mask)
-
-        output = self.linear(output)
-        output = self.softmax(output)
-
-        return output, enc_self_attn, dec_self_attn, ctx_attn """
-
+    
       
 if __name__ == "__main__":
  
@@ -91,7 +52,6 @@ if __name__ == "__main__":
     parser.add_argument('--pretrain', type=str, default = None)
     parser.add_argument('--translate', type=str, default = None)
     parser.add_argument('--model_name', type=str, default = None)
-    parser.add_argument('--batch_size', type=int, default = 62 )
     args = parser.parse_args()
      
     training_fp = args.train_dataset
@@ -99,7 +59,6 @@ if __name__ == "__main__":
     train = args.train
     load_model_name = args.pretrain
     sentence = args.translate
-    batch_size = args.batch_size 
     model_name = args.model_name if args.model_name is not None else str().join(str(training_fp.split("/")[-1]).split(".")[:-1] )
     
     input_lang, output_lang, training_pairs, eval_pairs, VOCAB_SIZE = utils.prepareData(training_fp, eval_fp, False)
@@ -114,18 +73,17 @@ if __name__ == "__main__":
     torch.save(eval_inputs, "./model/eval_inputs.pt")
     torch.save(eval_targets, "./model/eval_targets.pt")'''
 
-    seq2seq = Transformer(input_lang, output_lang)#Seq2SeqModel(output_lang, VOCAB_SIZE)
+    seq2seq = Seq2SeqModel(output_lang, VOCAB_SIZE)
 
     if load_model_name is not None:
         seq2seq.load_model(load_model_name) ; 
     
     if train is not None:
-        #seq2seq.trainItersBert(training_pairs, eval_pairs, input_lang, output_lang)
-        nl.trainItersBert(model=seq2seq, n_iters=75000, training_pairs=training_pairs, eval_pairs=eval_pairs, input_lang=input_lang, output_lang=output_lang, batch_size=batch_size, model_name="q-dev")
+        seq2seq.trainItersBert(training_pairs, eval_pairs, input_lang, output_lang)
     
         
-    #if train or load is not None:
-    #    seq2seq.translate(sentence, input_lang, output_lang)
+    if train or load is not None:
+        seq2seq.translate(sentence, input_lang, output_lang)
     
     
     

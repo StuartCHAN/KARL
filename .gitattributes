@@ -1,3 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 model/QALD/1571235448.9997733.model.zip filter=lfs diff=lfs merge=lfs -text
+data/qald9/dataset.txt filter=lfs diff=lfs merge=lfs -text

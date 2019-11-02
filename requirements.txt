@@ -137,7 +137,13 @@ sphinxcontrib-htmlhelp==1.0.2
 sphinxcontrib-jsmath==1.0.1
 sphinxcontrib-qthelp==1.0.2
 sphinxcontrib-serializinghtml==1.1.3
+spyder==3.3.6
+spyder-kernels==0.5.1
 srsly==0.0.7
+tensorboard==1.14.0
+tensorflow==1.14.0
+tensorflow-estimator==1.14.0
+tensorflow-hub==0.5.0
 termcolor==1.1.0
 testpath==0.4.2
 text-unidecode==1.2
@@ -162,3 +168,4 @@ win-inet-pton==1.1.0
 wincertstore==0.2
 wrapt==1.11.2
 xmltodict==0.12.0
+xx-ent-wiki-sm==2.1.0
