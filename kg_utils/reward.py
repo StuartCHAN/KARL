@@ -8,36 +8,32 @@ import numpy as np
 import kg_utils
 import kg_utils.kgutils as kgutils
 import kg_utils.queries as queries
- 
-
-from sematch.semantic.similarity import EntitySimilarity
-sim = EntitySimilarity()
 
 
-def get_reward(cand_sent, ref_ent):
+def get_ans_reward(cand_sent, ref_ents):
     try:
     	cand_query = kgutils.interprete(cand_sent)
-    	entity = queries.process(cand_query)
-    	if entity == ref_ent:
-    		return 1.0
-    	elif entity is "empty":
-    		return 1.0
-    	elif entity is "error":
-    		return 2.0
-    	else: 
-    		reward = calculate_reward(entity, ref_ent ) 
-    		return reward  
+    	cand_ents = queries.process(cand_query)
+    	rewrd = criterion_func(cand_ents, ref_ents)
+        return rewrd 
     except:
-        return 2.0 ;
+        return None ;
 
 
-def calculate_reward(cand_ent, ref_ent ):
-	rewrd = 2.0
-	try:
-		rewrd = 2.0-sim.similarity(cand_ent, ref_ent )
-	except:
-		rewrd = 2.0
-	return rewrd ;
+def criterion_func(cand_ents, ref_ents):
+    notempty = "empty" not in (cand_ents or ref_ents)
+    noterror = "error" not in (cand_ents or ref_ents)
+    if notempty and noterror:
+        if len(set(cand_ents)&set(ref_ents)) is not 0 :
+            return 0.01 
+        else:
+            return None
+    elif (not notempty) and noterror:
+        return 0.01 
+    else:
+        return None ;
+    
+    
 
 """
     pos_h, pos_t, pos_r = self.get_positive_instance(in_batch = True)

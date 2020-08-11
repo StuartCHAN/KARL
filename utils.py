@@ -391,5 +391,44 @@ def getNzeroSize(tensor):
     idxs = torch.nonzero(tensor)
     return idxs.size(0)
     
+######################################33
+    
+with open("F:/portfolio/GSoC/DBpedia/gsoc2019/bert_rl_qa/bert_rl_qa/data/qald9/test.txt", "r", encoding="UTF-8") as test :
+    lines = [ line.split("\t") for line in test.readlines() ] 
+    
+with open("F:/portfolio/GSoC/DBpedia/gsoc2019/bert_rl_qa/bert_rl_qa/data/qald9/test.en", "w", encoding="UTF-8") as en, open("F:/portfolio/GSoC/DBpedia/gsoc2019/bert_rl_qa/bert_rl_qa/data/qald9/test.sparql", "w", encoding="UTF-8") as sparql :
+    for line in lines:
+        assert(3==len(line))
+        en.write(line[0]+"\n")
+        sparql.write(line[1]+"\n")
+    
+##############################################################  
+        
+from gensim.test.utils import datapath, get_tmpfile
+from gensim.models import KeyedVectors
+from gensim.scripts.glove2word2vec import glove2word2vec
 
- 
+glove_file = datapath('D:/Downloads/Compressed/uniform.txt')
+
+tmp_file = get_tmpfile("D:/Downloads/Compressed/dbpedia_kglove_uniform_200.txt")
+
+_ = glove2word2vec(glove_file, tmp_file)
+
+model = KeyedVectors.load_word2vec_format(tmp_file) 
+
+"""
+python -m spacy init-model xx ./dbpedia_kglove_uniform_200 --vectors-loc dbpedia_kglove_uniform_200.txt.gz 
+
+"""
+"D:/Downloads/Compressed/dbpedia_kglove_uniform_200.clean.txt"
+
+model.save('/tmp/MyModel')
+model.save_word2vec_format('/tmp/mymodel.txt',binary = False)
+model.save_word2vec_format('/tmp/mymodel.bin.gz',binary = True)
+
+
+tri = open("D:/Downloads/Compressed/try.txt", "r",encoding="UTF-8").readline().replace("\n","").strip()
+
+
+
+

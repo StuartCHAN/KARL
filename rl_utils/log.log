@@ -1,0 +1,1206 @@
+--  0
+['dbr_Salt_Lake_City', 'dbo_timeZone', 'var_uri']
+
+ or from here 
+--  0
+['var_uri', 'dct_subject', 'dbc_Assassins_of_Julius_Caesar']
+
+ or from here 
+--  0
+['var_uri', 'rdf_type', 'onto_Mountain']
+--  1
+['var_uri', 'onto_elevation', 'var_elevation']
+--  2
+['var_uri', 'onto_locatedInArea', 'dbr_Germany']
+
+ or from here 
+--  0
+['var_uri', 'dct_subject', 'dbc_Presidents_of_the_United_States']
+--  1
+['dbr_Vietnam_War', 'dbo_commander', 'var_uri']
+
+ or from here 
+--  0
+['var_uri', 'a', 'http_//dbpedia.org/class/yago/WikicatStatesOfTheUnitedStates']
+--  1
+['var_uri', 'dbp_governor', 'dbr_Butch_Otter']
+
+ or from here 
+--  0
+['var_sub', 'dbo_goldMedalist', 'dbr_Michael_Phelps']
+
+ or from here 
+--  0
+['var_uri', 'a', 'dbo_Artist']
+--  1
+['dbr_Rachel_Stevens', 'dbo_birthDate', 'var_birthdate']
+--  2
+['var_uri', 'dbo_birthDate', 'var_birthdate']
+
+ or from here 
+--  0
+['dbr_Frank_Herbert', 'dbpedia2_occupation', 'var_string']
+
+ or from here 
+--  0
+['dbr_FC_Porto', 'dbo_ground', 'var_ground']
+--  1
+['var_ground', 'dbo_capacity', 'var_capacity']
+--  2
+['dbr_FC_Porto', 'dbo_ground', 'var_ground']
+--  3
+['var_ground', 'dbp_capacity', 'var_capacity']
+
+ or from here 
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+--  0
+['var_airline', 'dbp_frequentFlyer', 'var_uri']
+
+ or from here 
+--  0
+['var_uri', 'dct_subject', 'dbc_Countries_in_Europe']
+--  1
+['var_uri', 'dbo_governmentType', 'dbr_Constitutional_monarchy']
+
+ or from here 
+--  0
+['var_cave', 'rdf_type', 'dbo_Cave']
+--  1
+['var_cave', 'dbo_location', 'var_uri']
+--  2
+['var_uri', 'rdf_type', 'dbo_Country']
+
+ or from here 
+--  0
+['var_uri', 'a', 'dbo_Airport']
+--  1
+['var_uri', 'dbo_location', 'dbr_California']
+--  2
+['var_uri', 'dbo_city', 'dbr_California']
+--  3
+['var_uri', 'dbo_city', 'var_city']
+--  4
+['var_city', 'dbo_isPartOf', 'dbr_California']
+--  5
+['var_uri', 'dbo_operator', 'dbr_California']
+
+ or from here 
+--  0
+['dbr_San_Francisco', 'foaf_nick', 'var_string']
+
+ or from here 
+--  0
+['dbr_Angela_Merkel', 'dbp_birthName', 'var_string']
+
+ or from here 
+--  0
+['dbr_Berlin', 'dbp_leader', 'var_uri']
+
+ or from here 
+--  0
+['var_uri', 'a', 'dbo_Country']
+--  1
+['var_uri', 'dbo_currency', 'dbr_Euro']
+--  2
+['var_uri', 'dbp_currencyCode', '"EUR"@en']
+
+ or from here 
+--  0
+['var_uri', 'rdf_type', 'onto_Software']
+--  1
+['var_uri', 'onto_publisher', 'dbr_Mean_']
+
+ or from here 
+--  0
+['dbr_Bill_Gates', 'dbo_birthPlace', 'var_birthPlace']
+--  1
+['var_birthPlace', 'dbo_country', 'var_country']
+--  2
+['dbr_Bill_Gates', 'dbo_birthPlace', 'var_birthPlace']
+--  3
+['var_birthPlace', 'dbo_isPartOf', 'var_place']
+--  4
+['var_place', 'dbo_country', 'var_country']
+
+ or from here 
+--  0
+['dbr_Jacques_Cousteau', 'dbo_child', 'var_x']
+--  1
+['var_x', 'dbo_child', 'var_y']
+
+ or from here 
+--  0
+['var_uri', 'dbo_occupation', 'dbr_Skateboarder']
+--  1
+['var_uri', 'dbo_birthPlace', 'dbr_Sweden']
+--  2
+['var_uri', 'dbo_birthPlace', 'var_place']
+--  3
+['var_place', 'dbo_country', 'dbr_Sweden']
+
+ or from here 
+--  0
+['var_uri', 'rdf_type', 'yago_WikicatMonarchsOfTheUnitedKingdom']
+--  1
+['var_uri', 'dbo_spouse', 'var_spouse']
+--  2
+['var_spouse', 'dbo_birthPlace', 'dbr_Germany']
+
+ or from here 
+--  0
+['var_uri', 'rdf_type', 'yago_ArgentineFilms']
+--  1
+['var_uri', 'rdf_type', 'dbo_Film']
+--  2
+['var_uri', 'dbo_country', 'dbr_Argentina']
+--  3
+['var_uri', 'dbp_country', '"Argentina"@en']
+
+ or from here 
+--  0
+['dbr_Michael_Jackson', 'dbp_deathCause', 'var_s']
+
+ or from here 
+--  0
+['var_uri', 'dct_subject', 'dbc_States_of_the_United_States']
+--  1
+['var_uri', 'dbp_admittancedate', 'var_x']
+
+ or from here 
+--  0
+['dbr_Millipede', 'dbp_taxon', 'var_String']
+
+ or from here 
+--  0
+['dbr_Forbes', 'foaf_homepage', 'var_string']
+
+ or from here 
+--  0
+['var_uri', 'dbo_spouse', 'dbr_Amanda_Palmer']
+
+ or from here 
+--  0
+['dbr_The_Storm_on_the_Sea_of_Galilee', 'dbo_author', 'var_uri']
+
+ or from here 
+--  0
+['dbr_Karakoram', 'dbp_highest', 'var_uri']
+
+ or from here 
+--  0
+['dbr_Finland', 'dbp_accessioneudate', 'var_date']
+
+ or from here 
+--  0
+['dbr_The_Big_Bang_Theory', 'dbo_starring', 'var_uri']
+
+ or from here 
+--  0
+['var_uri', 'dbo_field', 'dbr_Computer_science']
+--  1
+['var_uri', 'dbo_award', 'dbr_Academy_Award']
+
+ or from here 
+--  0
+['dbr_Harry_Potter', 'dbp_author', 'var_uri']
+
+ or from here 
+--  0
+['var_uri', 'a', 'dbo_Writer']
+--  1
+['var_uri', 'dbo_award', 'dbr_Nobel_Prize_in_Literature']
+
+ or from here 
+--  0
+['dbr_Lovesick_', 'dbo_starring', 'var_uri']
+--  1
+['var_uri', 'dbo_birthPlace', 'var_city']
+--  2
+['var_city', 'dbo_country', 'dbr_United_Kingdom']
+
+ or from here 
+--  0
+['dbr_Baghdad', 'foaf_nick', 'var_nm']
+
+ or from here 
+--  0
+['var_x', 'dbp_title', 'dbr_President_of_Montenegro']
+--  1
+['var_x', 'dbo_birthPlace', 'var_uri']
+--  2
+['var_uri', 'dbo_type', 'dbr_Capital_city']
+
+ or from here 
+--  0
+['var_uri', 'dbo_country', 'dbr_United_States']
+--  1
+['var_uri', 'dbo_capital', 'var_capital']
+--  2
+['var_uri', 'dbp_densityrank', 'var_density']
+--  3
+['var_uri', 'http_//www.w3.org/2000/01/rdf-schema#label', 'var_string']
+
+ or from here 
+--  0
+['var_uri', 'a', 'dbo_River']
+--  1
+['var_uri', 'dbo_country', 'dbr_China']
+--  2
+['var_uri', 'dbp_length', 'var_l']
+
+ or from here 
+--  0
+['dbr_Berlin', 'dbo_areaCode', 'var_string']
+
+ or from here 
+--  0
+['var_uri', 'a', 'dbo_Scientist']
+--  1
+['var_uri', 'dbo_almaMater', 'var_university']
+--  2
+['var_university', 'dbo_affiliation', 'dbr_Ivy_League']
+--  3
+['var_university', 'a', 'dbo_University']
+
+ or from here 
+--  0
+['var_uri', 'dbo_occupation', 'dbr_Surfer']
+--  1
+['var_uri', 'dbo_birthPlace', 'dbr_Australia']
+--  2
+['var_uri', 'dbo_occupation', 'dbr_Surfer']
+--  3
+['var_uri', 'dbo_birthPlace', 'var_place']
+--  4
+['var_place', 'dbo_country', 'dbr_Australia']
+
+ or from here 
+--  0
+['var_uri', 'a', 'dbo_PoliticalParty']
+--  1
+['var_uri', 'dbo_country', 'dbr_Netherlands']
+
+ or from here 
+--  0
+['dbr_Mars', 'dbp_satellites', 'var_n']
+
+ or from here 
+--  0
+['dbr_Batman', 'http_//xmlns.com/foaf/0.1/name', 'var_label']
+
+ or from here 
+--  0
+['dbr_Elon_Musk', 'dbo_knownFor', 'var_uri']
+
+ or from here 
+--  0
+['dbr_WikiLeaks', 'onto_author', 'var_uri']
+
+ or from here 
+--  0
+['dbr_Sean_Parnell', 'dbo_region', 'var_uri']
+
+ or from here 
+--  0
+['dbr_Ford_Model_T', 'dbo_productionEndYear', 'var_end']
+--  1
+['dbr_Ford_Model_T', 'dbo_productionStartYear', 'var_start']
+
+ or from here 
+--  0
+['dbr_Death_of_Carlo_Giuliani', 'dbo_deathDate', 'var_date']
+
+ or from here 
+--  0
+['var_uri', 'a', 'dbo_Animal']
+--  1
+['var_uri', 'dbo_conservationStatus', '"EX"']
+
+ or from here 
+--  0
+['dbr_Abraham_Lincoln', 'onto_spouse', 'var_uri']
+
+ or from here 
+--  0
+['dbr_Bertrand_Russell', 'dbo_award', 'var_Awards']
+
+ or from here 
+--  0
+['var_s', 'dct_subject', 'dbc_Missions_to_the_Sun']
+--  1
+['var_s', 'rdf_type', 'var_type']
+--  2
+['var_type', 'dbo_Satellite,', 'dbo_ArtificialSatellite']
+
+ or from here 
+--  0
+['var_uri', 'a', 'dbo_City']
+--  1
+['var_uri', 'a', 'dbo_Town']
+--  2
+['var_uri', 'dbo_country', 'dbr_Germany']
+--  3
+['var_uri', 'dbo_populationTotal', 'var_population']
+
+ or from here 
+--  0
+['dbr_Robert_F._Kennedy', 'dbo_child', 'var_child']
+--  1
+['var_child', 'dbo_spouse', 'var_uri']
+
+ or from here 
+--  0
+['dbr_Vrije_Universiteit_Amsterdam', 'dbo_numberOfStudents', 'var_num']
+
+ or from here 
+--  0
+['dbr_IBM', 'onto_revenue', 'var_number']
+
+ or from here 
+--  0
+['var_uri', 'dct_subject', 'dbc_James_Bond_films']
+
+ or from here 
+--  0
+['dbr_Bart_Simpson', 'dbp_voiceactor', 'var_uri']
+
+ or from here 
+--  0
+['dbr_Tom_Hanks', 'dbo_spouse', 'var_uri']
+
+ or from here 
+--  0
+['dbr_Yenisei_River', 'dbo_country', 'var_uri']
+
+ or from here 
+--  0
+['var_uri', 'a', 'dbo_Automobile']
+--  1
+['var_uri', 'dbo_assembly', 'dbr_Germany']
+--  2
+['var_uri', 'dbp_assembly', 'dbr_Germany']
+--  3
+['var_uri', 'dbo_manufacturer', 'var_x']
+--  4
+['var_uri', 'dbp_manufacturer', 'var_x']
+--  5
+['var_x', 'dbo_locationCountry', 'dbr_Germany']
+--  6
+['var_x', 'dbo_location', 'dbr_Germany']
+
+ or from here 
+--  0
+['dbr_Michael_Jackson', 'dbo_deathDate', 'var_date']
+
+ or from here 
+--  0
+['var_uri', 'a', 'dbo_Volcano']
+--  1
+['var_uri', 'dbo_locatedInArea', 'var_area']
+--  2
+['var_area', 'dct_subject', 'dbc_Countries_in_Africa']
+--  3
+['var_uri', 'dbo_elevation', 'var_elevation']
+
+ or from here 
+--  0
+['var_uri', 'dbo_occupation', 'dbr_Poet']
+--  1
+['var_x', 'dbo_author', 'var_uri']
+
+ or from here 
+--  0
+['var_uri', 'dbo_occupation', 'dbr_Gangster']
+--  1
+['var_uri', 'dct_subject', 'dbc_Prohibition-era_gangsters']
+
+ or from here 
+--  0
+['var_s', 'dct_subject', 'dbc_Mars_rovers']
+--  1
+['var_s', 'rdf_type', 'var_type']
+--  2
+['var_type', 'dbo_Satellite,', 'dbo_ArtificialSatellite']
+
+ or from here 
+--  0
+['var_uri', 'a', 'dbo_Film']
+--  1
+['var_uri', 'dbo_country', 'dbr_Czech_Republic']
+
+ or from here 
+--  0
+['var_uri', 'a', 'dbo_Astronaut']
+--  1
+['var_uri', 'dbo_nationality', "dbr_People's_Republic_of_China"]
+--  2
+['var_uri', 'a', 'dbo_Astronaut']
+--  3
+['var_uri', 'dbo_nationality', 'dbr_China']
+
+ or from here 
+--  0
+['var_x', 'a', 'dbo_Volcano']
+--  1
+['var_x', 'dbo_locatedInArea', 'var_uri']
+--  2
+['var_uri', 'a', 'dbo_Country']
+
+ or from here 
+--  0
+['var_uri', 'rdf_type', 'onto_Film']
+--  1
+['var_uri', 'onto_starring', 'dbr_Tom_Cruise']
+--  2
+['var_uri', 'rdfs_label', 'var_string']
+
+ or from here 
+--  0
+['dbr_Count_Dracula', 'dbo_creator', 'var_x']
+--  1
+['var_x', 'dbo_deathDate', 'var_date']
+
+ or from here 
+--  0
+['dbr_Wikipedia', 'onto_author', 'var_uri']
+
+ or from here 
+--  0
+['dbr_Chancellor_of_Germany', 'dbp_incumbent', 'var_uri']
+
+ or from here 
+--  0
+['dbr_Aldi', 'dbp_founders', 'var_uri']
+
+ or from here 
+--  0
+['var_uri', 'rdf_type', 'onto_Book']
+--  1
+['var_uri', 'onto_author', 'dbr_Danielle_Steel']
+
+ or from here 
+--  0
+['var_uri', 'dbo_influencedBy', 'dbr_Socrates']
+
+ or from here 
+--  0
+['dbr_Chiemsee', 'dbo_maximumDepth', 'var_n']
+
+ or from here 
+--  0
+['var_uri', 'a', 'dbo_Company']
+--  1
+['var_uri', 'dbo_industry', 'dbr_Aerospace']
+--  2
+['var_uri', 'dbo_industry', 'dbr_Medical']
+
+ or from here 
+--  0
+['var_uri', 'dbo_occupation', 'dbr_Surfer']
+--  1
+['var_uri', 'dbo_birthPlace', 'dbr_Philippines']
+
+ or from here 
+--  0
+['dbr_Queen_Victoria', 'dbo_parent', 'var_uri']
+
+ or from here 
+--  0
+['var_uri', 'dbo_spokenIn', 'dbr_Estonia']
+
+ or from here 
+--  0
+['var_uri', 'rdf_type', 'dbo_Bird']
+--  1
+['var_uri', 'dbo_conservationStatus', '"CR"']
+--  2
+['var_uri', 'dct_subject', 'dbc_Critically_endangered_animals']
+
+ or from here 
+--  0
+['dbr_Rhine', 'dbo_country', 'var_uri']
+--  1
+['dbr_Rhine', 'dbp_country', 'var_uri']
+
+ or from here 
+--  0
+['dbr_Elizabeth_II', 'dbo_parent', 'var_uri']
+--  1
+['var_uri', 'http_//xmlns.com/foaf/0.1/gender', '"male"@en']
+
+ or from here 
+--  0
+['var_uri', 'rdf_type', 'owl_Thing']
+--  1
+['var_uri', 'dct_subject', 'dbc_Chemical_elements']
+
+ or from here 
+--  0
+['var_uri', 'rdf_type', 'dbo_Person']
+--  1
+['var_uri', 'dct_subject', 'dbc_Presidents_of_the_United_States']
+--  2
+['var_uri', 'dbo_activeYearsEndDate', 'var_termEnd']
+
+ or from here 
+--  0
+['dbr_Worst_Case_Scenario_', 'var_p', 'var_o']
+--  1
+['dbr_Worst_Case_Scenario_', 'dbo_releaseDate', 'var_rel']
+
+ or from here 
+--  0
+['dbr_Lance_Bass', 'dbo_spouse', 'var_uri']
+--  1
+['var_uri', 'dbo_spouse', 'dbr_Lance_Bass']
+
+ or from here 
+--  0
+['dbr_TUI_Travel', 'dbo_subsidiary', 'var_uri']
+--  1
+['var_uri', 'dbo_targetAirport', 'dbr_Glasgow_International_Airport']
+--  2
+['var_uri', 'dbo_targetAirport', 'dbr_Dublin_Airport']
+
+ or from here 
+--  0
+['dbr_Pakistan', 'dbo_language', 'var_uri']
+
+ or from here 
+--  0
+['dbr_Bill_Clinton', 'dbo_child', 'var_child']
+--  1
+['var_child', 'dbo_spouse', 'var_uri']
+--  2
+['var_uri', 'rdfs_label', 'var_string']
+
+ or from here 
+--  0
+['dbr_Apollo_11', 'dbp_crewMembers', 'var_uri']
+
+ or from here 
+--  0
+['dbr_Indigo', 'dbo_wavelength', 'var_n']
+
+ or from here 
+--  0
+['var_x', 'dbo_musicalArtist', 'dbr_Ramones']
+--  1
+['var_x', 'dbo_bSide', 'var_string']
+
+ or from here 
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+--  0
+['var_uri', 'dbo_alias', 'var_alias']
+
+ or from here 
+--  0
+['var_uri', 'a', 'dbo_River']
+--  1
+['var_uri', 'dbo_riverMouth', 'dbr_North_Sea']
+
+ or from here 
+--  0
+['dbr_Fort_Knox', 'dbo_location', 'var_uri']
+--  1
+['var_uri', 'a', 'dbo_Place']
+
+ or from here 
+--  0
+['var_uri', 'rdf_type', 'yago_WikicatDaughtersOfBritishEarls']
+--  1
+['var_uri', 'dbo_birthPlace', 'var_x']
+--  2
+['var_uri', 'dbo_deathPlace', 'var_y']
+
+ or from here 
+--  0
+['var_uri', 'dbp_title', 'dbr_Emperor_of_China']
+
+ or from here 
+--  0
+['dbr_Teenage_Mutant_Ninja_Turtles', 'dbp_members', 'var_x']
+--  1
+['var_x', 'foaf_givenName', 'var_s']
+
+ or from here 
+--  0
+['var_uri', 'dbo_routeStart', 'dbr_Piccadilly']
+
+ or from here 
+--  0
+['dbr_Barack_Obama', 'dbo_spouse', 'var_x']
+--  1
+['var_x', 'dbo_almaMater', 'var_s']
+
+ or from here 
+--  0
+['dbr_Paraguay', 'dbo_foundingDate', 'var_date']
+
+ or from here 
+--  0
+['var_x', 'a', 'dbo_BasketballPlayer']
+--  1
+['var_x', 'dbo_league', 'dbr_National_Basketball_Association']
+--  2
+['var_x', 'dbo_height', 'var_n']
+--  3
+['var_x', 'dbo_activeYearsEndYear', 'var_d']
+
+ or from here 
+--  0
+['dbr_Abraham_Lincoln', 'dbo_deathPlace', 'var_uri']
+
+ or from here 
+--  0
+['dbr_Jack_Wolfskin', 'dbo_foundingYear', 'var_year']
+
+ or from here 
+--  0
+['dbr_Air_China', 'dbo_headquarter', 'var_uri']
+--  1
+['var_uri', 'a', 'http_//dbpedia.org/class/yago/City108524735']
+
+ or from here 
+--  0
+['dbr_Pilsner_Urquell', 'dbp_brewery', 'var_uri']
+--  1
+['var_uri', 'dbo_foundingYear', 'var_num']
+
+ or from here 
+--  0
+['dbr_Boston_Tea_Party', 'dbp_date', 'var_d']
+
+ or from here 
+--  0
+['var_uri', 'a', 'dbo_Animal']
+--  1
+['var_uri', 'dbo_conservationStatus', '"CR"']
+
+ or from here 
+--  0
+['var_uri', 'a', 'dbo_Politician']
+--  1
+['var_uri', 'dbo_spouse', 'var_spouse']
+--  2
+['var_spouse', 'dbo_birthPlace', 'dbr_Germany']
+--  3
+['var_spouse', 'dbo_birthPlace', 'var_p']
+--  4
+['var_p', 'dbo_country', 'dbr_Germany']
+
+ or from here 
+--  0
+['dbr_Earth', 'dbo_meanRadius', 'var_radius']
+
+ or from here 
+--  0
+['var_uri', 'a', 'yago_WikicatStatesOfTheUnitedStates']
+--  1
+['var_uri', 'dbp_postalabbreviation', '"MN"^^']
+
+ or from here 
+--  0
+['dbr_Muhammad', 'dbo_deathDate', 'var_date']
+
+ or from here 
+--  0
+['dbr_Moon', 'dbp_atmosphereComposition', 'var_uri']
+
+ or from here 
+--  0
+['dbr_Texas', 'dbp_governor', 'var_string']
+
+ or from here 
+--  0
+['var_uri', 'rdf_type', 'dbo_Film']
+--  1
+['var_uri', 'dbo_director', 'dbr_Akira_Kurosawa']
+
+ or from here 
+--  0
+['var_uri', 'a', 'dbo_MilitaryConflict']
+--  1
+['var_uri', 'dbo_place', 'dbr_San_Antonio']
+--  2
+['var_uri', 'dbo_date', 'var_date']
+
+ or from here 
+--  0
+['dbr_Charmed', 'onto_starring', 'var_actors']
+--  1
+['var_actors', 'foaf_homepage', 'var_uri']
+
+ or from here 
+--  0
+['dbr_Baguette', 'dbp_calories', 'var_n']
+
+ or from here 
+--  0
+['var_uri', 'a', 'dbo_Library']
+--  1
+['var_uri', 'dbp_established', 'var_year']
+
+ or from here 
+--  0
+['var_uri', 'rdf_type', 'yago_WikicatFrisianIslands']
+--  1
+['var_uri', 'dbo_country', 'dbr_Netherlands']
+
+ or from here 
+--  0
+['dbr_The_Scream', 'dbo_museum', 'var_uri']
+
+ or from here 
+--  0
+['dbr_De_Beers', 'dbo_foundingYear', 'var_date']
+
+ or from here 
+--  0
+['dbr_John_F._Kennedy', 'dbp_presidentEnd', 'var_x']
+--  1
+['var_uri', 'dbp_presidentStart', 'var_x']
+--  2
+['var_uri', 'a', 'dbo_Person']
+
+ or from here 
+--  0
+['dbr_Juan_Carlos_I_of_Spain', 'dbo_spouse', 'var_x']
+--  1
+['var_x', 'dbo_parent', 'var_uri']
+
+ or from here 
+--  0
+['dbr_A_Song_of_Ice_and_Fire', 'dbp_author', 'var_Novelist']
+
+ or from here 
+--  0
+['var_album', 'dbo_artist', 'dbr_The_Beatles']
+--  1
+['var_album', 'rdf_type', 'dbo_Album']
+--  2
+['var_album', 'dbo_releaseDate', 'var_date']
+--  3
+['var_album', 'dbp_studio', 'var_studio']
+
+ or from here 
+--  0
+['var_company', 'dct_subject', 'dbc_Companies_based_in_North_Rhine-Westphalia']
+--  1
+['var_company', 'rdf_type', 'dbo_Brewery']
+
+ or from here 
+--  0
+['dbr_Diana,_Princess_of_Wales', 'dbo_deathDate', 'var_d']
+
+ or from here 
+--  0
+['dbr_Intel', 'dbp_founders', 'var_uri']
+
+ or from here 
+--  0
+['var_uri', 'dbo_team', 'var_team']
+--  1
+['var_league', 'dbo_league', 'dbr_Premier_League']
+--  2
+['var_league', 'dbo_team', 'var_team']
+--  3
+['var_uri', 'dbo_birthDate', 'var_date']
+--  0
+['var_uri', 'dbo_team', 'var_team']
+--  1
+['var_league', 'dbo_league', 'dbr_Premier_League']
+--  2
+['var_league', 'dbo_team', 'var_team']
+--  3
+['var_uri', 'dbo_birthDate', 'var_date']
+
+ or from here 
+--  0
+['dbr_Cat_Stevens', 'dbo_instrument', 'var_uri']
+
+ or from here 
+--  0
+['var_uri', 'dbo_location', 'dbr_South_Carolina']
+--  1
+['var_uri', 'rdf_type', 'dbo_Lake']
+--  2
+['var_uri', 'dct_subject', 'dbc_Rivers_and_streams_of_South_Carolina']
+
+ or from here 
+--  0
+['var_uri', 'http_//xmlns.com/foaf/0.1/nick', '"Rodzilla"@en']
+
+ or from here 
+--  0
+['var_country', 'dct_subject', 'dbc_Countries_in_Africa']
+--  1
+['var_country', 'dbo_capital', 'var_uri']
+
+ or from here 
+--  0
+['dbr_Manhattan_Bridge', 'dbo_type', 'var_type']
+--  1
+['var_bridge', 'dbo_type', 'var_type']
+--  2
+['var_bridge', 'rdf_type', 'dbo_Bridge']
+
+ or from here 
+--  0
+['dbr_Facebook', 'dbo_foundedBy', 'var_uri']
+--  1
+['var_x', 'dbo_foundedBy', 'var_uri']
+
+ or from here 
+--  0
+['var_uri', 'dbp_trailheads', 'dbr_Grand_Canyon']
+--  1
+['var_uri', 'dbp_hazards', 'dbr_Flash_flood']
+
+ or from here 
+--  0
+['var_uri', 'rdf_type', 'dbo_Book']
+--  1
+['var_uri', 'dbo_numberOfPages', 'var_n']
+
+ or from here 
+--  0
+['var_uri', 'dct_subject', 'dbc_States_of_the_United_States']
+--  1
+['var_uri', 'rdf_type', 'dbo_AdministrativeRegion']
+--  2
+['var_uri', 'dbo_areaTotal', 'var_area']
+
+ or from here 
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+--  0
+['var_sub', 'dbo_numberOfEmployees', 'var_obj']
+--  1
+['var_sub', 'foaf_homepage', 'var_web']
+
+ or from here 
+--  0
+['var_uri', 'rdf_type', 'dbo_Ship']
+--  1
+['var_uri', 'dct_subject', 'dbc_Christopher_Columbus']
+--  2
+['var_uri', 'dct_subject', 'dbc_Exploration_ships']
+
+ or from here 
