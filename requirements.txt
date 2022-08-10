@@ -71,7 +71,7 @@ mkl-random==1.1.0
 mkl-service==2.3.0
 mlperf-compliance==0.0.10
 murmurhash==1.0.2
-nbconvert==5.5.0
+nbconvert==6.3.0
 nbformat==4.4.0
 networkx==2.3
 neuralcoref==4.0
